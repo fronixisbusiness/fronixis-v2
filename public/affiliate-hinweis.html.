@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Affiliate-Hinweis | Fronixis</title>
+
+  <meta
+    name="description"
+    content="Informationen zu Affiliate-Links, Werbung und Provisionen auf Fronixis."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container navigation">
+
+      <a href="index.html" class="logo">FRONIXIS</a>
+
+      <nav class="desktop-nav">
+        <a href="index.html#ki">KI & Automation</a>
+        <a href="index.html#smart-home">Smart Home</a>
+        <a href="index.html#smart-garden">Smart Garden</a>
+        <a href="index.html#future-tech">Future Tech</a>
+        <a href="index.html#guides">Guides</a>
+      </nav>
+
+      <a href="index.html" class="nav-button">Startseite</a>
+
+    </div>
+  </header>
+
+
+  <main class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">TRANSPARENZ</span>
+
+        <h1>Affiliate-Hinweis</h1>
+
+        <p>
+          Transparenz über Werbung, Partnerlinks und mögliche Provisionen
+          auf Fronixis.
+        </p>
+      </div>
+
+
+      <div class="guide-box"
+           style="display:block; max-width:900px;">
+
+        <h2 style="font-size:1.7rem;">
+          1. Affiliate-Links
+        </h2>
+
+        <p>
+          Auf Fronixis können sogenannte Affiliate-Links verwendet werden.
+          Dabei handelt es sich um speziell gekennzeichnete oder technisch
+          zuordenbare Links zu Produkten, Dienstleistungen oder Angeboten
+          externer Anbieter.
+        </p>
+
+        <p>
+          Wenn Sie über einen solchen Link eine Bestellung aufgeben
+          oder eine andere vergütete Aktion durchführen,
+          kann Fronixis eine Provision vom jeweiligen Anbieter
+          oder Affiliate-Netzwerk erhalten.
+        </p>
+
+        <p>
+          Für Sie entstehen dadurch grundsätzlich keine zusätzlichen Kosten.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          2. Kennzeichnung von Werbung
+        </h2>
+
+        <p>
+          Inhalte mit kommerziellem Charakter oder Affiliate-Bezug
+          werden nach Möglichkeit klar und verständlich gekennzeichnet.
+        </p>
+
+        <p>
+          Je nach Inhalt können Hinweise wie
+          „Werbung“, „Anzeige“, „Affiliate-Link“
+          oder vergleichbare Kennzeichnungen verwendet werden.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          3. Awin
+        </h2>
+
+        <p>
+          Fronixis nimmt unter anderem am Affiliate-Netzwerk Awin teil.
+        </p>
+
+        <p>
+          Awin ermöglicht die technische Zuordnung von Klicks,
+          Käufen oder anderen vergüteten Aktionen,
+          damit Provisionen korrekt zugeordnet werden können.
+        </p>
+
+        <p>
+          Dabei können Tracking-Technologien,
+          Partnerkennungen, Klickinformationen und
+          weitere pseudonymisierte technische Daten verwendet werden.
+        </p>
+
+        <p>
+          Weitere Informationen zur Datenverarbeitung finden Sie
+          in unserer
+          <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          4. Weitere Affiliate-Programme
+        </h2>
+
+        <p>
+          Fronixis kann neben Awin auch mit weiteren
+          Affiliate-Netzwerken, Herstellern, Shops
+          oder Technologieanbietern zusammenarbeiten.
+        </p>
+
+        <p>
+          Welche Partner eingesetzt werden,
+          kann sich im Laufe der Zeit ändern.
+        </p>
+
+        <p>
+          Eine kommerzielle Zusammenarbeit beeinflusst nicht automatisch
+          unsere redaktionelle Bewertung eines Produkts oder Dienstes.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          5. Preise und Verfügbarkeit
+        </h2>
+
+        <p>
+          Preise, Verfügbarkeiten, Rabatte und Produktinformationen
+          können sich jederzeit ändern.
+        </p>
+
+        <p>
+          Maßgeblich sind die Angaben auf der Website
+          des jeweiligen Anbieters zum Zeitpunkt des Kaufs.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          6. Keine Kaufgarantie
+        </h2>
+
+        <p>
+          Empfehlungen, Vergleiche und redaktionelle Inhalte
+          auf Fronixis dienen der Information und Orientierung.
+        </p>
+
+        <p>
+          Besucher sollten vor einer Kaufentscheidung
+          die aktuellen Produktinformationen,
+          Vertragsbedingungen und Preise
+          des jeweiligen Anbieters prüfen.
+        </p>
+
+
+        <h2 style="font-size:1.7rem; margin-top:35px;">
+          7. Transparenz
+        </h2>
+
+        <p>
+          Unser Ziel ist es,
+          Affiliate-Beziehungen transparent darzustellen
+          und Inhalte so aufzubereiten,
+          dass Besucher nachvollziehen können,
+          wann eine kommerzielle Beziehung besteht.
+        </p>
+
+        <p>
+          Stand: August 2026
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div>
+        <a href="index.html" class="logo">
+          FRONIXIS
+        </a>
+
+        <p>
+          AI. Smart Tech. Automation. Future.
+        </p>
+      </div>
+
+
+      <div class="footer-links">
+        <a href="ueber-fronixis.html">Über Fronixis</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+
+
+    <div class="container copyright">
+      © 2026 Fronixis. Alle Rechte vorbehalten.
+    </div>
+
+  </footer>
+
+</body>
+</html>
