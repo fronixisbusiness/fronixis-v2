@@ -50,45 +50,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById("cookie-banner");
+  const planetButton = document.getElementById("cookie-planet");
   const acceptButton = document.getElementById("cookie-accept");
   const rejectButton = document.getElementById("cookie-reject");
   const settingsButton = document.getElementById("cookie-settings");
 
-  if (!banner) return;
+  if (!banner || !planetButton) return;
 
   const savedConsent = localStorage.getItem("fronixis-cookie-consent");
 
-  if (savedConsent) {
-    banner.hidden = true;
-  } else {
+  const openBanner = () => {
     banner.hidden = false;
+    banner.classList.add("show");
+  };
+
+  const closeBanner = () => {
+    banner.classList.remove("show");
+    banner.hidden = true;
+  };
+
+  planetButton.addEventListener("click", () => {
+    openBanner();
+  });
+
+  if (!savedConsent) {
+    setTimeout(() => {
+      openBanner();
+    }, 500);
+  } else {
+    banner.hidden = true;
   }
 
   acceptButton?.addEventListener("click", () => {
     localStorage.setItem("fronixis-cookie-consent", "all");
-    banner.hidden = true;
+    closeBanner();
 
     window.dispatchEvent(
       new CustomEvent("fronixis-consent-updated", {
-        detail: { analytics: true, marketing: true, affiliate: true }
+        detail: {
+          analytics: true,
+          marketing: true,
+          affiliate: true
+        }
       })
     );
   });
 
   rejectButton?.addEventListener("click", () => {
     localStorage.setItem("fronixis-cookie-consent", "necessary");
-    banner.hidden = true;
+    closeBanner();
 
     window.dispatchEvent(
       new CustomEvent("fronixis-consent-updated", {
-        detail: { analytics: false, marketing: false, affiliate: false }
+        detail: {
+          analytics: false,
+          marketing: false,
+          affiliate: false
+        }
       })
     );
   });
 
   settingsButton?.addEventListener("click", () => {
     alert(
-      "Individuelle Cookie-Einstellungen ergänzen wir im nächsten Schritt. Bis dahin kannst du entweder nur notwendige Technologien oder alle Technologien auswählen."
+      "Individuelle Cookie-Einstellungen ergänzen wir im nächsten Schritt."
     );
   });
 });
