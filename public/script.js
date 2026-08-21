@@ -64,6 +64,45 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!banner || !planetButton) return;
 
   const STORAGE_KEY = "fronixis-cookie-consent";
+  const GA_MEASUREMENT_ID = "G-KSM56XTJBP";
+let googleAnalyticsLoaded = false;
+
+const loadGoogleAnalytics = () => {
+  if (googleAnalyticsLoaded) return;
+
+  if (document.querySelector('script[data-fronixis-ga]')) {
+    googleAnalyticsLoaded = true;
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.gtag = function () {
+    dataLayer.push(arguments);
+  };
+
+  gtag("consent", "default", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied"
+  });
+
+  gtag("js", new Date());
+  gtag("config", GA_MEASUREMENT_ID);
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src =
+    "https://www.googletagmanager.com/gtag/js?id=" +
+    encodeURIComponent(GA_MEASUREMENT_ID);
+
+  script.dataset.fronixisGa = "true";
+
+  document.head.appendChild(script);
+
+  googleAnalyticsLoaded = true;
+};
 
   const openBanner = () => {
     banner.hidden = false;
@@ -105,6 +144,13 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     );
   };
+  if (consent.analytics) {
+  loadGoogleAnalytics();
+} else if (window.gtag) {
+  gtag("consent", "update", {
+    analytics_storage: "denied"
+  });
+}
 
   const applySavedConsentToToggles = () => {
     const saved = getSavedConsent();
@@ -170,13 +216,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const hasSavedConsent = applySavedConsentToToggles();
+const hasSavedConsent = applySavedConsentToToggles();
 
-  if (!hasSavedConsent) {
-    setTimeout(() => {
-      openBanner();
-    }, 350);
-  } else {
-    closeBanner();
-  }
-});
+const savedConsent = getSavedConsent();
+
+if (savedConsent?.analytics) {
+  loadGoogleAnalytics();
+}
+
+if (!hasSavedConsent) {
+  setTimeout(() => {
+    openBanner();
+  }, 350);
+} else {
+  closeBanner();
+}
