@@ -45,3 +45,138 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// COOKIE CONSENT
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const banner = document.getElementById("cookie-banner");
+  const planetButton = document.getElementById("cookie-planet");
+  const closeButton = document.getElementById("cookie-close");
+
+  const acceptButton = document.getElementById("cookie-accept");
+  const rejectButton = document.getElementById("cookie-reject");
+  const saveButton = document.getElementById("cookie-save");
+
+  const analyticsToggle = document.getElementById("cookie-analytics");
+  const marketingToggle = document.getElementById("cookie-marketing");
+
+  if (!banner || !planetButton) return;
+
+  const STORAGE_KEY = "fronixis-cookie-consent";
+
+  const openBanner = () => {
+    banner.hidden = false;
+    document.body.classList.add("cookie-modal-open");
+  };
+
+  const closeBanner = () => {
+    banner.hidden = true;
+    document.body.classList.remove("cookie-modal-open");
+  };
+
+  const getSavedConsent = () => {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY));
+    } catch {
+      return null;
+    }
+  };
+
+  const saveConsent = (consent) => {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        necessary: true,
+        analytics: !!consent.analytics,
+        marketing: !!consent.marketing,
+        updatedAt: new Date().toISOString()
+      })
+    );
+
+    window.dispatchEvent(
+      new CustomEvent("fronixis-consent-updated", {
+        detail: {
+          necessary: true,
+          analytics: !!consent.analytics,
+          marketing: !!consent.marketing,
+          affiliate: !!consent.marketing
+        }
+      })
+    );
+  };
+
+  const applySavedConsentToToggles = () => {
+    const saved = getSavedConsent();
+
+    if (!saved) return false;
+
+    if (analyticsToggle) {
+      analyticsToggle.checked = !!saved.analytics;
+    }
+
+    if (marketingToggle) {
+      marketingToggle.checked = !!saved.marketing;
+    }
+
+    return true;
+  };
+
+  planetButton.addEventListener("click", () => {
+    applySavedConsentToToggles();
+    openBanner();
+  });
+
+  closeButton?.addEventListener("click", () => {
+    closeBanner();
+  });
+
+  rejectButton?.addEventListener("click", () => {
+    if (analyticsToggle) analyticsToggle.checked = false;
+    if (marketingToggle) marketingToggle.checked = false;
+
+    saveConsent({
+      analytics: false,
+      marketing: false
+    });
+
+    closeBanner();
+  });
+
+  saveButton?.addEventListener("click", () => {
+    saveConsent({
+      analytics: analyticsToggle?.checked || false,
+      marketing: marketingToggle?.checked || false
+    });
+
+    closeBanner();
+  });
+
+  acceptButton?.addEventListener("click", () => {
+    if (analyticsToggle) analyticsToggle.checked = true;
+    if (marketingToggle) marketingToggle.checked = true;
+
+    saveConsent({
+      analytics: true,
+      marketing: true
+    });
+
+    closeBanner();
+  });
+
+  banner.addEventListener("click", (event) => {
+    if (event.target === banner) {
+      closeBanner();
+    }
+  });
+
+  const hasSavedConsent = applySavedConsentToToggles();
+
+  if (!hasSavedConsent) {
+    setTimeout(() => {
+      openBanner();
+    }, 350);
+  } else {
+    closeBanner();
+  }
+});
