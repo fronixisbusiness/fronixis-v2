@@ -723,6 +723,34 @@ input {
     height: 13px;
   }
 }
+.cookie-tooltip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: rgba(12, 15, 28, 0.96);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.cookie-planet:hover .cookie-tooltip,
+.cookie-planet:focus-visible .cookie-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(-3px);
+}
+
 /* COOKIE PRIVACY MODAL */
 
 .cookie-modal {
