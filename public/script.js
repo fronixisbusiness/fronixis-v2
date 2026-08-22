@@ -133,18 +133,18 @@ const loadGoogleAnalytics = () => {
       })
     );
 
-    window.dispatchEvent(
-      new CustomEvent("fronixis-consent-updated", {
-        detail: {
-          necessary: true,
-          analytics: !!consent.analytics,
-          marketing: !!consent.marketing,
-          affiliate: !!consent.marketing
-        }
-      })
-    );
-  };
-  if (consent.analytics) {
+   window.dispatchEvent(
+  new CustomEvent("fronixis-consent-updated", {
+    detail: {
+      necessary: true,
+      analytics: !!consent.analytics,
+      marketing: !!consent.marketing,
+      affiliate: !!consent.marketing
+    }
+  })
+);
+
+if (consent.analytics) {
   loadGoogleAnalytics();
 } else if (window.gtag) {
   gtag("consent", "update", {
@@ -152,7 +152,9 @@ const loadGoogleAnalytics = () => {
   });
 }
 
-  const applySavedConsentToToggles = () => {
+};
+
+const applySavedConsentToToggles = () => {
     const saved = getSavedConsent();
 
     if (!saved) return false;
