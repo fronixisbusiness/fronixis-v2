@@ -78,7 +78,7 @@ const loadGoogleAnalytics = () => {
   window.dataLayer = window.dataLayer || [];
 
   window.gtag = function () {
-    dataLayer.push(arguments);
+    window.dataLayer.push(arguments);
   };
 
   gtag("consent", "default", {
