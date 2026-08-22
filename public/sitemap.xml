@@ -5,7 +5,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
 
-  <!-- HOMEPAGES -->
+  <!-- =====================================================
+       HOMEPAGES
+  ====================================================== -->
 
   <url>
     <loc>https://fronixis.com/</loc>
@@ -38,166 +40,176 @@
   </url>
 
 
-  <!-- ABOUT -->
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
 
   <url>
-    <loc>https://fronixis.com/ueber-fronixis.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis.html" />
+    <loc>https://fronixis.com/ueber-fronixis</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/en/about-fronixis.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis.html" />
+    <loc>https://fronixis.com/en/about-fronixis</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/fr/a-propos.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis.html" />
+    <loc>https://fronixis.com/fr/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/ueber-fronixis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/about-fronixis" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/a-propos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/ueber-fronixis" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
 
-  <!-- CONTACT -->
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
 
   <url>
-    <loc>https://fronixis.com/kontakt.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt.html" />
+    <loc>https://fronixis.com/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt.html" />
+    <loc>https://fronixis.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/fr/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt.html" />
+    <loc>https://fronixis.com/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/kontakt" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
 
-  <!-- AFFILIATE DISCLOSURE -->
+  <!-- =====================================================
+       AFFILIATE DISCLOSURE
+  ====================================================== -->
 
   <url>
-    <loc>https://fronixis.com/affiliate-hinweis.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis.html" />
+    <loc>https://fronixis.com/affiliate-hinweis</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/en/affiliate-disclosure.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis.html" />
+    <loc>https://fronixis.com/en/affiliate-disclosure</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/fr/affiliation.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis.html" />
+    <loc>https://fronixis.com/fr/affiliation</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/affiliate-hinweis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/affiliate-disclosure" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/affiliation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/affiliate-hinweis" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
 
-  <!-- LEGAL -->
+  <!-- =====================================================
+       LEGAL
+  ====================================================== -->
 
   <url>
-    <loc>https://fronixis.com/impressum.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum.html" />
+    <loc>https://fronixis.com/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/en/legal-notice.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum.html" />
+    <loc>https://fronixis.com/en/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/fr/mentions-legales.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum.html" />
+    <loc>https://fronixis.com/fr/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/legal-notice" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/mentions-legales" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/impressum" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
 
-  <!-- PRIVACY -->
+  <!-- =====================================================
+       PRIVACY
+  ====================================================== -->
 
   <url>
-    <loc>https://fronixis.com/datenschutz.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz.html" />
+    <loc>https://fronixis.com/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz.html" />
+    <loc>https://fronixis.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://fronixis.com/fr/confidentialite.html</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz.html" />
+    <loc>https://fronixis.com/fr/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://fronixis.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://fronixis.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fronixis.com/fr/confidentialite" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fronixis.com/datenschutz" />
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
