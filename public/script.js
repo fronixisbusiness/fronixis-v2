@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* =========================================================
+     NEWSLETTER
+  ========================================================= */
+
   const newsletterForm = document.querySelector(".newsletter-form");
 
   if (newsletterForm) {
@@ -6,20 +10,25 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       const emailInput = newsletterForm.querySelector('input[type="email"]');
-      const email = emailInput ? emailInput.value.trim() : "";
+      const email = emailInput?.value.trim() || "";
 
       if (!email) {
         alert("Bitte gib zuerst deine E-Mail-Adresse ein.");
         return;
       }
 
-      alert("Danke! Der Newsletter wird später mit einem echten E-Mail-Dienst verbunden.");
+      alert(
+        "Danke! Der Newsletter wird später mit einem echten E-Mail-Dienst verbunden."
+      );
 
-      if (emailInput) {
-        emailInput.value = "";
-      }
+      emailInput.value = "";
     });
   }
+
+
+  /* =========================================================
+     INTERNE LINKS / SMOOTH SCROLL
+  ========================================================= */
 
   const internalLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -32,23 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const target = document.querySelector(targetId);
+      const elementId = targetId.slice(1);
+      const target = document.getElementById(elementId);
 
-      if (target) {
-        event.preventDefault();
+      if (!target) return;
 
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
   });
-});
 
-// COOKIE CONSENT
 
-document.addEventListener("DOMContentLoaded", () => {
+  /* =========================================================
+     COOKIE CONSENT
+  ========================================================= */
 
   const banner = document.getElementById("cookie-banner");
   const planetButton = document.getElementById("cookie-planet");
@@ -63,46 +73,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!banner || !planetButton) return;
 
+
+  /* =========================================================
+     EINSTELLUNGEN
+  ========================================================= */
+
   const STORAGE_KEY = "fronixis-cookie-consent";
   const GA_MEASUREMENT_ID = "G-KSM56XTJBP";
-let googleAnalyticsLoaded = false;
 
-const loadGoogleAnalytics = () => {
-  if (googleAnalyticsLoaded) return;
+  let googleAnalyticsLoaded = false;
 
-  if (document.querySelector('script[data-fronixis-ga]')) {
-    googleAnalyticsLoaded = true;
-    return;
-  }
 
-  window.dataLayer = window.dataLayer || [];
+  /* =========================================================
+     GOOGLE ANALYTICS
+     Wird ausschließlich nach Analyse-Einwilligung geladen.
+  ========================================================= */
 
-  window.gtag = function () {
-    window.dataLayer.push(arguments);
+  const loadGoogleAnalytics = () => {
+    if (googleAnalyticsLoaded) return;
+
+    if (document.querySelector("script[data-fronixis-ga]")) {
+      googleAnalyticsLoaded = true;
+      return;
+    }
+
+    // GA wieder aktivieren, falls zuvor widerrufen
+    window[`ga-disable-${GA_MEASUREMENT_ID}`] = false;
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+
+    window.gtag("consent", "default", {
+      analytics_storage: "granted",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+
+    window.gtag("js", new Date());
+
+    window.gtag("config", GA_MEASUREMENT_ID, {
+      anonymize_ip: true
+    });
+
+    const script = document.createElement("script");
+
+    script.async = true;
+
+    script.src =
+      "https://www.googletagmanager.com/gtag/js?id=" +
+      encodeURIComponent(GA_MEASUREMENT_ID);
+
+    script.dataset.fronixisGa = "true";
+
+    script.addEventListener("load", () => {
+      googleAnalyticsLoaded = true;
+    });
+
+    script.addEventListener("error", () => {
+      console.error("Google Analytics konnte nicht geladen werden.");
+      googleAnalyticsLoaded = false;
+    });
+
+    document.head.appendChild(script);
   };
 
-  gtag("consent", "default", {
-    analytics_storage: "granted",
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied"
-  });
 
-  gtag("js", new Date());
-  gtag("config", GA_MEASUREMENT_ID);
+  const disableGoogleAnalytics = () => {
+    window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
 
-  const script = document.createElement("script");
-  script.async = true;
-  script.src =
-    "https://www.googletagmanager.com/gtag/js?id=" +
-    encodeURIComponent(GA_MEASUREMENT_ID);
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: "denied"
+      });
+    }
+  };
 
-  script.dataset.fronixisGa = "true";
 
-  document.head.appendChild(script);
-
-  googleAnalyticsLoaded = true;
-};
+  /* =========================================================
+     COOKIE MODAL
+  ========================================================= */
 
   const openBanner = () => {
     banner.hidden = false;
@@ -114,101 +167,118 @@ const loadGoogleAnalytics = () => {
     document.body.classList.remove("cookie-modal-open");
   };
 
+
+  /* =========================================================
+     CONSENT LESEN
+  ========================================================= */
+
   const getSavedConsent = () => {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY));
+      const rawConsent = localStorage.getItem(STORAGE_KEY);
+
+      if (!rawConsent) return null;
+
+      const saved = JSON.parse(rawConsent);
+
+      if (
+        !saved ||
+        typeof saved !== "object" ||
+        Array.isArray(saved)
+      ) {
+        return null;
+      }
+
+      return {
+        necessary: true,
+        analytics: saved.analytics === true,
+        marketing: saved.marketing === true,
+        updatedAt: saved.updatedAt || null
+      };
     } catch {
       return null;
     }
   };
 
+
+  /* =========================================================
+     CONSENT SPEICHERN
+  ========================================================= */
+
   const saveConsent = (consent) => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({
-        necessary: true,
-        analytics: !!consent.analytics,
-        marketing: !!consent.marketing,
-        updatedAt: new Date().toISOString()
+    const normalizedConsent = {
+      necessary: true,
+      analytics: consent.analytics === true,
+      marketing: consent.marketing === true,
+      updatedAt: new Date().toISOString()
+    };
+
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(normalizedConsent)
+      );
+    } catch (error) {
+      console.error(
+        "Cookie-Einstellungen konnten nicht gespeichert werden.",
+        error
+      );
+    }
+
+    window.dispatchEvent(
+      new CustomEvent("fronixis-consent-updated", {
+        detail: {
+          necessary: true,
+          analytics: normalizedConsent.analytics,
+          marketing: normalizedConsent.marketing,
+          affiliate: normalizedConsent.marketing
+        }
       })
     );
 
-   window.dispatchEvent(
-  new CustomEvent("fronixis-consent-updated", {
-    detail: {
-      necessary: true,
-      analytics: !!consent.analytics,
-      marketing: !!consent.marketing,
-      affiliate: !!consent.marketing
+    if (normalizedConsent.analytics) {
+      loadGoogleAnalytics();
+    } else {
+      disableGoogleAnalytics();
     }
-  })
-);
+  };
 
-if (consent.analytics) {
-  loadGoogleAnalytics();
-} else if (window.gtag) {
-  gtag("consent", "update", {
-    analytics_storage: "denied"
-  });
-}
 
-};
+  /* =========================================================
+     GESPEICHERTE EINSTELLUNGEN AUF SCHALTER ÜBERTRAGEN
+  ========================================================= */
 
-const applySavedConsentToToggles = () => {
+  const applySavedConsentToToggles = () => {
     const saved = getSavedConsent();
 
     if (!saved) return false;
 
     if (analyticsToggle) {
-      analyticsToggle.checked = !!saved.analytics;
+      analyticsToggle.checked = saved.analytics;
     }
 
     if (marketingToggle) {
-      marketingToggle.checked = !!saved.marketing;
+      marketingToggle.checked = saved.marketing;
     }
 
     return true;
   };
+
+
+  /* =========================================================
+     PLANET
+  ========================================================= */
 
   planetButton.addEventListener("click", () => {
     applySavedConsentToToggles();
     openBanner();
   });
 
+
+  /* =========================================================
+     SCHLIESSEN
+  ========================================================= */
+
   closeButton?.addEventListener("click", () => {
-    closeBanner();
-  });
-
-  rejectButton?.addEventListener("click", () => {
-    if (analyticsToggle) analyticsToggle.checked = false;
-    if (marketingToggle) marketingToggle.checked = false;
-
-    saveConsent({
-      analytics: false,
-      marketing: false
-    });
-
-    closeBanner();
-  });
-
-  saveButton?.addEventListener("click", () => {
-    saveConsent({
-      analytics: analyticsToggle?.checked || false,
-      marketing: marketingToggle?.checked || false
-    });
-
-    closeBanner();
-  });
-
-  acceptButton?.addEventListener("click", () => {
-    if (analyticsToggle) analyticsToggle.checked = true;
-    if (marketingToggle) marketingToggle.checked = true;
-
-    saveConsent({
-      analytics: true,
-      marketing: true
-    });
-
     closeBanner();
   });
 
@@ -218,18 +288,92 @@ const applySavedConsentToToggles = () => {
     }
   });
 
-const hasSavedConsent = applySavedConsentToToggles();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !banner.hidden) {
+      closeBanner();
+    }
+  });
 
-const savedConsent = getSavedConsent();
 
-if (savedConsent?.analytics) {
-  loadGoogleAnalytics();
-}
+  /* =========================================================
+     NUR NOTWENDIGE
+  ========================================================= */
 
-if (!hasSavedConsent) {
-  setTimeout(() => {
-    openBanner();
-  }, 350);
-} else {
-  closeBanner();
-}
+  rejectButton?.addEventListener("click", () => {
+    if (analyticsToggle) {
+      analyticsToggle.checked = false;
+    }
+
+    if (marketingToggle) {
+      marketingToggle.checked = false;
+    }
+
+    saveConsent({
+      analytics: false,
+      marketing: false
+    });
+
+    closeBanner();
+  });
+
+
+  /* =========================================================
+     AUSWAHL SPEICHERN
+  ========================================================= */
+
+  saveButton?.addEventListener("click", () => {
+    saveConsent({
+      analytics: analyticsToggle?.checked === true,
+      marketing: marketingToggle?.checked === true
+    });
+
+    closeBanner();
+  });
+
+
+  /* =========================================================
+     ALLE AKZEPTIEREN
+  ========================================================= */
+
+  acceptButton?.addEventListener("click", () => {
+    if (analyticsToggle) {
+      analyticsToggle.checked = true;
+    }
+
+    if (marketingToggle) {
+      marketingToggle.checked = true;
+    }
+
+    saveConsent({
+      analytics: true,
+      marketing: true
+    });
+
+    closeBanner();
+  });
+
+
+  /* =========================================================
+     STARTZUSTAND
+  ========================================================= */
+
+  // Standardmäßig Analytics deaktivieren.
+  window[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+
+  const hasSavedConsent = applySavedConsentToToggles();
+  const savedConsent = getSavedConsent();
+
+  if (savedConsent?.analytics === true) {
+    loadGoogleAnalytics();
+  } else {
+    disableGoogleAnalytics();
+  }
+
+  if (!hasSavedConsent) {
+    setTimeout(() => {
+      openBanner();
+    }, 350);
+  } else {
+    closeBanner();
+  }
+});
