@@ -5,8 +5,9 @@
 
    Compatible with:
    - existing Fronixis pages
-   - newer editorial / comparison pages
-   - old + new cookie consent markup
+   - editorial hub pages
+   - comparison pages
+   - old + new cookie markup
    ========================================================= */
 
 
@@ -199,7 +200,6 @@ main {
 
 /* =========================================================
    5. HEADER
-   Supports old and new markup
    ========================================================= */
 
 .site-header {
@@ -772,7 +772,7 @@ main {
 
 
 /* =========================================================
-   15. TYPOGRAPHY IN CONTENT
+   15. CONTENT TYPOGRAPHY
    ========================================================= */
 
 .feature-card h4 {
@@ -1062,7 +1062,66 @@ main {
 
 
 /* =========================================================
-   18. GUIDE BOX
+   18. SPECIAL FEATURE GRID VARIANTS
+   ========================================================= */
+
+/*
+ * 2 cards
+ * Example: "Weiterlesen"
+ */
+.feature-grid-2 {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+
+/*
+ * 5 cards
+ *
+ * Desktop:
+ *
+ * [ 1 ][ 2 ][ 3 ]
+ *    [ 4 ][ 5 ]
+ *
+ * Uses 6 virtual columns so the second
+ * row can be centered perfectly.
+ */
+.feature-grid-5 {
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+}
+
+.feature-grid-5 > * {
+  grid-column: span 2;
+}
+
+.feature-grid-5 > *:nth-child(4) {
+  grid-column:
+    2 / span 2;
+}
+
+.feature-grid-5 > *:nth-child(5) {
+  grid-column:
+    4 / span 2;
+}
+
+
+/*
+ * 8 cards
+ *
+ * Desktop:
+ *
+ * [1][2][3][4]
+ * [5][6][7][8]
+ */
+.feature-grid-8 {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   19. GUIDE BOX
    ========================================================= */
 
 .guide-box {
@@ -1107,7 +1166,7 @@ main {
 
 
 /* =========================================================
-   19. NEWSLETTER
+   20. NEWSLETTER
    ========================================================= */
 
 .newsletter {
@@ -1210,8 +1269,7 @@ main {
 
 
 /* =========================================================
-   20. FOOTER
-   Supports old and new markup
+   21. FOOTER
    ========================================================= */
 
 .footer,
@@ -1291,7 +1349,7 @@ main {
 
 
 /* =========================================================
-   21. FLOATING COOKIE PLANET
+   22. FLOATING COOKIE PLANET
    ========================================================= */
 
 .cookie-planet {
@@ -1421,7 +1479,7 @@ main {
 
 
 /* =========================================================
-   22. COOKIE TOOLTIP
+   23. COOKIE TOOLTIP
    ========================================================= */
 
 .cookie-tooltip {
@@ -1475,7 +1533,7 @@ main {
 
 
 /* =========================================================
-   23. COOKIE MODAL OUTER SHELL
+   24. COOKIE MODAL SHELL
    ========================================================= */
 
 .cookie-modal,
@@ -1509,16 +1567,11 @@ main {
   position: absolute;
 
   inset: 0;
-
-  cursor: default;
 }
 
 
 /* =========================================================
-   24. COOKIE MODAL CARD
-   Supports:
-   .cookie-modal-card
-   .cookie-modal-panel
+   25. COOKIE MODAL CARD
    ========================================================= */
 
 .cookie-modal-card,
@@ -1582,7 +1635,7 @@ main {
 
 
 /* =========================================================
-   25. COOKIE CLOSE
+   26. COOKIE CLOSE
    ========================================================= */
 
 .cookie-close,
@@ -1633,7 +1686,7 @@ main {
 
 
 /* =========================================================
-   26. COOKIE HEADER
+   27. COOKIE HEADER
    ========================================================= */
 
 .cookie-modal-header {
@@ -1702,7 +1755,7 @@ main {
 
 
 /* =========================================================
-   27. COOKIE OPTIONS CONTAINER
+   28. COOKIE OPTIONS
    ========================================================= */
 
 .cookie-options {
@@ -1710,14 +1763,6 @@ main {
 
   gap: 12px;
 }
-
-
-/* =========================================================
-   28. COOKIE OPTION
-   IMPORTANT:
-   Flexible layout instead of fixed 44px grid.
-   Works with old + new HTML.
-   ========================================================= */
 
 .cookie-option {
   position: relative;
@@ -1764,12 +1809,7 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   29. NEW SIMPLE COOKIE MARKUP
-   Example:
-   <div class="cookie-option">
-     <div>...</div>
-     <span>Immer aktiv</span>
-   </div>
+   29. SIMPLE COOKIE MARKUP
    ========================================================= */
 
 .cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) {
@@ -1818,7 +1858,7 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   30. LEGACY COOKIE OPTION MARKUP
+   30. LEGACY COOKIE MARKUP
    ========================================================= */
 
 .cookie-option-icon {
@@ -1877,8 +1917,7 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   31. SIMPLE NATIVE COOKIE CHECKBOX
-   Used by the new comparison page.
+   31. NATIVE COOKIE CHECKBOX
    ========================================================= */
 
 .cookie-option > input[type="checkbox"]:not(.cookie-toggle-input) {
@@ -1896,7 +1935,7 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   32. LEGACY CUSTOM COOKIE TOGGLE
+   32. CUSTOM COOKIE TOGGLE
    ========================================================= */
 
 .cookie-toggle-input {
@@ -2011,7 +2050,6 @@ label.cookie-option:hover {
 
 /* =========================================================
    34. COOKIE ACTIONS
-   Supports cookie-button and global .button classes
    ========================================================= */
 
 .cookie-actions {
@@ -2113,6 +2151,15 @@ body.cookie-modal-open {
   .main-nav a {
     font-size: 0.87rem;
   }
+
+  /*
+   * 8-card methodology becomes 2 columns
+   * before the rest of the site reaches mobile.
+   */
+  .feature-grid-8 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
 }
 
 
@@ -2140,6 +2187,23 @@ body.cookie-modal-open {
       repeat(2, minmax(0, 1fr));
   }
 
+  /*
+   * Special layouts become normal
+   * two-column tablet grids.
+   */
+  .feature-grid-2,
+  .feature-grid-5,
+  .feature-grid-8 {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-grid-5 > *,
+  .feature-grid-5 > *:nth-child(4),
+  .feature-grid-5 > *:nth-child(5) {
+    grid-column: auto;
+  }
+
   .newsletter-inner {
     grid-template-columns: 1fr;
 
@@ -2155,7 +2219,7 @@ body.cookie-modal-open {
 
 
 /* =========================================================
-   38. TABLET COOKIE
+   38. COOKIE TABLET
    ========================================================= */
 
 @media (max-width: 820px) {
@@ -2295,8 +2359,17 @@ body.cookie-modal-open {
   }
 
   .category-grid,
-  .feature-grid {
+  .feature-grid,
+  .feature-grid-2,
+  .feature-grid-5,
+  .feature-grid-8 {
     grid-template-columns: 1fr;
+  }
+
+  .feature-grid-5 > *,
+  .feature-grid-5 > *:nth-child(4),
+  .feature-grid-5 > *:nth-child(5) {
+    grid-column: auto;
   }
 
   .category-card {
@@ -2455,10 +2528,6 @@ body.cookie-modal-open {
       18px;
   }
 
-  /*
-   * On very narrow devices the option may wrap,
-   * but never collapses the text into a tiny column.
-   */
   .cookie-option {
     flex-wrap: wrap;
 
