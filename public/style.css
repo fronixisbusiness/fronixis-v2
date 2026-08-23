@@ -2584,3 +2584,235 @@ body.cookie-modal-open {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================
+   ARTICLE / GUIDE PAGES
+========================================= */
+
+.article-hero {
+  padding: 90px 0 65px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(188, 77, 255, 0.16), transparent 35%),
+    radial-gradient(circle at 85% 20%, rgba(0, 210, 255, 0.10), transparent 35%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.article-hero .container {
+  max-width: 1050px;
+}
+
+.article-hero .eyebrow,
+.product-recommendation .eyebrow {
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #49d9ff;
+}
+
+.article-hero h1 {
+  max-width: 900px;
+  margin: 0 0 24px;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.article-intro {
+  max-width: 800px;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   ARTICLE CONTENT
+========================================= */
+
+.article-section {
+  padding: 70px 0 100px;
+}
+
+.article-container {
+  max-width: 900px;
+}
+
+.article-container h2 {
+  margin-top: 56px;
+  margin-bottom: 18px;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.2;
+}
+
+.article-container p {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.article-container ul {
+  margin: 24px 0 35px;
+  padding: 0;
+  list-style: none;
+}
+
+.article-container li {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 30px;
+  font-size: 1.03rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.article-container li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #49d9ff;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   AFFILIATE NOTICE
+========================================= */
+
+.affiliate-disclosure {
+  margin-bottom: 50px;
+  padding: 22px 26px;
+  border: 1px solid rgba(73, 217, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(73, 217, 255, 0.06);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.affiliate-disclosure strong {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   PRODUCT RECOMMENDATION
+========================================= */
+
+.product-recommendation {
+  position: relative;
+  margin: 65px 0;
+  padding: 42px;
+  overflow: hidden;
+  border: 1px solid rgba(188, 77, 255, 0.25);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(188, 77, 255, 0.12),
+      rgba(73, 217, 255, 0.07)
+    );
+}
+
+.product-recommendation::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: -100px;
+  right: -80px;
+  border-radius: 50%;
+  background: rgba(188, 77, 255, 0.16);
+  filter: blur(45px);
+}
+
+.product-recommendation h2 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.product-recommendation p {
+  position: relative;
+}
+
+
+/* =========================================
+   AFFILIATE BUTTON
+========================================= */
+
+.affiliate-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 15px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #bf4dff, #4bdcff);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.affiliate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(188, 77, 255, 0.25);
+}
+
+.affiliate-note {
+  margin-top: 14px !important;
+  font-size: 0.83rem !important;
+  color: rgba(255, 255, 255, 0.48) !important;
+}
+
+
+/* =========================================
+   ARTICLE FOOTER
+========================================= */
+
+.article-section + .site-footer {
+  margin-top: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .article-hero {
+    padding: 65px 0 45px;
+  }
+
+  .article-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .article-intro {
+    font-size: 1rem;
+  }
+
+  .article-section {
+    padding: 45px 0 70px;
+  }
+
+  .product-recommendation {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .affiliate-button {
+    width: 100%;
+  }
+
+}
