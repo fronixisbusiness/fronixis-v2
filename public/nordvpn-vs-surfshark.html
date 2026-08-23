@@ -1076,20 +1076,22 @@
         <div class="feedback-votes">
 
           <button
-            type="button"
-            class="feedback-button"
-            data-feedback="helpful"
-          >
-            👍 Ja
-          </button>
+  type="button"
+  class="feedback-button"
+  data-feedback="helpful"
+  aria-pressed="false"
+>
+  👍 Ja
+</button>
 
-          <button
-            type="button"
-            class="feedback-button"
-            data-feedback="not-helpful"
-          >
-            👎 Noch nicht
-          </button>
+         <button
+  type="button"
+  class="feedback-button"
+  data-feedback="not-helpful"
+  aria-pressed="false"
+>
+  👎 Noch nicht
+</button>
 
         </div>
 
@@ -1296,6 +1298,95 @@
     </div>
 
   </footer>
+
+    </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const feedbackButtons = document.querySelectorAll(".feedback-button");
+      const feedbackSendButton = document.querySelector(
+        '.feedback-actions a.button-primary'
+      );
+
+      const openQuestion = document.getElementById("open-question");
+      const nextComparison = document.getElementById("next-comparison");
+      const feedbackStatus = document.querySelector(".feedback-status");
+
+      let selectedFeedback = "";
+
+      feedbackButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          feedbackButtons.forEach((item) => {
+            item.classList.remove("is-selected");
+            item.setAttribute("aria-pressed", "false");
+          });
+
+          button.classList.add("is-selected");
+          button.setAttribute("aria-pressed", "true");
+
+          if (button.dataset.feedback === "helpful") {
+            selectedFeedback = "Ja, der Artikel war hilfreich.";
+          } else {
+            selectedFeedback = "Der Artikel war noch nicht ausreichend hilfreich.";
+          }
+
+          if (feedbackStatus) {
+            feedbackStatus.textContent =
+              "Danke. Deine Bewertung wurde für die Nachricht übernommen.";
+          }
+        });
+      });
+
+      if (feedbackSendButton) {
+        feedbackSendButton.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const question =
+            openQuestion && openQuestion.value.trim()
+              ? openQuestion.value.trim()
+              : "Keine offene Frage angegeben.";
+
+          const comparison =
+            nextComparison && nextComparison.value.trim()
+              ? nextComparison.value.trim()
+              : "Kein Vergleich vorgeschlagen.";
+
+          const rating =
+            selectedFeedback || "Keine Bewertung abgegeben.";
+
+          const subject =
+            "Feedback zu NordVPN vs. Surfshark | Fronixis";
+
+          const body = [
+            "Hallo Fronixis,",
+            "",
+            "ich möchte Feedback zum Artikel „NordVPN vs. Surfshark“ geben.",
+            "",
+            "Bewertung:",
+            rating,
+            "",
+            "Noch offene Frage:",
+            question,
+            "",
+            "Gewünschter nächster Vergleich:",
+            comparison,
+            "",
+            "Seite:",
+            window.location.href
+          ].join("\n");
+
+          const mailtoLink =
+            "mailto:kontakt@fronixis.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+
+          window.location.href = mailtoLink;
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
