@@ -1,6 +1,12 @@
 /* =========================================================
    FRONIXIS
    Global Styles
+   Version: 2026-08-23
+
+   Compatible with:
+   - existing Fronixis pages
+   - newer editorial / comparison pages
+   - old + new cookie consent markup
    ========================================================= */
 
 
@@ -11,12 +17,14 @@
 :root {
   --bg: #070912;
   --bg-soft: #0d1020;
+  --bg-elevated: #111527;
 
-  --card: rgba(18, 22, 42, 0.72);
-  --card-strong: rgba(24, 29, 56, 0.95);
+  --card: rgba(18, 22, 42, 0.74);
+  --card-strong: rgba(24, 29, 56, 0.96);
 
   --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(139, 92, 246, 0.35);
+  --border-strong: rgba(255, 255, 255, 0.13);
+  --border-hover: rgba(139, 92, 246, 0.38);
 
   --text: #f7f8ff;
   --muted: #a6acc7;
@@ -26,6 +34,9 @@
   --magenta: #d946ef;
   --cyan: #22d3ee;
 
+  --success: #4ade80;
+  --warning: #fbbf24;
+
   --gradient:
     linear-gradient(
       135deg,
@@ -34,16 +45,29 @@
       var(--cyan)
     );
 
+  --gradient-soft:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.16),
+      rgba(217, 70, 239, 0.08),
+      rgba(34, 211, 238, 0.07)
+    );
+
   --shadow:
     0 25px 80px rgba(0, 0, 0, 0.35);
 
   --shadow-soft:
     0 14px 40px rgba(0, 0, 0, 0.25);
 
+  --shadow-modal:
+    0 30px 100px rgba(0, 0, 0, 0.58);
+
   --radius-small: 12px;
   --radius-medium: 18px;
   --radius-large: 24px;
   --radius-xl: 28px;
+
+  --container: 1180px;
 
   --transition: 0.25s ease;
 }
@@ -56,14 +80,14 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 95px;
+  scroll-padding-top: 96px;
 }
 
 body {
@@ -89,7 +113,7 @@ body {
 
   color: var(--text);
 
-  line-height: 1.6;
+  line-height: 1.65;
 
   overflow-x: hidden;
 
@@ -126,6 +150,15 @@ button {
   color: inherit;
 }
 
+ul,
+ol {
+  padding-left: 1.3rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
 
 /* =========================================================
    3. ACCESSIBILITY
@@ -141,8 +174,8 @@ select:focus-visible {
 }
 
 ::selection {
-  color: white;
-  background: rgba(139, 92, 246, 0.7);
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.72);
 }
 
 
@@ -151,29 +184,41 @@ select:focus-visible {
    ========================================================= */
 
 .container {
-  width: min(1180px, calc(100% - 40px));
+  width: min(
+    var(--container),
+    calc(100% - 40px)
+  );
+
   margin-inline: auto;
+}
+
+main {
+  min-width: 0;
 }
 
 
 /* =========================================================
    5. HEADER
+   Supports old and new markup
    ========================================================= */
 
 .site-header {
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
-  background: rgba(7, 9, 18, 0.78);
+  background: rgba(7, 9, 18, 0.8);
+
+  border-bottom: 1px solid var(--border);
 
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-
-  border-bottom: 1px solid var(--border);
 }
 
-.navigation {
+.navigation,
+.header-inner {
   min-height: 78px;
 
   display: flex;
@@ -182,12 +227,20 @@ select:focus-visible {
   gap: 24px;
 }
 
-.logo {
+
+/* =========================================================
+   6. BRAND / LOGO
+   ========================================================= */
+
+.logo,
+.brand,
+.brand-name {
   flex-shrink: 0;
 
   font-size: 1.25rem;
   font-weight: 900;
-  letter-spacing: 0.18em;
+
+  letter-spacing: 0.16em;
 
   background: var(--gradient);
 
@@ -201,17 +254,20 @@ select:focus-visible {
     transform var(--transition);
 }
 
-.logo:hover {
+.logo:hover,
+.brand:hover {
   opacity: 0.88;
+
   transform: translateY(-1px);
 }
 
 
 /* =========================================================
-   6. DESKTOP NAVIGATION
+   7. DESKTOP NAVIGATION
    ========================================================= */
 
-.desktop-nav {
+.desktop-nav,
+.main-nav {
   margin-left: auto;
 
   display: flex;
@@ -220,7 +276,8 @@ select:focus-visible {
   gap: 26px;
 }
 
-.desktop-nav a {
+.desktop-nav a,
+.main-nav a {
   position: relative;
 
   padding: 8px 0;
@@ -237,7 +294,8 @@ select:focus-visible {
     opacity var(--transition);
 }
 
-.desktop-nav a::after {
+.desktop-nav a::after,
+.main-nav a::after {
   content: "";
 
   position: absolute;
@@ -253,17 +311,19 @@ select:focus-visible {
   transition: right var(--transition);
 }
 
-.desktop-nav a:hover {
+.desktop-nav a:hover,
+.main-nav a:hover {
   color: var(--text);
 }
 
-.desktop-nav a:hover::after {
+.desktop-nav a:hover::after,
+.main-nav a:hover::after {
   right: 0;
 }
 
 
 /* =========================================================
-   7. LANGUAGE SWITCHER
+   8. LANGUAGE SWITCHER
    ========================================================= */
 
 .language-switcher {
@@ -299,6 +359,7 @@ select:focus-visible {
 
   font-size: 0.68rem;
   font-weight: 800;
+
   letter-spacing: 0.07em;
 
   transition:
@@ -319,19 +380,19 @@ select:focus-visible {
 .language-switcher a[aria-current="page"] {
   color: white;
 
-  border-color: rgba(139, 92, 246, 0.28);
+  border-color: rgba(139, 92, 246, 0.3);
 
   background:
     linear-gradient(
       135deg,
-      rgba(139, 92, 246, 0.2),
-      rgba(217, 70, 239, 0.12)
+      rgba(139, 92, 246, 0.22),
+      rgba(217, 70, 239, 0.13)
     );
 }
 
 
 /* =========================================================
-   8. HEADER CTA
+   9. HEADER CTA
    ========================================================= */
 
 .nav-button {
@@ -350,8 +411,8 @@ select:focus-visible {
 
   background: rgba(139, 92, 246, 0.1);
 
-  font-weight: 700;
   font-size: 0.9rem;
+  font-weight: 700;
 
   transition:
     background var(--transition),
@@ -369,13 +430,13 @@ select:focus-visible {
 
 
 /* =========================================================
-   9. HERO
+   10. HERO
    ========================================================= */
 
 .hero {
   position: relative;
 
-  min-height: 86vh;
+  min-height: 70vh;
 
   display: flex;
   align-items: center;
@@ -387,9 +448,14 @@ select:focus-visible {
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   max-width: 940px;
+}
+
+.hero .section-heading {
+  max-width: 960px;
 }
 
 .hero-badge {
@@ -409,19 +475,26 @@ select:focus-visible {
 
   font-size: 0.78rem;
   font-weight: 700;
+
   letter-spacing: 0.18em;
 }
 
-.hero h1 {
+.hero h1,
+.section-heading h1 {
   max-width: 1000px;
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 
-  font-size: clamp(3rem, 8vw, 6.6rem);
+  font-size:
+    clamp(
+      2.65rem,
+      7vw,
+      5.8rem
+    );
 
-  line-height: 0.98;
+  line-height: 1.02;
 
-  letter-spacing: -0.055em;
+  letter-spacing: -0.05em;
 
   overflow-wrap: break-word;
 }
@@ -430,8 +503,6 @@ select:focus-visible {
 .section-heading h1 span,
 .section-heading h2 span,
 .guide-box h2 span {
-  display: block;
-
   background: var(--gradient);
 
   -webkit-background-clip: text;
@@ -440,28 +511,45 @@ select:focus-visible {
   color: transparent;
 }
 
-.hero-text {
-  max-width: 720px;
-
-  margin-bottom: 34px;
+.hero-text,
+.lead {
+  max-width: 760px;
 
   color: var(--muted);
 
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size:
+    clamp(
+      1.05rem,
+      2vw,
+      1.25rem
+    );
 }
 
-.hero-buttons {
+.hero-text {
+  margin-bottom: 34px;
+}
+
+.lead {
+  margin-bottom: 20px;
+}
+
+.hero p + p {
+  margin-top: 14px;
+}
+
+.hero-buttons,
+.button-row {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 16px;
+  gap: 14px;
 
-  margin-bottom: 58px;
+  margin-top: 30px;
 }
 
 
 /* =========================================================
-   10. BUTTONS
+   11. BUTTONS
    ========================================================= */
 
 .button {
@@ -473,7 +561,10 @@ select:focus-visible {
 
   padding: 0 24px;
 
+  border: 1px solid transparent;
   border-radius: 14px;
+
+  cursor: pointer;
 
   font-weight: 700;
 
@@ -483,13 +574,14 @@ select:focus-visible {
     transform var(--transition),
     background var(--transition),
     box-shadow var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    filter var(--transition);
 }
 
 .button-primary {
   background: var(--gradient);
 
-  color: white;
+  color: #ffffff;
 
   box-shadow:
     0 18px 50px rgba(139, 92, 246, 0.22);
@@ -498,18 +590,22 @@ select:focus-visible {
 .button-primary:hover {
   transform: translateY(-2px);
 
+  filter: brightness(1.06);
+
   box-shadow:
     0 24px 70px rgba(217, 70, 239, 0.28);
 }
 
 .button-secondary {
-  border: 1px solid var(--border);
+  border-color: var(--border);
 
   background: rgba(255, 255, 255, 0.035);
+
+  color: var(--text);
 }
 
 .button-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.15);
 
   background: rgba(255, 255, 255, 0.07);
 
@@ -518,7 +614,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   11. HERO STATS
+   12. HERO STATS
    ========================================================= */
 
 .hero-stats {
@@ -530,6 +626,8 @@ select:focus-visible {
     repeat(3, minmax(0, 1fr));
 
   gap: 16px;
+
+  margin-top: 54px;
 }
 
 .hero-stats div {
@@ -564,7 +662,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   12. HERO GLOWS
+   13. HERO GLOWS
    ========================================================= */
 
 .hero-glow {
@@ -601,29 +699,29 @@ select:focus-visible {
 
 
 /* =========================================================
-   13. SECTIONS
+   14. SECTIONS
    ========================================================= */
 
 .section {
-  padding: 110px 0;
+  padding: 105px 0;
 }
 
 .section-dark {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
   background:
     linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.015),
       rgba(255, 255, 255, 0.03)
     );
-
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .section-heading {
-  max-width: 760px;
+  max-width: 780px;
 
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 }
 
 .eyebrow {
@@ -636,31 +734,9 @@ select:focus-visible {
   font-size: 0.78rem;
   font-weight: 800;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.19em;
 
   overflow-wrap: anywhere;
-}
-
-
-/* =========================================================
-   14. PAGE TITLES
-   ========================================================= */
-
-.section-heading h1 {
-  margin-bottom: 20px;
-
-  font-size:
-    clamp(
-      2.6rem,
-      6vw,
-      5rem
-    );
-
-  line-height: 1.02;
-
-  letter-spacing: -0.045em;
-
-  overflow-wrap: break-word;
 }
 
 .section-heading h2,
@@ -670,12 +746,12 @@ select:focus-visible {
 
   font-size:
     clamp(
-      2.1rem,
+      2.05rem,
       5vw,
-      4.2rem
+      4rem
     );
 
-  line-height: 1.05;
+  line-height: 1.06;
 
   letter-spacing: -0.04em;
 
@@ -685,18 +761,49 @@ select:focus-visible {
 .section-heading p,
 .guide-box p,
 .newsletter p {
-  max-width: 680px;
+  max-width: 720px;
 
   color: var(--muted);
 }
 
 .section-heading p {
-  font-size: 1.03rem;
+  font-size: 1.04rem;
 }
 
 
 /* =========================================================
-   15. CATEGORY GRID
+   15. TYPOGRAPHY IN CONTENT
+   ========================================================= */
+
+.feature-card h4 {
+  margin:
+    10px
+    0
+    10px;
+
+  font-size: 1rem;
+
+  color: var(--text);
+}
+
+.feature-card ul,
+.feature-card ol {
+  margin-bottom: 24px;
+
+  color: var(--muted);
+}
+
+.feature-card li {
+  padding-left: 2px;
+}
+
+.feature-card strong {
+  color: var(--text);
+}
+
+
+/* =========================================================
+   16. CATEGORY GRID
    ========================================================= */
 
 .category-grid {
@@ -754,6 +861,7 @@ select:focus-visible {
 
 .category-card > * {
   position: relative;
+
   z-index: 1;
 }
 
@@ -762,7 +870,7 @@ select:focus-visible {
 
   border-color: var(--border-hover);
 
-  background: rgba(20, 25, 48, 0.82);
+  background: rgba(20, 25, 48, 0.84);
 }
 
 .category-icon {
@@ -842,7 +950,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   16. FEATURE GRID
+   17. FEATURE GRID
    ========================================================= */
 
 .feature-grid {
@@ -852,6 +960,11 @@ select:focus-visible {
     repeat(3, minmax(0, 1fr));
 
   gap: 20px;
+}
+
+.feature-grid + .feature-card,
+.feature-card + .feature-card {
+  margin-top: 22px;
 }
 
 .feature-card {
@@ -880,9 +993,9 @@ select:focus-visible {
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 
-  border-color: rgba(34, 211, 238, 0.35);
+  border-color: rgba(34, 211, 238, 0.3);
 
   box-shadow: var(--shadow-soft);
 }
@@ -890,7 +1003,7 @@ select:focus-visible {
 .feature-label {
   display: inline-block;
 
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 
   color: var(--magenta);
 
@@ -908,13 +1021,13 @@ select:focus-visible {
 
   font-size: 1.5rem;
 
-  line-height: 1.2;
+  line-height: 1.22;
 
   overflow-wrap: break-word;
 }
 
 .feature-card p {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   color: var(--muted);
 }
@@ -923,11 +1036,15 @@ select:focus-visible {
   margin-bottom: 0;
 }
 
-.feature-card a {
+.feature-card > .button {
   margin-top: auto;
 
   align-self: flex-start;
 
+  color: inherit;
+}
+
+.feature-card a:not(.button) {
   color: var(--cyan);
 
   font-weight: 700;
@@ -939,15 +1056,13 @@ select:focus-visible {
     transform var(--transition);
 }
 
-.feature-card a:hover {
+.feature-card a:not(.button):hover {
   color: white;
-
-  transform: translateX(3px);
 }
 
 
 /* =========================================================
-   17. GUIDE BOX
+   18. GUIDE BOX
    ========================================================= */
 
 .guide-box {
@@ -992,7 +1107,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   18. NEWSLETTER
+   19. NEWSLETTER
    ========================================================= */
 
 .newsletter {
@@ -1054,6 +1169,7 @@ select:focus-visible {
   padding: 0 14px;
 
   border: 0;
+
   outline: 0;
 
   background: transparent;
@@ -1094,16 +1210,19 @@ select:focus-visible {
 
 
 /* =========================================================
-   19. FOOTER
+   20. FOOTER
+   Supports old and new markup
    ========================================================= */
 
-.footer {
+.footer,
+.site-footer {
   padding: 54px 0 30px;
 
   border-top: 1px solid var(--border);
 }
 
-.footer-grid {
+.footer-grid,
+.footer-inner {
   display: flex;
 
   justify-content: space-between;
@@ -1112,34 +1231,47 @@ select:focus-visible {
   gap: 40px;
 }
 
-.footer-grid p {
+.footer-grid p,
+.footer-inner p {
   margin-top: 12px;
 
   color: var(--muted);
 }
 
-.footer-links {
-  max-width: 650px;
+.footer-links,
+.footer-nav {
+  max-width: 700px;
 
   display: flex;
   flex-wrap: wrap;
 
   justify-content: flex-end;
+  align-items: center;
 
   gap: 14px 20px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-nav a,
+.cookie-settings-link {
+  border: 0;
+
+  background: transparent;
+
   color: var(--muted);
 
   font-size: 0.9rem;
+
+  cursor: pointer;
 
   transition:
     color var(--transition),
     transform var(--transition);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-nav a:hover,
+.cookie-settings-link:hover {
   color: var(--text);
 
   transform: translateY(-1px);
@@ -1159,7 +1291,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   20. FLOATING COOKIE PLANET
+   21. FLOATING COOKIE PLANET
    ========================================================= */
 
 .cookie-planet {
@@ -1173,15 +1305,21 @@ select:focus-visible {
   width: 74px;
   height: 74px;
 
+  display: block;
+
   border: 0;
   border-radius: 50%;
 
   cursor: pointer;
 
+  color: transparent;
+
+  font-size: 0;
+
   background:
     radial-gradient(
       circle at 30% 26%,
-      rgba(255, 255, 255, 0.75) 0%,
+      rgba(255, 255, 255, 0.76) 0%,
       transparent 8%
     ),
     radial-gradient(
@@ -1266,13 +1404,7 @@ select:focus-visible {
   filter: brightness(1.08);
 }
 
-
-/* =========================================================
-   21. COOKIE PLANET ANIMATION
-   ========================================================= */
-
 @keyframes cookiePlanetFloat {
-
   0%,
   100% {
     transform:
@@ -1285,12 +1417,11 @@ select:focus-visible {
       translateY(-8px)
       rotate(2deg);
   }
-
 }
 
 
 /* =========================================================
-   22. COOKIE PLANET TOOLTIP
+   22. COOKIE TOOLTIP
    ========================================================= */
 
 .cookie-tooltip {
@@ -1344,10 +1475,11 @@ select:focus-visible {
 
 
 /* =========================================================
-   23. COOKIE MODAL
+   23. COOKIE MODAL OUTER SHELL
    ========================================================= */
 
-.cookie-modal {
+.cookie-modal,
+#cookie-banner {
   position: fixed;
 
   inset: 0;
@@ -1362,28 +1494,56 @@ select:focus-visible {
 
   padding: 24px;
 
-  background: rgba(4, 7, 18, 0.72);
+  background: rgba(4, 7, 18, 0.78);
 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
-.cookie-modal[hidden] {
+.cookie-modal[hidden],
+#cookie-banner[hidden] {
   display: none !important;
 }
 
-.cookie-modal-card {
+.cookie-modal-backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   24. COOKIE MODAL CARD
+   Supports:
+   .cookie-modal-card
+   .cookie-modal-panel
+   ========================================================= */
+
+.cookie-modal-card,
+.cookie-modal-panel {
   position: relative;
 
-  width: min(560px, 100%);
+  z-index: 1;
 
-  max-height: calc(100vh - 48px);
+  width: min(680px, 100%);
+
+  max-height:
+    min(
+      860px,
+      calc(100dvh - 48px)
+    );
 
   overflow-y: auto;
+  overflow-x: hidden;
 
-  padding: 28px;
+  padding: 30px;
 
-  border: 1px solid rgba(155, 92, 246, 0.48);
+  border:
+    1px solid
+    rgba(155, 92, 246, 0.48);
+
   border-radius: 24px;
 
   background:
@@ -1394,25 +1554,46 @@ select:focus-visible {
     ),
     linear-gradient(
       180deg,
-      rgba(15, 19, 35, 0.98),
-      rgba(8, 11, 22, 0.98)
+      rgba(15, 19, 35, 0.99),
+      rgba(8, 11, 22, 0.99)
     );
 
   box-shadow:
-    0 26px 70px rgba(0, 0, 0, 0.48),
+    var(--shadow-modal),
     0 0 40px rgba(148, 70, 246, 0.12);
+
+  scrollbar-width: thin;
+  scrollbar-color:
+    rgba(139, 92, 246, 0.55)
+    transparent;
+}
+
+.cookie-modal-card::-webkit-scrollbar,
+.cookie-modal-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cookie-modal-card::-webkit-scrollbar-thumb,
+.cookie-modal-panel::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+
+  border-radius: 999px;
 }
 
 
 /* =========================================================
-   24. COOKIE CLOSE
+   25. COOKIE CLOSE
    ========================================================= */
 
-.cookie-close {
+.cookie-close,
+.cookie-modal-close,
+#cookie-close {
   position: absolute;
 
   top: 18px;
   right: 18px;
+
+  z-index: 3;
 
   width: 38px;
   height: 38px;
@@ -1420,10 +1601,12 @@ select:focus-visible {
   display: grid;
   place-items: center;
 
+  padding: 0;
+
   border: 0;
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 
   color: var(--muted);
 
@@ -1438,17 +1621,19 @@ select:focus-visible {
     transform var(--transition);
 }
 
-.cookie-close:hover {
+.cookie-close:hover,
+.cookie-modal-close:hover,
+#cookie-close:hover {
   color: var(--text);
 
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.1);
 
-  transform: rotate(4deg);
+  transform: rotate(5deg);
 }
 
 
 /* =========================================================
-   25. COOKIE HEADER
+   26. COOKIE HEADER
    ========================================================= */
 
 .cookie-modal-header {
@@ -1457,7 +1642,7 @@ select:focus-visible {
 
   gap: 14px;
 
-  padding-right: 46px;
+  padding-right: 52px;
 }
 
 .cookie-shield {
@@ -1482,16 +1667,33 @@ select:focus-visible {
     inset 0 0 20px rgba(139, 92, 246, 0.08);
 }
 
-.cookie-modal-header h2 {
-  margin: 4px 0 0;
+.cookie-modal-header h2,
+.cookie-modal-card > h2,
+.cookie-modal-panel > h2 {
+  margin-bottom: 10px;
 
-  font-size: 1.65rem;
+  padding-right: 48px;
+
+  font-size:
+    clamp(
+      1.55rem,
+      4vw,
+      1.9rem
+    );
 
   line-height: 1.15;
 }
 
-.cookie-intro {
-  margin: 20px 0 22px;
+.cookie-modal-header h2 {
+  margin: 4px 0 0;
+
+  padding-right: 0;
+}
+
+.cookie-intro,
+.cookie-modal-card > h2 + p,
+.cookie-modal-panel > h2 + p {
+  margin-bottom: 22px;
 
   color: var(--muted);
 
@@ -1500,7 +1702,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   26. COOKIE OPTIONS
+   27. COOKIE OPTIONS CONTAINER
    ========================================================= */
 
 .cookie-options {
@@ -1509,28 +1711,40 @@ select:focus-visible {
   gap: 12px;
 }
 
+
+/* =========================================================
+   28. COOKIE OPTION
+   IMPORTANT:
+   Flexible layout instead of fixed 44px grid.
+   Works with old + new HTML.
+   ========================================================= */
+
 .cookie-option {
   position: relative;
 
-  display: grid;
+  width: 100%;
+  min-width: 0;
+  min-height: 78px;
 
-  grid-template-columns:
-    44px
-    minmax(0, 1fr)
-    auto;
-
+  display: flex;
   align-items: center;
 
   gap: 14px;
 
-  min-height: 72px;
+  margin-top: 12px;
 
-  padding: 14px 16px;
+  padding: 15px 17px;
 
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.03);
+
+  overflow: hidden;
+}
+
+.cookie-options .cookie-option {
+  margin-top: 0;
 }
 
 label.cookie-option {
@@ -1538,18 +1752,80 @@ label.cookie-option {
 
   transition:
     background var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    transform var(--transition);
 }
 
 label.cookie-option:hover {
-  border-color: rgba(139, 92, 246, 0.24);
+  border-color: rgba(139, 92, 246, 0.32);
 
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(139, 92, 246, 0.055);
 }
+
+
+/* =========================================================
+   29. NEW SIMPLE COOKIE MARKUP
+   Example:
+   <div class="cookie-option">
+     <div>...</div>
+     <span>Immer aktiv</span>
+   </div>
+   ========================================================= */
+
+.cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) {
+  flex: 1 1 auto;
+
+  min-width: 0;
+}
+
+.cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--text);
+
+  font-size: 0.98rem;
+
+  line-height: 1.35;
+}
+
+.cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 0.86rem;
+
+  line-height: 1.45;
+
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.cookie-option > span:not(.cookie-toggle) {
+  flex: 0 0 auto;
+
+  margin-left: auto;
+
+  color: #c084fc;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   30. LEGACY COOKIE OPTION MARKUP
+   ========================================================= */
 
 .cookie-option-icon {
   width: 40px;
   height: 40px;
+
+  flex: 0 0 40px;
 
   display: grid;
   place-items: center;
@@ -1564,6 +1840,8 @@ label.cookie-option:hover {
 }
 
 .cookie-option-text {
+  flex: 1 1 auto;
+
   min-width: 0;
 
   display: flex;
@@ -1587,15 +1865,38 @@ label.cookie-option:hover {
 }
 
 .cookie-required {
+  flex-shrink: 0;
+
   color: #c084fc;
 
-  font-size: 1.25rem;
+  font-size: 0.86rem;
   font-weight: 800;
+
+  white-space: nowrap;
 }
 
 
 /* =========================================================
-   27. COOKIE TOGGLE
+   31. SIMPLE NATIVE COOKIE CHECKBOX
+   Used by the new comparison page.
+   ========================================================= */
+
+.cookie-option > input[type="checkbox"]:not(.cookie-toggle-input) {
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  margin-left: auto;
+
+  accent-color: var(--violet);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   32. LEGACY CUSTOM COOKIE TOGGLE
    ========================================================= */
 
 .cookie-toggle-input {
@@ -1605,6 +1906,8 @@ label.cookie-option:hover {
   height: 1px;
 
   opacity: 0;
+
+  pointer-events: none;
 }
 
 .cookie-toggle {
@@ -1613,7 +1916,9 @@ label.cookie-option:hover {
   width: 48px;
   height: 28px;
 
-  flex-shrink: 0;
+  flex: 0 0 48px;
+
+  margin-left: auto;
 
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
@@ -1672,7 +1977,7 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   28. COOKIE LINKS
+   33. COOKIE LINKS
    ========================================================= */
 
 .cookie-links {
@@ -1682,7 +1987,7 @@ label.cookie-option:hover {
   flex-wrap: wrap;
   align-items: center;
 
-  gap: 7px;
+  gap: 8px 14px;
 
   color: var(--muted);
 
@@ -1705,7 +2010,8 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   29. COOKIE ACTIONS
+   34. COOKIE ACTIONS
+   Supports cookie-button and global .button classes
    ========================================================= */
 
 .cookie-actions {
@@ -1714,30 +2020,40 @@ label.cookie-option:hover {
   display: grid;
 
   grid-template-columns:
-    1fr
-    1fr
-    1.15fr;
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1.15fr);
 
   gap: 10px;
 }
 
+.cookie-actions .button,
 .cookie-button {
-  min-height: 46px;
+  width: 100%;
+
+  min-height: 48px;
 
   padding: 11px 14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 14px;
 
   cursor: pointer;
 
   font-weight: 700;
 
+  white-space: normal;
+
   transition:
     transform var(--transition),
     background var(--transition),
     filter var(--transition),
     border-color var(--transition);
+}
+
+.cookie-button {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
 }
 
 .cookie-secondary {
@@ -1770,33 +2086,43 @@ label.cookie-option:hover {
 
 
 /* =========================================================
-   30. TABLET
+   35. COOKIE BODY LOCK
    ========================================================= */
 
-@media (max-width: 1100px) {
-
-  .navigation {
-    gap: 16px;
-  }
-
-  .desktop-nav {
-    gap: 18px;
-  }
-
-  .desktop-nav a {
-    font-size: 0.87rem;
-  }
-
+body.cookie-modal-open {
+  overflow: hidden;
 }
 
 
 /* =========================================================
-   31. TABLET / SMALL DESKTOP
+   36. TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .navigation,
+  .header-inner {
+    gap: 16px;
+  }
+
+  .desktop-nav,
+  .main-nav {
+    gap: 18px;
+  }
+
+  .desktop-nav a,
+  .main-nav a {
+    font-size: 0.87rem;
+  }
+}
+
+
+/* =========================================================
+   37. SMALL DESKTOP / TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
-
-  .desktop-nav {
+  .desktop-nav,
+  .main-nav {
     display: none;
   }
 
@@ -1810,7 +2136,8 @@ label.cookie-option:hover {
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .newsletter-inner {
@@ -1824,21 +2151,49 @@ label.cookie-option:hover {
 
     align-items: flex-start;
   }
-
 }
 
 
 /* =========================================================
-   32. MOBILE
+   38. TABLET COOKIE
+   ========================================================= */
+
+@media (max-width: 820px) {
+  .cookie-planet {
+    right: 16px;
+    bottom: 16px;
+
+    width: 62px;
+    height: 62px;
+  }
+
+  .cookie-planet::before {
+    width: 88px;
+    height: 25px;
+  }
+
+  .cookie-planet::after {
+    width: 13px;
+    height: 13px;
+  }
+
+  .cookie-modal-card,
+  .cookie-modal-panel {
+    width: min(620px, 100%);
+  }
+}
+
+
+/* =========================================================
+   39. MOBILE
    ========================================================= */
 
 @media (max-width: 680px) {
-
   .container {
     width:
       min(
         calc(100% - 26px),
-        1180px
+        var(--container)
       );
   }
 
@@ -1846,16 +2201,19 @@ label.cookie-option:hover {
     scroll-padding-top: 80px;
   }
 
-  .navigation {
+  .navigation,
+  .header-inner {
     min-height: 68px;
 
     gap: 10px;
   }
 
-  .logo {
+  .logo,
+  .brand,
+  .brand-name {
     font-size: 1rem;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
   }
 
   .nav-button {
@@ -1880,7 +2238,7 @@ label.cookie-option:hover {
   .hero {
     min-height: auto;
 
-    padding: 86px 0 70px;
+    padding: 82px 0 68px;
   }
 
   .hero-badge {
@@ -1889,19 +2247,11 @@ label.cookie-option:hover {
     font-size: 0.68rem;
   }
 
-  .hero h1 {
-    font-size:
-      clamp(
-        2.7rem,
-        14vw,
-        3.8rem
-      );
-  }
-
+  .hero h1,
   .section-heading h1 {
     font-size:
       clamp(
-        2.35rem,
+        2.3rem,
         12vw,
         3.6rem
       );
@@ -1912,18 +2262,20 @@ label.cookie-option:hover {
   .newsletter h2 {
     font-size:
       clamp(
-        2rem,
+        1.95rem,
         10vw,
-        3rem
+        2.9rem
       );
   }
 
-  .hero-text {
+  .hero-text,
+  .lead {
     font-size: 1rem;
   }
 
-  .hero-buttons {
-    margin-bottom: 42px;
+  .hero-buttons,
+  .button-row {
+    flex-direction: column;
   }
 
   .button {
@@ -1935,14 +2287,15 @@ label.cookie-option:hover {
   }
 
   .section {
-    padding: 82px 0;
+    padding: 78px 0;
   }
 
   .section-heading {
     margin-bottom: 34px;
   }
 
-  .category-grid {
+  .category-grid,
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1953,7 +2306,7 @@ label.cookie-option:hover {
   .feature-card {
     min-height: auto;
 
-    padding: 26px;
+    padding: 25px;
   }
 
   .guide-box {
@@ -1963,7 +2316,7 @@ label.cookie-option:hover {
   }
 
   .newsletter {
-    padding: 74px 0;
+    padding: 72px 0;
   }
 
   .newsletter-form {
@@ -1974,58 +2327,40 @@ label.cookie-option:hover {
     width: 100%;
   }
 
-  .footer-grid {
+  .footer-grid,
+  .footer-inner {
     flex-direction: column;
   }
 
-  .footer-links {
+  .footer-links,
+  .footer-nav {
     justify-content: flex-start;
   }
-
 }
 
 
 /* =========================================================
-   33. COOKIE MOBILE
+   40. COOKIE MOBILE
    ========================================================= */
 
-@media (max-width: 820px) {
-
-  .cookie-planet {
-    right: 16px;
-    bottom: 16px;
-
-    width: 62px;
-    height: 62px;
-  }
-
-  .cookie-planet::before {
-    width: 88px;
-    height: 25px;
-  }
-
-  .cookie-planet::after {
-    width: 13px;
-    height: 13px;
-  }
-
-}
-
-
 @media (max-width: 640px) {
-
-  .cookie-modal {
+  .cookie-modal,
+  #cookie-banner {
     align-items: flex-end;
 
-    padding: 12px;
+    padding: 10px;
   }
 
-  .cookie-modal-card {
+  .cookie-modal-card,
+  .cookie-modal-panel {
     width: 100%;
 
-    max-height: calc(100dvh - 24px);
+    max-height:
+      calc(
+        100dvh - 20px
+      );
 
-    padding: 22px 18px;
+    padding: 24px 18px 20px;
 
     border-radius: 22px;
   }
@@ -2034,44 +2369,57 @@ label.cookie-option:hover {
     padding-right: 42px;
   }
 
-  .cookie-modal-header h2 {
+  .cookie-modal-header h2,
+  .cookie-modal-card > h2,
+  .cookie-modal-panel > h2 {
     font-size: 1.4rem;
+  }
+
+  .cookie-option {
+    min-height: 72px;
+
+    gap: 11px;
+
+    padding: 13px 14px;
+  }
+
+  .cookie-option-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) strong,
+  .cookie-option-text strong {
+    font-size: 0.93rem;
+  }
+
+  .cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle) p,
+  .cookie-option-text span {
+    font-size: 0.8rem;
+  }
+
+  .cookie-option > span:not(.cookie-toggle),
+  .cookie-required {
+    font-size: 0.78rem;
   }
 
   .cookie-actions {
     grid-template-columns: 1fr;
   }
-
-  .cookie-option {
-    grid-template-columns:
-      40px
-      minmax(0, 1fr)
-      auto;
-
-    gap: 10px;
-
-    padding: 13px;
-  }
-
-  .cookie-option-text strong {
-    font-size: 0.92rem;
-  }
-
-  .cookie-option-text span {
-    font-size: 0.78rem;
-  }
-
 }
 
 
 /* =========================================================
-   34. VERY SMALL SCREENS
+   41. VERY SMALL SCREENS
    ========================================================= */
 
-@media (max-width: 390px) {
-
-  .logo {
-    font-size: 0.92rem;
+@media (max-width: 420px) {
+  .logo,
+  .brand,
+  .brand-name {
+    font-size: 0.91rem;
   }
 
   .language-switcher a {
@@ -2080,14 +2428,15 @@ label.cookie-option:hover {
     padding: 0 4px;
   }
 
-  .section-heading h1 {
+  .section-heading h1,
+  .hero h1 {
     font-size: 2.15rem;
   }
 
   .section-heading h2,
   .guide-box h2,
   .newsletter h2 {
-    font-size: 1.9rem;
+    font-size: 1.88rem;
   }
 
   .guide-box {
@@ -2098,21 +2447,41 @@ label.cookie-option:hover {
     padding: 22px;
   }
 
-  .cookie-option {
-    grid-template-columns:
-      36px
-      minmax(0, 1fr)
-      auto;
+  .cookie-modal-card,
+  .cookie-modal-panel {
+    padding:
+      22px
+      15px
+      18px;
   }
 
-  .cookie-option-icon {
-    width: 36px;
-    height: 36px;
+  /*
+   * On very narrow devices the option may wrap,
+   * but never collapses the text into a tiny column.
+   */
+  .cookie-option {
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
+
+  .cookie-option > div:not(.cookie-option-icon):not(.cookie-toggle),
+  .cookie-option-text {
+    flex:
+      1
+      1
+      calc(100% - 58px);
+  }
+
+  .cookie-option > span:not(.cookie-toggle) {
+    margin-left: auto;
   }
 
   .cookie-toggle {
     width: 44px;
     height: 26px;
+
+    flex-basis: 44px;
   }
 
   .cookie-toggle::after {
@@ -2123,16 +2492,14 @@ label.cookie-option:hover {
   .cookie-toggle-input:checked + .cookie-toggle::after {
     transform: translateX(18px);
   }
-
 }
 
 
 /* =========================================================
-   35. REDUCED MOTION
+   42. REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
@@ -2147,5 +2514,4 @@ label.cookie-option:hover {
 
     transition-duration: 0.01ms !important;
   }
-
 }
