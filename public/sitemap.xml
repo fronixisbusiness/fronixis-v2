@@ -32,7 +32,7 @@
 
 
   <!-- =====================================================
-       DEUTSCHE THEMEN & RATGEBER
+       KI & AUTOMATION
        ===================================================== -->
 
   <url>
@@ -40,11 +40,24 @@
   </url>
 
   <url>
-    <loc>https://fronixis.com/smart-garden</loc>
+    <loc>https://fronixis.com/ki-tools-fuer-anfaenger</loc>
   </url>
 
   <url>
-    <loc>https://fronixis.com/cybersecurity</loc>
+    <loc>https://fronixis.com/automatisierung-fuer-anfaenger</loc>
+  </url>
+
+  <url>
+    <loc>https://fronixis.com/beste-automatisierungs-tools</loc>
+  </url>
+
+
+  <!-- =====================================================
+       SMART GARDEN
+       ===================================================== -->
+
+  <url>
+    <loc>https://fronixis.com/smart-garden</loc>
   </url>
 
   <url>
@@ -57,6 +70,15 @@
 
   <url>
     <loc>https://fronixis.com/rtk-oder-lidar-maehroboter</loc>
+  </url>
+
+
+  <!-- =====================================================
+       CYBERSECURITY
+       ===================================================== -->
+
+  <url>
+    <loc>https://fronixis.com/cybersecurity</loc>
   </url>
 
 
