@@ -4,7 +4,7 @@
 # =========================================================
 #
 # Search engines are allowed to crawl and index Fronixis.
-# AI model training is not permitted.
+# AI model training and generative AI input are not permitted.
 #
 # Sitemap:
 # https://fronixis.com/sitemap.xml
@@ -16,22 +16,20 @@
 # CLOUDFLARE CONTENT SIGNALS POLICY
 # ---------------------------------------------------------
 #
-# As a condition of accessing this website, you agree to
-# abide by the following content signals:
-#
 # search:
-# Building a search index and providing conventional
-# search results, including links and short excerpts.
+# Conventional search indexing is permitted.
 #
 # ai-input:
-# Inputting content into generative AI systems for
-# real-time answers, retrieval or grounding.
+# Use of Fronixis content as input, grounding or retrieval
+# for generative AI systems is not permitted.
 #
 # ai-train:
-# Training or fine-tuning AI or machine-learning models.
+# Training or fine-tuning AI / machine-learning models
+# is not permitted.
 #
 # use:
-# Defines how accessed content may be retained or reused.
+# Accessed content may only be used as a reference,
+# index entry, excerpt or link back to Fronixis.
 #
 # Restrictions expressed through these signals are intended
 # as reservations of rights under Article 4 of Directive
@@ -42,7 +40,7 @@
 # BEGIN Cloudflare Managed Content
 
 User-agent: *
-Content-Signal: search=yes,ai-train=no,use=reference
+Content-Signal: search=yes,ai-input=no,ai-train=no,use=reference
 Allow: /
 
 
