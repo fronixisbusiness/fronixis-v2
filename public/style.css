@@ -2816,3 +2816,24 @@ body.cookie-modal-open {
   }
 
 }
+
+@media (max-width: 768px) {
+  .article-hero {
+    padding: 65px 0 45px;
+  }
+
+  ...
+
+  .affiliate-button {
+    width: 100%;
+  }
+}
+
+/* HIER DIREKT WEITER */
+
+ /* =========================================================
+   FRONIXIS NAVIGATOR SYSTEM
+   Breadcrumbs · Compass · TOC · Feedback · Mobile
+   ========================================================= */
+
+/* ... kompletter neuer CSS-Block ... */
