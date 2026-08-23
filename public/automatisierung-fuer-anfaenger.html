@@ -6,12 +6,12 @@
 
   <title>
     Automatisierung für Anfänger:
-    Trigger, Aktionen und Workflows einfach erklärt | Fronixis
+    Trigger, Aktionen & Workflows erklärt | Fronixis
   </title>
 
   <meta
     name="description"
-    content="Automatisierung für Anfänger verständlich erklärt. Fronixis zeigt, wie Trigger, Aktionen, Bedingungen und Workflows funktionieren und wann sich Automatisierung wirklich lohnt."
+    content="Automatisierung für Anfänger verständlich erklärt. Lerne Trigger, Aktionen, Bedingungen, Workflows, Fehlerbehandlung und erste praktische Automationen Schritt für Schritt kennen."
   />
 
   <meta name="robots" content="index,follow" />
@@ -39,12 +39,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Automatisierung für Anfänger: Trigger, Aktionen und Workflows einfach erklärt",
-    "description": "Fronixis erklärt die Grundlagen moderner Automatisierung mit Triggern, Aktionen, Bedingungen und praktischen Workflow-Beispielen.",
+    "headline": "Automatisierung für Anfänger: Trigger, Aktionen und Workflows erklärt",
+    "description": "Fronixis erklärt Automatisierung für Anfänger und zeigt, wie Trigger, Aktionen, Bedingungen, Workflows und Fehlerbehandlung zusammenarbeiten.",
     "inLanguage": "de",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://fronixis.com/automatisierung-fuer-anfaenger"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Fronixis",
+      "url": "https://fronixis.com/ueber-fronixis"
     },
     "publisher": {
       "@type": "Organization",
@@ -58,6 +63,10 @@
 </head>
 
 <body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
   <header class="site-header">
     <div class="container header-inner">
@@ -117,22 +126,19 @@
 
           <h1>
             Automatisierung für Anfänger:
-            Trigger, Aktionen und Workflows einfach erklärt
+            Trigger, Aktionen und Workflows erklärt
           </h1>
 
           <p class="lead">
             Automatisierung bedeutet nicht,
-            dass plötzlich alles von selbst funktioniert.
-            Gute Automatisierung beginnt mit einem klaren,
-            wiederholbaren Prozess.
+            dass plötzlich alles von allein funktioniert.
           </p>
 
           <p>
-            Wenn du verstehst,
-            was ein Trigger, eine Aktion,
-            eine Bedingung und ein Workflow sind,
-            kannst du viele digitale Abläufe
-            deutlich leichter strukturieren.
+            Gute Automationen entstehen,
+            wenn ein klarer Ablauf
+            in kleine,
+            nachvollziehbare Schritte zerlegt wird.
           </p>
 
           <div class="button-row">
@@ -146,9 +152,9 @@
 
             <a
               class="button button-secondary"
-              href="#beispiele"
+              href="#erster-workflow"
             >
-              Beispiele ansehen
+              Ersten Workflow planen
             </a>
 
           </div>
@@ -178,27 +184,26 @@
           </h2>
 
           <p>
-            Ein schlechter Ablauf wird nicht automatisch gut,
-            nur weil Software ihn schneller ausführt.
+            Viele Anfänger suchen zuerst
+            nach einem Automations-Tool.
           </p>
 
           <p>
-            Deshalb sollte vor jeder Automatisierung
-            zuerst klar sein:
+            Sinnvoller ist die umgekehrte Reihenfolge:
           </p>
 
-          <ul>
-            <li>Was passiert heute?</li>
-            <li>Was wiederholt sich?</li>
-            <li>Was kostet unnötig Zeit?</li>
-            <li>Welche Schritte sind immer gleich?</li>
-            <li>Wo ist menschliche Kontrolle weiterhin nötig?</li>
-          </ul>
+          <ol>
+            <li>Aufgabe identifizieren.</li>
+            <li>Ablauf beschreiben.</li>
+            <li>Wiederholungen erkennen.</li>
+            <li>Entscheidungspunkte markieren.</li>
+            <li>Erst danach ein Werkzeug auswählen.</li>
+          </ol>
 
           <p>
             <strong>
-              Gute Automatisierung reduziert Arbeit.
-              Schlechte Automatisierung produziert nur schneller Fehler.
+              Einen schlechten Prozess zu automatisieren
+              macht ihn nicht automatisch besser.
             </strong>
           </p>
 
@@ -226,6 +231,7 @@
 
           <h2>
             Die vier wichtigsten Bausteine
+            einer Automation
           </h2>
 
         </div>
@@ -244,19 +250,20 @@
             </h3>
 
             <p>
-              Der Trigger ist das Ereignis,
-              das einen Workflow startet.
+              Der Trigger startet
+              einen Workflow.
             </p>
 
             <p>
-              Beispiel:
+              Beispiele:
             </p>
 
-            <p>
-              <strong>
-                Ein neues Formular wird abgeschickt.
-              </strong>
-            </p>
+            <ul>
+              <li>neues Formular wurde abgeschickt</li>
+              <li>neue E-Mail ist eingegangen</li>
+              <li>neue Zeile wurde erstellt</li>
+              <li>bestimmte Uhrzeit wurde erreicht</li>
+            </ul>
 
           </article>
 
@@ -272,19 +279,20 @@
             </h3>
 
             <p>
-              Die Aktion ist das,
-              was nach dem Trigger automatisch passiert.
+              Eine Aktion ist das,
+              was anschließend automatisch passiert.
             </p>
 
             <p>
-              Beispiel:
+              Beispiele:
             </p>
 
-            <p>
-              <strong>
-                Kontakt in einer Liste speichern.
-              </strong>
-            </p>
+            <ul>
+              <li>E-Mail senden</li>
+              <li>Datei speichern</li>
+              <li>Datensatz anlegen</li>
+              <li>Nachricht verschicken</li>
+            </ul>
 
           </article>
 
@@ -301,7 +309,7 @@
 
             <p>
               Eine Bedingung entscheidet,
-              ob ein bestimmter Schritt ausgeführt wird.
+              welcher Weg weiter ausgeführt wird.
             </p>
 
             <p>
@@ -309,10 +317,9 @@
             </p>
 
             <p>
-              <strong>
-                Nur wenn Land = Luxemburg,
-                Benachrichtigung senden.
-              </strong>
+              Wenn Land = Deutschland,
+              dann Route A.
+              Sonst Route B.
             </p>
 
           </article>
@@ -325,13 +332,24 @@
             </p>
 
             <h3>
-              Workflow
+              Ergebnis
             </h3>
 
             <p>
-              Ein Workflow verbindet mehrere
-              Trigger, Aktionen und Bedingungen
-              zu einem vollständigen Ablauf.
+              Am Ende sollte klar sein,
+              welches Resultat
+              der Workflow liefern soll.
+            </p>
+
+            <p>
+              Beispiel:
+            </p>
+
+            <p>
+              Ein neuer Kontakt
+              wurde gespeichert,
+              kategorisiert
+              und informiert.
             </p>
 
           </article>
@@ -356,36 +374,48 @@
           </p>
 
           <h2>
-            Formular → Kontakt → E-Mail
+            Ein Formular automatisch verarbeiten
           </h2>
+
+          <p>
+            Stell dir vor,
+            jemand trägt sich
+            über ein Kontaktformular ein.
+          </p>
 
           <ol>
 
             <li>
               <strong>Trigger:</strong>
-              Eine Person sendet ein Kontaktformular ab.
+              Neues Formular wurde abgeschickt.
             </li>
 
             <li>
-              <strong>Aktion:</strong>
-              Die Daten werden automatisch gespeichert.
+              <strong>Aktion 1:</strong>
+              Kontaktdaten in einer Tabelle speichern.
             </li>
 
             <li>
-              <strong>Aktion:</strong>
-              Eine Bestätigungs-E-Mail wird verschickt.
+              <strong>Aktion 2:</strong>
+              Bestätigungs-E-Mail senden.
             </li>
 
             <li>
               <strong>Bedingung:</strong>
-              Wenn das Thema „Angebot“ gewählt wurde,
-              erhält zusätzlich das Vertriebsteam eine Nachricht.
+              Prüfen,
+              ob ein bestimmtes Thema ausgewählt wurde.
+            </li>
+
+            <li>
+              <strong>Aktion 3:</strong>
+              Passende interne Benachrichtigung senden.
             </li>
 
           </ol>
 
           <p>
-            Genau daraus entsteht ein kleiner automatisierter Workflow.
+            Genau daraus entsteht
+            ein einfacher Workflow.
           </p>
 
         </div>
@@ -395,7 +425,7 @@
 
 
     <!-- =====================================================
-         WHY AUTOMATE
+         AUTOMATION VS AI
          ===================================================== -->
 
     <section class="section">
@@ -404,11 +434,11 @@
         <div class="section-heading">
 
           <p class="eyebrow">
-            WARUM AUTOMATISIEREN?
+            AUTOMATION VS. KI
           </p>
 
           <h2>
-            Wo Automatisierung besonders sinnvoll ist
+            Nicht jede Automation braucht künstliche Intelligenz
           </h2>
 
         </div>
@@ -419,13 +449,17 @@
           <article class="feature-card">
 
             <h3>
-              Wiederholung
+              Klassische Automation
             </h3>
 
             <p>
-              Wenn du denselben digitalen Schritt
-              immer wieder manuell ausführst,
-              kann Automatisierung interessant werden.
+              Arbeitet nach klar definierten Regeln.
+            </p>
+
+            <p>
+              Beispiel:
+              Wenn Formular eingeht,
+              speichere Daten.
             </p>
 
           </article>
@@ -434,13 +468,18 @@
           <article class="feature-card">
 
             <h3>
-              Datenübertragung
+              Automation mit KI
             </h3>
 
             <p>
-              Informationen müssen nicht ständig
-              manuell von einem System
-              in ein anderes kopiert werden.
+              Ein AI-Modell übernimmt
+              einen Verarbeitungsschritt.
+            </p>
+
+            <p>
+              Beispiel:
+              Inhalt einer Anfrage zusammenfassen
+              und Kategorie bestimmen.
             </p>
 
           </article>
@@ -449,58 +488,18 @@
           <article class="feature-card">
 
             <h3>
-              Geschwindigkeit
+              Agentischer Workflow
             </h3>
 
             <p>
-              Bestätigungen oder Benachrichtigungen
-              können unmittelbar nach einem Ereignis
-              ausgelöst werden.
+              Ein Agent kann mehrere Werkzeuge
+              nutzen und Entscheidungen
+              innerhalb eines definierten Rahmens treffen.
             </p>
 
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Konsistenz
-            </h3>
-
             <p>
-              Standardisierte Schritte
-              werden jedes Mal nach derselben
-              Logik ausgeführt.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Zeitersparnis
-            </h3>
-
-            <p>
-              Viele kleine manuelle Aufgaben
-              können sich über Wochen
-              zu erheblichem Zeitaufwand summieren.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Weniger Kopierarbeit
-            </h3>
-
-            <p>
-              Besonders einfache
-              Copy-and-Paste-Prozesse
-              sind häufig gute Kandidaten.
+              Das ist deutlich komplexer
+              als ein einfacher Trigger-Aktion-Workflow.
             </p>
 
           </article>
@@ -512,252 +511,23 @@
 
 
     <!-- =====================================================
-         WHEN NOT TO AUTOMATE
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="feature-card">
-
-          <p class="eyebrow">
-            NICHT ALLES AUTOMATISIEREN
-          </p>
-
-          <h2>
-            Wann Automatisierung eher keine gute Idee ist
-          </h2>
-
-          <ul>
-            <li>
-              der Ablauf ändert sich ständig
-            </li>
-
-            <li>
-              Entscheidungen benötigen viel menschliches Urteil
-            </li>
-
-            <li>
-              der Vorgang passiert nur sehr selten
-            </li>
-
-            <li>
-              ein Fehler hätte hohe Folgen
-            </li>
-
-            <li>
-              sensible Daten dürfen nicht unkontrolliert weitergegeben werden
-            </li>
-
-            <li>
-              der Prozess ist noch nicht sauber definiert
-            </li>
-          </ul>
-
-          <p>
-            In solchen Fällen kann eine
-            halbautomatische Lösung besser sein:
-            Software bereitet vor,
-            ein Mensch bestätigt.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         EXAMPLES
+         FIRST WORKFLOW
          ===================================================== -->
 
     <section
       class="section"
-      id="beispiele"
+      id="erster-workflow"
     >
       <div class="container">
 
         <div class="section-heading">
 
           <p class="eyebrow">
-            PRAXISBEISPIELE
+            ERSTER WORKFLOW
           </p>
 
           <h2>
-            Was lässt sich automatisieren?
-          </h2>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-          <article class="feature-card">
-
-            <h3>
-              Kontaktformular
-            </h3>
-
-            <p>
-              Formular →
-              Kontakt speichern →
-              Bestätigung senden →
-              Team informieren.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Newsletter
-            </h3>
-
-            <p>
-              Anmeldung →
-              Einwilligung prüfen →
-              Kontakt zur Liste hinzufügen →
-              Willkommens-E-Mail senden.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Leads
-            </h3>
-
-            <p>
-              Neue Anfrage →
-              Daten strukturieren →
-              Priorität vergeben →
-              zuständige Person informieren.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Rechnungen
-            </h3>
-
-            <p>
-              Neue Rechnung →
-              Datei speichern →
-              Daten erfassen →
-              zuständige Person benachrichtigen.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Social Media
-            </h3>
-
-            <p>
-              Neuer Beitrag →
-              interne Liste aktualisieren →
-              Veröffentlichung dokumentieren.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Support
-            </h3>
-
-            <p>
-              Neue Anfrage →
-              Kategorie bestimmen →
-              Ticket anlegen →
-              Team informieren.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         EMAIL AUTOMATION
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            E-MAIL
-          </p>
-
-          <h2>
-            E-Mail-Automatisierung sinnvoll einsetzen
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <p>
-            E-Mail ist einer der häufigsten
-            Einstiege in Automatisierung.
-          </p>
-
-          <p>
-            Typische Beispiele:
-          </p>
-
-          <ul>
-            <li>Willkommens-E-Mail nach Anmeldung</li>
-            <li>Bestätigung nach Formularabsendung</li>
-            <li>interne Benachrichtigung bei wichtigen Anfragen</li>
-            <li>Erinnerung nach einem definierten Zeitraum</li>
-            <li>Follow-up nach einer bestimmten Aktion</li>
-          </ul>
-
-          <p>
-            Wichtig:
-            Marketing-E-Mails benötigen je nach Rechtsraum
-            passende Einwilligungs- und Datenschutzprozesse.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         NEWSLETTER
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            NEWSLETTER
-          </p>
-
-          <h2>
-            Ein Newsletter ist bereits ein Workflow
+            So planst du deine erste Automation
           </h2>
 
         </div>
@@ -768,36 +538,56 @@
           <ol>
 
             <li>
-              Nutzer trägt E-Mail-Adresse ein.
+              <strong>
+                Wiederholung finden
+              </strong>
+              <br />
+              Welche Aufgabe erledigst du regelmäßig?
             </li>
 
             <li>
-              System speichert die Anmeldung.
+              <strong>
+                Startpunkt definieren
+              </strong>
+              <br />
+              Was löst den Ablauf aus?
             </li>
 
             <li>
-              Bestätigungsprozess wird gestartet.
+              <strong>
+                Schritte aufschreiben
+              </strong>
+              <br />
+              Welche Handlungen folgen nacheinander?
             </li>
 
             <li>
-              Nach erfolgreicher Bestätigung
-              wird der Kontakt aktiviert.
+              <strong>
+                Entscheidungen markieren
+              </strong>
+              <br />
+              Gibt es Bedingungen oder unterschiedliche Wege?
             </li>
 
             <li>
-              Willkommens-E-Mail kann ausgelöst werden.
+              <strong>
+                Fehlerfälle definieren
+              </strong>
+              <br />
+              Was passiert,
+              wenn Daten fehlen oder eine App nicht erreichbar ist?
             </li>
 
             <li>
-              Weitere E-Mails können zeit- oder ereignisbasiert folgen.
+              <strong>
+                Ergebnis festlegen
+              </strong>
+              <br />
+              Woran erkennst du,
+              dass die Automation erfolgreich war?
             </li>
 
           </ol>
-
-          <p>
-            Damit besteht bereits ein
-            mehrstufiger automatisierter Prozess.
-          </p>
 
         </div>
 
@@ -806,7 +596,7 @@
 
 
     <!-- =====================================================
-         FORMS
+         BEGINNER USE CASES
          ===================================================== -->
 
     <section class="section">
@@ -815,11 +605,11 @@
         <div class="section-heading">
 
           <p class="eyebrow">
-            FORMULARE
+            EINFACHE EINSTIEGE
           </p>
 
           <h2>
-            Formulare sind ideale Trigger
+            Gute Automationen für Anfänger
           </h2>
 
         </div>
@@ -830,12 +620,13 @@
           <article class="feature-card">
 
             <h3>
-              Kontaktformular
+              Formular → Tabelle
             </h3>
 
             <p>
-              Neue Nachricht →
-              Ansprechpartner informieren.
+              Neue Formulareingaben
+              automatisch
+              in einer Tabelle speichern.
             </p>
 
           </article>
@@ -844,13 +635,13 @@
           <article class="feature-card">
 
             <h3>
-              Anfrageformular
+              Formular → E-Mail
             </h3>
 
             <p>
-              Neue Anfrage →
-              Daten sortieren →
-              Priorität vergeben.
+              Nach einer Anfrage
+              automatisch
+              eine Bestätigung senden.
             </p>
 
           </article>
@@ -859,13 +650,58 @@
           <article class="feature-card">
 
             <h3>
-              Bewerbung
+              Kalender → Erinnerung
             </h3>
 
             <p>
-              Neue Bewerbung →
-              Dokumente speichern →
-              Eingang bestätigen.
+              Vor einem Termin
+              automatisch
+              eine Benachrichtigung auslösen.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Datei → Cloud
+            </h3>
+
+            <p>
+              Neue Dateien
+              automatisch
+              an einem definierten Ort speichern.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              E-Mail → Aufgabe
+            </h3>
+
+            <p>
+              Bestimmte E-Mails
+              automatisch
+              in Aufgaben umwandeln.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Content → Benachrichtigung
+            </h3>
+
+            <p>
+              Nach Veröffentlichung
+              automatisch
+              eine interne Nachricht auslösen.
             </p>
 
           </article>
@@ -877,7 +713,7 @@
 
 
     <!-- =====================================================
-         CONDITIONS
+         TOOL SELECTION
          ===================================================== -->
 
     <section class="section">
@@ -886,11 +722,11 @@
         <div class="section-heading">
 
           <p class="eyebrow">
-            BEDINGUNGEN
+            TOOL-AUSWAHL
           </p>
 
           <h2>
-            Workflows müssen nicht immer gleich ablaufen
+            Welche Automationsplattform solltest du verwenden?
           </h2>
 
         </div>
@@ -899,36 +735,35 @@
         <div class="feature-card">
 
           <p>
-            Bedingungen ermöglichen unterschiedliche Wege.
+            Es gibt nicht eine Plattform,
+            die für jeden Nutzer
+            automatisch die beste ist.
           </p>
 
           <p>
-            Beispiel:
+            Prüfe vor der Auswahl:
           </p>
 
           <ul>
-
-            <li>
-              Wenn Anfrage = Support →
-              Support-Team informieren.
-            </li>
-
-            <li>
-              Wenn Anfrage = Verkauf →
-              Vertriebs-Team informieren.
-            </li>
-
-            <li>
-              Wenn Anfrage = Partnerschaft →
-              separate Liste verwenden.
-            </li>
-
+            <li>Welche Apps möchtest du verbinden?</li>
+            <li>Wie komplex werden deine Workflows?</li>
+            <li>Wie viel technisches Wissen möchtest du einsetzen?</li>
+            <li>Wie wird Nutzung abgerechnet?</li>
+            <li>Brauchst du Self-Hosting?</li>
+            <li>Welche Sicherheitsanforderungen gibt es?</li>
+            <li>Wie wichtig sind AI-Funktionen?</li>
           </ul>
 
           <p>
-            Dadurch wird aus einer simplen Kette
-            ein flexibler Workflow.
+            Einen ausführlicheren Vergleich findest du hier:
           </p>
+
+          <a
+            class="button button-secondary"
+            href="/beste-automatisierungs-tools"
+          >
+            Automatisierungs-Tools vergleichen
+          </a>
 
         </div>
 
@@ -937,7 +772,7 @@
 
 
     <!-- =====================================================
-         FILTERS
+         MAKE EXAMPLE
          ===================================================== -->
 
     <section class="section">
@@ -946,11 +781,11 @@
         <div class="section-heading">
 
           <p class="eyebrow">
-            FILTER
+            PRAKTISCHES BEISPIEL
           </p>
 
           <h2>
-            Nicht jedes Ereignis muss weiterverarbeitet werden
+            Make als möglicher Einstieg
           </h2>
 
         </div>
@@ -959,31 +794,74 @@
         <div class="feature-card">
 
           <p>
-            Ein Filter kann unerwünschte
-            oder irrelevante Fälle aussortieren.
+            Make ist eine der Plattformen,
+            mit denen sich solche Workflows
+            visuell aufbauen lassen.
           </p>
 
           <p>
-            Beispiel:
+            Module werden grafisch verbunden,
+            wodurch der Ablauf
+            direkt sichtbar wird.
           </p>
 
           <p>
-            <strong>
-              Nur Anfragen weiterleiten,
-              wenn eine gültige E-Mail-Adresse vorhanden ist.
-            </strong>
+            Das kann besonders hilfreich sein,
+            wenn du verstehen möchtest,
+            wie Daten
+            von einer App
+            zur nächsten weitergegeben werden.
           </p>
 
           <p>
-            Oder:
+            Make ist aber nicht automatisch
+            für jeden Anfänger die beste Wahl.
+            Je nach Apps,
+            Workflow-Typ
+            und gewünschter Einfachheit
+            können auch andere Plattformen besser passen.
           </p>
 
-          <p>
-            <strong>
-              Nur Benachrichtigung senden,
-              wenn Bestellwert über 500 € liegt.
-            </strong>
-          </p>
+
+          <div class="feature-card">
+
+            <p class="eyebrow">
+              AFFILIATE-HINWEIS
+            </p>
+
+            <p>
+              Der folgende Make-Link ist ein Affiliate-Link.
+              Wenn du dich darüber registrierst
+              und später einen kostenpflichtigen Tarif nutzt,
+              kann Fronixis eine Provision erhalten.
+              Für dich entstehen dadurch keine zusätzlichen Kosten.
+            </p>
+
+            <p>
+              Fronixis erhält laut Make
+              für qualifizierte Empfehlungen
+              35 % der Abonnementzahlungen
+              innerhalb der ersten 12 Monate
+              nach Registrierung über den Affiliate-Link.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="https://www.make.com/en/register?pc=fronixis&affiliateSource=fronixis-automation-guide"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+            >
+              Make kostenlos ausprobieren
+            </a>
+
+            <p>
+              <small>
+                Affiliate-Link zu Make.
+                Konditionen und Aktionen können sich ändern.
+              </small>
+            </p>
+
+          </div>
 
         </div>
 
@@ -992,7 +870,7 @@
 
 
     <!-- =====================================================
-         DELAYS
+         COMMON MISTAKES
          ===================================================== -->
 
     <section class="section">
@@ -1001,66 +879,11 @@
         <div class="section-heading">
 
           <p class="eyebrow">
-            ZEIT
+            TYPISCHE FEHLER
           </p>
 
           <h2>
-            Automationen können auch warten
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <p>
-            Ein Workflow muss nicht alle Schritte
-            sofort ausführen.
-          </p>
-
-          <p>
-            Beispiele:
-          </p>
-
-          <ul>
-            <li>
-              24 Stunden warten
-            </li>
-
-            <li>
-              drei Tage nach Anmeldung erinnern
-            </li>
-
-            <li>
-              jeden Montag eine Zusammenfassung senden
-            </li>
-
-            <li>
-              nur während Geschäftszeiten Benachrichtigungen auslösen
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         AI IN AUTOMATION
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            KI + AUTOMATION
-          </p>
-
-          <h2>
-            Wo KI in einem Workflow helfen kann
+            Was Anfänger häufig falsch machen
           </h2>
 
         </div>
@@ -1071,12 +894,13 @@
           <article class="feature-card">
 
             <h3>
-              Klassifizieren
+              Zu früh automatisieren
             </h3>
 
             <p>
-              Eine Nachricht automatisch
-              einer Kategorie zuordnen.
+              Wenn ein Prozess
+              noch ständig geändert wird,
+              lohnt sich Automation oft noch nicht.
             </p>
 
           </article>
@@ -1085,12 +909,13 @@
           <article class="feature-card">
 
             <h3>
-              Zusammenfassen
+              Zu komplex starten
             </h3>
 
             <p>
-              Lange Texte oder Dokumente
-              automatisch kürzer darstellen.
+              Der erste Workflow
+              sollte möglichst wenige Schritte
+              und Abhängigkeiten haben.
             </p>
 
           </article>
@@ -1099,13 +924,13 @@
           <article class="feature-card">
 
             <h3>
-              Informationen extrahieren
+              Fehlerfälle vergessen
             </h3>
 
             <p>
-              Namen, Termine,
-              Beträge oder andere Daten
-              aus Texten herausziehen.
+              APIs,
+              Verbindungen
+              und Daten können fehlschlagen.
             </p>
 
           </article>
@@ -1114,12 +939,13 @@
           <article class="feature-card">
 
             <h3>
-              Entwürfe erstellen
+              Keine Kontrolle einbauen
             </h3>
 
             <p>
-              Antwort oder Zusammenfassung vorbereiten,
-              bevor ein Mensch sie überprüft.
+              Automationen sollten
+              überprüfbar sein
+              und Fehler sichtbar machen.
             </p>
 
           </article>
@@ -1128,12 +954,13 @@
           <article class="feature-card">
 
             <h3>
-              Priorisieren
+              Unnötige AI einsetzen
             </h3>
 
             <p>
-              Anfragen nach vorgegebenen
-              Kriterien vorsortieren.
+              Eine einfache Regel
+              ist oft robuster
+              als ein AI-Modell.
             </p>
 
           </article>
@@ -1142,128 +969,16 @@
           <article class="feature-card">
 
             <h3>
-              Daten strukturieren
+              Kostenmodell ignorieren
             </h3>
 
             <p>
-              Unstrukturierte Texte
-              in definierte Felder übertragen.
+              Viele kleine Workflow-Schritte
+              können bei bestimmten Plattformen
+              schnell viele Nutzungseinheiten verbrauchen.
             </p>
 
           </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         DETERMINISTIC VS AI
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="feature-card">
-
-          <p class="eyebrow">
-            WICHTIGER UNTERSCHIED
-          </p>
-
-          <h2>
-            Klassische Automation und KI sind nicht dasselbe
-          </h2>
-
-          <p>
-            Eine klassische Automation arbeitet
-            nach klar definierten Regeln:
-          </p>
-
-          <p>
-            <strong>
-              Wenn X passiert,
-              führe Y aus.
-            </strong>
-          </p>
-
-          <p>
-            KI kann dagegen Inhalte interpretieren
-            und Wahrscheinlichkeitsentscheidungen treffen.
-          </p>
-
-          <p>
-            Das macht KI flexibler,
-            aber auch weniger vorhersehbar.
-          </p>
-
-          <p>
-            Deshalb sollten kritische Prozesse
-            nicht ohne geeignete Kontrolle
-            vollständig an KI delegiert werden.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         HUMAN IN THE LOOP
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="feature-card">
-
-          <p class="eyebrow">
-            HUMAN IN THE LOOP
-          </p>
-
-          <h2>
-            Automatisieren heißt nicht,
-            Menschen komplett zu entfernen
-          </h2>
-
-          <p>
-            Bei wichtigen Entscheidungen kann ein Workflow
-            bewusst eine menschliche Freigabe enthalten.
-          </p>
-
-          <p>
-            Beispiel:
-          </p>
-
-          <ol>
-
-            <li>
-              Anfrage kommt an.
-            </li>
-
-            <li>
-              KI erstellt eine Zusammenfassung.
-            </li>
-
-            <li>
-              System erstellt einen Antwortentwurf.
-            </li>
-
-            <li>
-              Ein Mensch kontrolliert die Antwort.
-            </li>
-
-            <li>
-              Erst danach wird sie versendet.
-            </li>
-
-          </ol>
-
-          <p>
-            Das kombiniert Geschwindigkeit
-            mit menschlicher Kontrolle.
-          </p>
 
         </div>
 
@@ -1278,14 +993,65 @@
     <section class="section">
       <div class="container">
 
-        <div class="section-heading">
+        <div class="feature-card">
 
           <p class="eyebrow">
             FEHLERBEHANDLUNG
           </p>
 
           <h2>
-            Gute Workflows planen auch Fehler ein
+            Was passiert,
+            wenn etwas nicht funktioniert?
+          </h2>
+
+          <p>
+            Dieser Punkt trennt
+            einfache Demo-Automationen
+            von belastbaren Workflows.
+          </p>
+
+          <p>
+            Prüfe mindestens:
+          </p>
+
+          <ul>
+            <li>Was passiert bei fehlenden Daten?</li>
+            <li>Was passiert bei API-Fehlern?</li>
+            <li>Wird der Vorgang wiederholt?</li>
+            <li>Gibt es eine Fehlerbenachrichtigung?</li>
+            <li>Kann ein Schritt doppelt ausgeführt werden?</li>
+            <li>Wie erkennst du einen fehlgeschlagenen Lauf?</li>
+          </ul>
+
+          <p>
+            <strong>
+              Eine Automation sollte nicht nur funktionieren,
+              wenn alles perfekt läuft.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         DATA QUALITY
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            DATENQUALITÄT
+          </p>
+
+          <h2>
+            Schlechte Eingangsdaten
+            bleiben schlechte Eingangsdaten
           </h2>
 
         </div>
@@ -1294,19 +1060,22 @@
         <div class="feature-card">
 
           <p>
-            Viele Anfänger denken nur an den Idealfall.
+            Automationen übernehmen Daten
+            häufig genau so,
+            wie sie ankommen.
           </p>
 
           <p>
-            Ein produktiver Workflow sollte auch beantworten:
+            Deshalb sollte geprüft werden:
           </p>
 
           <ul>
-            <li>Was passiert bei fehlenden Daten?</li>
-            <li>Was passiert, wenn eine App nicht erreichbar ist?</li>
-            <li>Was passiert bei einem doppelten Eintrag?</li>
-            <li>Wer wird bei einem Fehler informiert?</li>
-            <li>Kann der Vorgang wiederholt werden?</li>
+            <li>Sind Pflichtfelder vorhanden?</li>
+            <li>Ist eine E-Mail-Adresse plausibel?</li>
+            <li>Sind Zahlen im richtigen Format?</li>
+            <li>Gibt es doppelte Datensätze?</li>
+            <li>Sind Datumswerte eindeutig?</li>
+            <li>Sind notwendige Zustimmungen vorhanden?</li>
           </ul>
 
         </div>
@@ -1329,8 +1098,7 @@
           </p>
 
           <h2>
-            Automationen brauchen Zugriff –
-            und Zugriff ist ein Risiko
+            Automationen verbinden sensible Systeme
           </h2>
 
         </div>
@@ -1339,46 +1107,31 @@
         <div class="feature-card">
 
           <p>
-            Damit zwei Dienste miteinander arbeiten können,
-            müssen häufig Zugriffsrechte vergeben werden.
+            Ein Automationsdienst
+            kann je nach Workflow
+            Zugriff auf wichtige Konten
+            und Daten erhalten.
           </p>
 
           <p>
-            Deshalb solltest du prüfen:
+            Achte deshalb auf:
           </p>
 
           <ul>
-            <li>
-              Welche Daten darf der Dienst lesen?
-            </li>
-
-            <li>
-              Welche Daten darf er verändern?
-            </li>
-
-            <li>
-              Kann er E-Mails versenden?
-            </li>
-
-            <li>
-              Kann er Dateien löschen?
-            </li>
-
-            <li>
-              Werden Zugangsdaten sicher gespeichert?
-            </li>
-
-            <li>
-              Lassen sich Berechtigungen später widerrufen?
-            </li>
+            <li>nur notwendige Berechtigungen</li>
+            <li>Mehrfaktor-Authentifizierung</li>
+            <li>sichere API-Key-Verwaltung</li>
+            <li>regelmäßige Prüfung verbundener Apps</li>
+            <li>Widerruf nicht mehr benötigter Zugriffe</li>
+            <li>Schutz personenbezogener Daten</li>
           </ul>
 
-          <p>
-            <strong>
-              Vergib nur die Rechte,
-              die ein Workflow wirklich benötigt.
-            </strong>
-          </p>
+          <a
+            class="button button-secondary"
+            href="/cybersecurity"
+          >
+            Cybersecurity-Grundlagen lesen
+          </a>
 
         </div>
 
@@ -1387,127 +1140,7 @@
 
 
     <!-- =====================================================
-         PRIVACY
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            DATENSCHUTZ
-          </p>
-
-          <h2>
-            Daten wandern durch mehrere Systeme
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <p>
-            Bei einer Automation können Daten
-            zwischen mehreren Anbietern übertragen werden.
-          </p>
-
-          <p>
-            Beispiel:
-          </p>
-
-          <p>
-            Formular →
-            Automationsplattform →
-            CRM →
-            E-Mail-Dienst.
-          </p>
-
-          <p>
-            Deshalb sollte vor produktiver Nutzung geklärt sein,
-            welche Daten wohin übertragen werden
-            und auf welcher Grundlage die Verarbeitung erfolgt.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         BEGINNER WORKFLOW
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            DEIN ERSTER WORKFLOW
-          </p>
-
-          <h2>
-            Starte bewusst klein
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <ol>
-
-            <li>
-              Wähle eine Aufgabe,
-              die du regelmäßig manuell erledigst.
-            </li>
-
-            <li>
-              Schreibe den Ablauf Schritt für Schritt auf.
-            </li>
-
-            <li>
-              Bestimme den Trigger.
-            </li>
-
-            <li>
-              Bestimme die gewünschte Aktion.
-            </li>
-
-            <li>
-              Prüfe,
-              ob Bedingungen notwendig sind.
-            </li>
-
-            <li>
-              Automatisiere nur diesen kleinen Ablauf.
-            </li>
-
-            <li>
-              Teste mehrere reale Fälle.
-            </li>
-
-            <li>
-              Prüfe Fehler und Sonderfälle.
-            </li>
-
-            <li>
-              Erst danach erweitern.
-            </li>
-
-          </ol>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         BAD WORKFLOW
+         ROI
          ===================================================== -->
 
     <section class="section">
@@ -1516,291 +1149,71 @@
         <div class="feature-card">
 
           <p class="eyebrow">
-            ANFÄNGERFEHLER
+            LOHNT SICH DAS?
           </p>
 
           <h2>
-            Nicht sofort einen riesigen Workflow bauen
+            Nicht jede Automation spart tatsächlich Zeit
           </h2>
 
           <p>
-            Ein Ablauf mit 30 Schritten,
-            mehreren Apps,
-            KI und komplizierten Bedingungen
-            sieht beeindruckend aus.
-          </p>
-
-          <p>
-            Für Anfänger ist er aber oft schwer
-            zu testen und zu reparieren.
-          </p>
-
-          <p>
-            Besser:
-          </p>
-
-          <p>
-            <strong>
-              Erst 2–3 Schritte zuverlässig automatisieren.
-              Danach erweitern.
-            </strong>
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         AUTOMATION CHECK
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            FRONIXIS-CHECK
-          </p>
-
-          <h2>
-            Lohnt sich dieser Prozess für Automatisierung?
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <ol>
-
-            <li>
-              Wiederholt sich der Prozess regelmäßig?
-            </li>
-
-            <li>
-              Sind die einzelnen Schritte klar?
-            </li>
-
-            <li>
-              Gibt es viele manuelle Übertragungen?
-            </li>
-
-            <li>
-              Sind die Regeln weitgehend stabil?
-            </li>
-
-            <li>
-              Ist ein Fehler leicht erkennbar?
-            </li>
-
-            <li>
-              Kann ein Mensch bei kritischen Fällen eingreifen?
-            </li>
-
-            <li>
-              Spart die Automation tatsächlich Zeit?
-            </li>
-
-          </ol>
-
-          <p>
-            Je häufiger du diese Fragen mit
-            „Ja“ beantworten kannst,
-            desto interessanter wird Automatisierung.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         MEASURE ROI
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            WIRTSCHAFTLICHKEIT
-          </p>
-
-          <h2>
-            Spart die Automation wirklich etwas?
-          </h2>
-
-        </div>
-
-
-        <div class="feature-card">
-
-          <p>
-            Eine einfache Rechnung hilft:
-          </p>
-
-          <p>
-            <strong>
-              Zeit pro manueller Ausführung
-              × Anzahl pro Monat
-              = monatlicher Aufwand
-            </strong>
-          </p>
-
-          <p>
-            Beispiel:
-          </p>
-
-          <p>
-            5 Minuten pro Vorgang
-            × 100 Vorgänge
-            = 500 Minuten.
-          </p>
-
-          <p>
-            Das sind mehr als
-            <strong>8 Stunden pro Monat</strong>.
-          </p>
-
-          <p>
-            Wenn sich davon ein großer Teil
-            zuverlässig automatisieren lässt,
-            kann selbst eine kostenpflichtige Plattform
-            wirtschaftlich sinnvoll werden.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         TOOL SELECTION
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            TOOL-AUSWAHL
-          </p>
-
-          <h2>
-            Welches Automations-Tool brauchst du?
-          </h2>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-          <article class="feature-card">
-
-            <h3>
-              Einfacher Workflow
-            </h3>
-
-            <p>
-              Wenige Apps,
-              klare Trigger und Aktionen.
-            </p>
-
-            <p>
-              <strong>
-                Wichtig:
-              </strong>
-              einfache Einrichtung und gute Integrationen.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Komplexere Logik
-            </h3>
-
-            <p>
-              Bedingungen,
-              mehrere Pfade,
-              Datenverarbeitung und Fehlerbehandlung.
-            </p>
-
-            <p>
-              <strong>
-                Wichtig:
-              </strong>
-              flexible Workflow-Logik.
-            </p>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Unternehmen
-            </h3>
-
-            <p>
-              Rollen,
-              Sicherheit,
-              Auditierbarkeit und Teamverwaltung
-              werden wichtiger.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =====================================================
-         COST
-         ===================================================== -->
-
-    <section class="section">
-      <div class="container">
-
-        <div class="feature-card">
-
-          <p class="eyebrow">
-            KOSTEN
-          </p>
-
-          <h2>
-            Nicht nur den Monatspreis vergleichen
-          </h2>
-
-          <p>
-            Automationsplattformen können unterschiedlich abrechnen:
+            Vergleiche:
           </p>
 
           <ul>
-            <li>nach ausgeführten Aufgaben</li>
-            <li>nach Workflow-Ausführungen</li>
-            <li>nach Anzahl der Nutzer</li>
-            <li>nach Premium-Integrationen</li>
-            <li>nach Datenvolumen</li>
-            <li>nach KI-Nutzung</li>
+            <li>Wie lange dauert die Aufgabe heute?</li>
+            <li>Wie häufig wird sie ausgeführt?</li>
+            <li>Wie lange dauert der Aufbau?</li>
+            <li>Wie viel Wartung entsteht?</li>
+            <li>Was kostet das verwendete Tool?</li>
+            <li>Wie teuer wären Fehler?</li>
           </ul>
 
           <p>
-            Deshalb sollte ein günstiger Einstiegspreis
-            nicht automatisch als günstigste
-            Langzeitlösung angesehen werden.
+            Ein Workflow,
+            der monatlich nur zwei Minuten spart
+            und ständig repariert werden muss,
+            ist möglicherweise keine sinnvolle Automation.
           </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CHECKLIST
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            CHECKLISTE
+          </p>
+
+          <h2>
+            Ist dein Prozess bereit für Automation?
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <ul>
+            <li>Der Ablauf wiederholt sich regelmäßig.</li>
+            <li>Die einzelnen Schritte sind bekannt.</li>
+            <li>Der Startpunkt ist eindeutig.</li>
+            <li>Die benötigten Daten sind verfügbar.</li>
+            <li>Entscheidungsregeln lassen sich beschreiben.</li>
+            <li>Fehlerfälle sind bekannt.</li>
+            <li>Das gewünschte Ergebnis ist messbar.</li>
+            <li>Der Nutzen übersteigt Aufbau und Wartung.</li>
+          </ul>
 
         </div>
 
@@ -1822,31 +1235,35 @@
           </p>
 
           <h2>
-            Gute Automatisierung beginnt klein
+            Starte klein
+            und baue erst später Komplexität ein
           </h2>
 
           <p>
-            Suche nicht zuerst nach der Plattform
-            mit den meisten Funktionen.
+            Für deine erste Automation
+            brauchst du weder AI Agents
+            noch zehn verbundene Anwendungen.
           </p>
 
           <p>
-            Suche zuerst nach einem
-            wiederkehrenden Problem.
+            Ein einfacher Ablauf
+            mit einem klaren Trigger
+            und einer klaren Aktion
+            ist meist der bessere Einstieg.
           </p>
 
           <p>
-            Zerlege dieses Problem in klare Schritte
-            und automatisiere nur das,
-            was sich zuverlässig wiederholen lässt.
+            Erst wenn dieser Ablauf stabil funktioniert,
+            solltest du Bedingungen,
+            Router,
+            AI-Schritte
+            oder weitere Systeme ergänzen.
           </p>
 
           <p>
             <strong>
-              Trigger verstehen.
-              Aktionen definieren.
-              Bedingungen kontrollieren.
-              Erst dann skalieren.
+              Gute Automation beginnt
+              mit einem guten Prozess.
             </strong>
           </p>
 
@@ -1857,7 +1274,7 @@
 
 
     <!-- =====================================================
-         INTERNAL LINKS
+         NEXT
          ===================================================== -->
 
     <section class="section">
@@ -1870,7 +1287,7 @@
           </p>
 
           <h2>
-            KI & Automation weiter verstehen
+            Der nächste Schritt
           </h2>
 
         </div>
@@ -1881,21 +1298,48 @@
           <article class="feature-card">
 
             <h3>
+              Automatisierungs-Tools vergleichen
+            </h3>
+
+            <p>
+              Make,
+              Zapier,
+              n8n
+              und Activepieces
+              nach Bedienung,
+              Kosten
+              und Einsatzbereich vergleichen.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="/beste-automatisierungs-tools"
+            >
+              Tool-Vergleich öffnen
+            </a>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
               KI-Tools für Anfänger
             </h3>
 
             <p>
               Chatbots,
-              Agenten,
-              Bild-KI und Automations-Tools
-              besser unterscheiden.
+              Recherche,
+              Bilder,
+              Agents
+              und weitere KI-Werkzeuge verstehen.
             </p>
 
             <a
-              class="button button-primary"
+              class="button button-secondary"
               href="/ki-tools-fuer-anfaenger"
             >
-              KI-Tools verstehen
+              KI-Tools kennenlernen
             </a>
 
           </article>
@@ -1909,8 +1353,9 @@
 
             <p>
               Zur Fronixis-Themenseite
-              für künstliche Intelligenz,
-              Workflows und Automatisierung.
+              für Workflows,
+              AI
+              und Automatisierung.
             </p>
 
             <a
@@ -1918,28 +1363,6 @@
               href="/ki-automation"
             >
               Themenbereich öffnen
-            </a>
-
-          </article>
-
-
-          <article class="feature-card">
-
-            <h3>
-              Cybersecurity
-            </h3>
-
-            <p>
-              Kontosicherheit,
-              Datenschutz und Risiken
-              vernetzter Dienste.
-            </p>
-
-            <a
-              class="button button-secondary"
-              href="/cybersecurity"
-            >
-              Cybersecurity öffnen
             </a>
 
           </article>
@@ -2024,11 +1447,9 @@
     aria-label="Cookie-Einstellungen öffnen"
     title="Cookie-Einstellungen"
   >
-
     <span class="cookie-tooltip">
       Cookie-Einstellungen
     </span>
-
   </button>
 
 
@@ -2047,7 +1468,6 @@
 
     <div class="cookie-modal-backdrop"></div>
 
-
     <div class="cookie-modal-panel">
 
       <button
@@ -2058,7 +1478,6 @@
       >
         ×
       </button>
-
 
       <p class="eyebrow">
         DATENSCHUTZ
