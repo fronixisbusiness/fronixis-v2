@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Cybersecurity & Passwort-Manager – Sicherheit einfach erklärt | Fronixis</title>
+  <title>
+    Cybersecurity:
+    Konten, Geräte und Daten besser schützen | Fronixis
+  </title>
 
   <meta
     name="description"
-    content="Cybersecurity verständlich erklärt: Passwort-Manager, Zwei-Faktor-Authentifizierung, Malware-Schutz, Backups und digitale Sicherheit für Alltag und Unternehmen."
-  >
+    content="Cybersecurity verständlich erklärt. Fronixis zeigt, wie du Passwörter, Konten, Geräte, Backups, Cloud-Dienste und digitale Arbeitsabläufe besser absicherst."
+  />
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index,follow" />
 
-  <!-- CANONICAL -->
   <link
     rel="canonical"
     href="https://fronixis.com/cybersecurity"
-  >
+  />
 
-  <!-- LANGUAGE -->
   <link
     rel="alternate"
     hreflang="de"
     href="https://fronixis.com/cybersecurity"
-  >
+  />
 
   <link
     rel="alternate"
     hreflang="x-default"
     href="https://fronixis.com/cybersecurity"
-  >
+  />
 
-  <!-- STYLES -->
-  <link
-    rel="stylesheet"
-    href="/style.css?v=3"
-  >
+  <link rel="stylesheet" href="/style.css?v=3" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Cybersecurity",
+    "description": "Fronixis-Themenseite rund um digitale Sicherheit, Kontoschutz, Phishing, Passwörter, Backups und sichere Cloud-Nutzung.",
+    "url": "https://fronixis.com/cybersecurity",
+    "inLanguage": "de",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fronixis",
+      "url": "https://fronixis.com/"
+    },
+    "dateModified": "2026-08-23"
+  }
+  </script>
 </head>
 
-
 <body>
-
 
   <!-- =====================================================
        HEADER
        ===================================================== -->
 
   <header class="site-header">
-
-    <div class="container navigation">
+    <div class="container header-inner">
 
       <a
+        class="brand"
         href="/"
-        class="logo"
+        aria-label="Fronixis Startseite"
       >
-        FRONIXIS
+        <span class="brand-name">Fronixis</span>
       </a>
 
-
       <nav
-        class="desktop-nav"
+        class="main-nav"
         aria-label="Hauptnavigation"
       >
-
-        <a href="/#ki">
+        <a href="/ki-automation">
           KI & Automation
         </a>
 
@@ -80,7 +82,7 @@
           Smart Home
         </a>
 
-        <a href="/#smart-garden">
+        <a href="/smart-garden">
           Smart Garden
         </a>
 
@@ -88,807 +90,910 @@
           Future Tech
         </a>
 
-        <a href="/#guides">
-          Guides
+        <a
+          href="/cybersecurity"
+          aria-current="page"
+        >
+          Cybersecurity
         </a>
-
       </nav>
-
 
       <div
         class="language-switcher"
         aria-label="Sprache auswählen"
       >
-
         <a
           href="/cybersecurity"
-          lang="de"
           aria-current="page"
         >
           DE
         </a>
 
-        <a
-          href="/en/"
-          lang="en"
-        >
+        <a href="/en/">
           EN
         </a>
 
-        <a
-          href="/fr/"
-          lang="fr"
-        >
+        <a href="/fr/">
           FR
         </a>
-
       </div>
 
-
-      <a
-        href="#passwoerter"
-        class="nav-button"
-      >
-        Sicherheit
-      </a>
-
     </div>
-
   </header>
 
 
-
   <main>
-
 
     <!-- =====================================================
          HERO
          ===================================================== -->
 
     <section class="hero">
+      <div class="container">
 
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
+        <div class="section-heading">
 
+          <p class="eyebrow">
+            CYBERSECURITY
+          </p>
 
-      <div class="container hero-content">
+          <h1>
+            Konten schützen.
+            Geräte absichern.
+            Datenverlust vermeiden.
+          </h1>
 
-        <div class="hero-badge">
-          CYBERSECURITY
-        </div>
+          <p class="lead">
+            Cybersecurity beginnt nicht erst bei Unternehmen,
+            Servern oder komplizierten Angriffen.
+          </p>
 
+          <p>
+            Ein gestohlenes Passwort,
+            eine gefälschte Login-Seite,
+            ein ungepatchtes Gerät
+            oder ein fehlendes Backup können bereits ausreichen,
+            um erhebliche Probleme zu verursachen.
+          </p>
 
-        <h1>
-          Digitale Sicherheit.
-          <span>Verständlich statt kompliziert.</span>
-        </h1>
+          <div class="button-row">
 
+            <a
+              class="button button-primary"
+              href="#sicherheitscheck"
+            >
+              Sicherheitscheck starten
+            </a>
 
-        <p class="hero-text">
-          Starke Passwörter,
-          Zwei-Faktor-Authentifizierung,
-          sichere Backups,
-          Malware-Schutz und vernünftige Einstellungen
-          können einen großen Unterschied machen.
-          Fronixis erklärt die wichtigsten Grundlagen
-          ohne unnötigen Fachjargon.
-        </p>
+            <a
+              class="button button-secondary"
+              href="#grundlagen"
+            >
+              Grundlagen verstehen
+            </a>
 
-
-        <div class="hero-buttons">
-
-          <a
-            href="#passwoerter"
-            class="button button-primary"
-          >
-            Passwortschutz verstehen
-          </a>
-
-          <a
-            href="#grundlagen"
-            class="button button-secondary"
-          >
-            Security-Grundlagen
-          </a>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-          <div>
-            <strong>PASS</strong>
-            <span>Starke Zugangsdaten</span>
-          </div>
-
-          <div>
-            <strong>2FA</strong>
-            <span>Zusätzliche Absicherung</span>
-          </div>
-
-          <div>
-            <strong>BACKUP</strong>
-            <span>Daten schützen</span>
           </div>
 
         </div>
 
       </div>
-
     </section>
 
 
+    <!-- =====================================================
+         PRINCIPLE
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="feature-card">
+
+          <p class="eyebrow">
+            FRONIXIS-GRUNDSATZ
+          </p>
+
+          <h2>
+            Sicherheit entsteht nicht durch ein einzelnes Tool
+          </h2>
+
+          <p>
+            Antivirus,
+            Passwortmanager,
+            Firewall oder VPN können sinnvoll sein.
+          </p>
+
+          <p>
+            Keines dieser Werkzeuge ersetzt aber
+            ein solides Sicherheitskonzept.
+          </p>
+
+          <p>
+            Gute digitale Sicherheit besteht aus mehreren Ebenen:
+          </p>
+
+          <ul>
+            <li>starke Konten</li>
+            <li>mehrstufige Anmeldung</li>
+            <li>aktuelle Software</li>
+            <li>sichere Geräte</li>
+            <li>Backups</li>
+            <li>vorsichtiger Umgang mit Links und Anhängen</li>
+            <li>begrenzte Zugriffsrechte</li>
+            <li>Kontrolle über verbundene Apps</li>
+          </ul>
+
+          <p>
+            <strong>
+              Nicht ein Schutzmechanismus muss perfekt sein.
+              Mehrere Schutzschichten sollen sich gegenseitig absichern.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
 
     <!-- =====================================================
-         INTRO
+         BASICS
          ===================================================== -->
 
     <section
       class="section"
       id="grundlagen"
     >
-
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            FRONIXIS SECURITY
-          </span>
+          <p class="eyebrow">
+            GRUNDLAGEN
+          </p>
 
           <h2>
-            Cybersecurity beginnt
-            <span>nicht erst bei großen Unternehmen.</span>
+            Die wichtigsten Bereiche digitaler Sicherheit
           </h2>
-
-          <p>
-            Auch private Nutzer,
-            Familien,
-            Selbstständige
-            und kleine Unternehmen
-            verwalten heute zahlreiche Konten,
-            Geräte und digitale Daten.
-            Damit wächst auch die Bedeutung
-            grundlegender Sicherheitsmaßnahmen.
-          </p>
 
         </div>
 
 
         <div class="feature-grid">
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              IDENTITÄT
-            </span>
+            <p class="eyebrow">
+              01
+            </p>
 
-            <h2>
-              Konten schützen
-            </h2>
+            <h3>
+              Kontosicherheit
+            </h3>
 
             <p>
-              E-Mail-Konten,
-              Cloud-Dienste,
-              Social Media,
-              Shops und Unternehmenssoftware
-              sollten nicht mit denselben Passwörtern
-              abgesichert werden.
+              Passwörter,
+              Passkeys,
+              Zwei-Faktor-Authentifizierung
+              und Wiederherstellungsoptionen.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              GERÄTE
-            </span>
+            <p class="eyebrow">
+              02
+            </p>
 
-            <h2>
-              Systeme aktuell halten
-            </h2>
+            <h3>
+              Phishing
+            </h3>
 
             <p>
-              Sicherheitsupdates
-              und aktuelle Softwareversionen
-              können bekannte Schwachstellen schließen
-              und das Risiko
-              erfolgreicher Angriffe reduzieren.
+              Gefälschte E-Mails,
+              Nachrichten,
+              Login-Seiten
+              und Social-Engineering-Versuche erkennen.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              DATEN
-            </span>
+            <p class="eyebrow">
+              03
+            </p>
 
-            <h2>
-              Verlust einkalkulieren
-            </h2>
+            <h3>
+              Gerätesicherheit
+            </h3>
 
             <p>
-              Daten können durch Defekte,
-              Fehlbedienung,
-              Schadsoftware
-              oder andere Vorfälle verloren gehen.
-              Deshalb gehören Backups
-              zu jeder Sicherheitsstrategie.
+              Computer,
+              Smartphones,
+              Tablets
+              und andere Geräte aktuell und gesperrt halten.
             </p>
 
           </article>
 
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              04
+            </p>
+
+            <h3>
+              Backups
+            </h3>
+
+            <p>
+              Daten so sichern,
+              dass Geräteverlust,
+              Defekt oder Ransomware
+              nicht automatisch zum Totalverlust führen.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              05
+            </p>
+
+            <h3>
+              Cloud-Sicherheit
+            </h3>
+
+            <p>
+              Freigaben,
+              Zugriffsrechte,
+              verbundene Apps
+              und sensible Dateien kontrollieren.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              06
+            </p>
+
+            <h3>
+              Netzwerk
+            </h3>
+
+            <p>
+              Router,
+              WLAN,
+              Gastnetzwerke
+              und verbundene Geräte absichern.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              07
+            </p>
+
+            <h3>
+              Datenschutz
+            </h3>
+
+            <p>
+              Verstehen,
+              welche persönlichen Daten
+              an welche Dienste übermittelt werden.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              08
+            </p>
+
+            <h3>
+              Zugriffsrechte
+            </h3>
+
+            <p>
+              Apps und Dienste nur mit den Rechten ausstatten,
+              die sie tatsächlich benötigen.
+            </p>
+
+          </article>
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         PASSWORD MANAGERS
+         PASSWORDS
          ===================================================== -->
 
-    <section
-      class="section section-dark"
-      id="passwoerter"
-    >
-
+    <section class="section">
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            PASSWORT-MANAGER
-          </span>
+          <p class="eyebrow">
+            PASSWÖRTER
+          </p>
 
           <h2>
-            Ein starkes Passwort
-            <span>für jeden Dienst.</span>
+            Ein Passwort sollte nicht mehrere Konten schützen
           </h2>
-
-          <p>
-            Passwort-Manager helfen dabei,
-            viele unterschiedliche Zugangsdaten
-            sicherer zu verwalten,
-            ohne sich jedes einzelne Passwort
-            merken zu müssen.
-          </p>
 
         </div>
 
 
+        <div class="feature-card">
 
-        <div class="category-grid">
+          <p>
+            Wenn dasselbe Passwort für mehrere Dienste verwendet wird,
+            kann ein einziges Datenleck mehrere Konten gefährden.
+          </p>
+
+          <p>
+            Deshalb ist eine der wichtigsten Regeln:
+          </p>
+
+          <p>
+            <strong>
+              Für jedes wichtige Konto ein eigenes Passwort verwenden.
+            </strong>
+          </p>
+
+          <p>
+            Ein Passwortmanager kann dabei helfen,
+            lange und unterschiedliche Passwörter zu speichern,
+            ohne sie alle auswendig lernen zu müssen.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
 
 
-          <article class="category-card">
+    <!-- =====================================================
+         PASSWORD MANAGER
+         ===================================================== -->
 
-            <div class="category-icon">
-              KEY
-            </div>
+    <section class="section">
+      <div class="container">
 
-            <span class="category-number">
-              01
-            </span>
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            PASSWORTMANAGER
+          </p>
+
+          <h2>
+            Warum Passwortmanager sinnvoll sein können
+          </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
 
             <h3>
               Einzigartige Passwörter
             </h3>
 
             <p>
-              Für unterschiedliche Dienste
-              sollten nach Möglichkeit
-              unterschiedliche Passwörter
-              verwendet werden.
+              Für jeden Dienst kann ein eigenes,
+              zufälliges Passwort verwendet werden.
             </p>
-
-            <a href="#kaufberatung">
-              Worauf achten →
-            </a>
 
           </article>
 
 
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              GEN
-            </div>
-
-            <span class="category-number">
-              02
-            </span>
+          <article class="feature-card">
 
             <h3>
-              Passwortgenerator
+              Weniger Wiederverwendung
             </h3>
 
             <p>
-              Zufällig generierte,
-              lange Passwörter
-              sind meist schwerer zu erraten
-              als einfache selbst gewählte Varianten.
+              Ein kompromittiertes Passwort
+              gefährdet nicht automatisch alle anderen Konten.
             </p>
-
-            <a href="#kaufberatung">
-              Mehr erfahren →
-            </a>
 
           </article>
 
 
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              VAULT
-            </div>
-
-            <span class="category-number">
-              03
-            </span>
+          <article class="feature-card">
 
             <h3>
-              Verschlüsselter Tresor
+              Einfachere Verwaltung
             </h3>
 
             <p>
-              Zugangsdaten werden
-              in einem geschützten Tresor
-              organisiert und gespeichert.
+              Zugangsdaten können zentral
+              und strukturiert verwaltet werden.
             </p>
 
-            <a href="#kaufberatung">
-              Kriterien ansehen →
-            </a>
-
           </article>
-
-
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              SYNC
-            </div>
-
-            <span class="category-number">
-              04
-            </span>
-
-            <h3>
-              Synchronisierung
-            </h3>
-
-            <p>
-              Manche Lösungen ermöglichen
-              den Zugriff auf Passwörter
-              über mehrere Geräte hinweg.
-            </p>
-
-            <a href="#kaufberatung">
-              Unterschiede verstehen →
-            </a>
-
-          </article>
-
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         WHY PASSWORD MANAGER
+         MFA
          ===================================================== -->
 
     <section class="section">
+      <div class="container">
 
+        <div class="feature-card">
+
+          <p class="eyebrow">
+            ZWEITER FAKTOR
+          </p>
+
+          <h2>
+            MFA schützt auch dann,
+            wenn ein Passwort bekannt wird
+          </h2>
+
+          <p>
+            Mehrfaktor-Authentifizierung verlangt
+            neben dem Passwort einen weiteren Nachweis.
+          </p>
+
+          <p>
+            Das kann zum Beispiel sein:
+          </p>
+
+          <ul>
+            <li>Authenticator-App</li>
+            <li>Security Key</li>
+            <li>Passkey</li>
+            <li>Gerätebestätigung</li>
+            <li>in manchen Fällen SMS</li>
+          </ul>
+
+          <p>
+            Besonders wichtige Konten sollten,
+            wenn möglich,
+            zusätzlich abgesichert werden.
+          </p>
+
+          <p>
+            Dazu gehören insbesondere:
+          </p>
+
+          <ul>
+            <li>primäre E-Mail-Adresse</li>
+            <li>Apple-, Google- oder Microsoft-Konto</li>
+            <li>Bank- und Zahlungsdienste</li>
+            <li>Cloudspeicher</li>
+            <li>Domain- und Hosting-Konten</li>
+            <li>geschäftliche Accounts</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PASSKEYS
+         ===================================================== -->
+
+    <section class="section">
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            WARUM?
-          </span>
+          <p class="eyebrow">
+            PASSKEYS
+          </p>
 
           <h2>
-            Das größte Problem:
-            <span>Passwörter wiederzuverwenden.</span>
+            Passwortlose Anmeldung wird zunehmend wichtiger
           </h2>
 
+        </div>
+
+
+        <div class="feature-card">
+
           <p>
-            Wird dasselbe Passwort
-            bei mehreren Diensten verwendet,
-            kann ein einzelner kompromittierter Zugang
-            weitere Konten gefährden.
+            Passkeys können klassische Passwörter
+            bei unterstützten Diensten ersetzen.
           </p>
+
+          <p>
+            Die Anmeldung erfolgt typischerweise
+            über ein registriertes Gerät
+            und dessen lokale Entsperrung.
+          </p>
+
+          <p>
+            Ein großer Vorteil:
+            Ein Passkey lässt sich nicht auf dieselbe Weise
+            auf einer gefälschten Login-Seite eingeben
+            wie ein klassisches Passwort.
+          </p>
+
+          <p>
+            Trotzdem solltest du
+            Wiederherstellungsoptionen und Gerätezugänge
+            sorgfältig absichern.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PHISHING
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            PHISHING
+          </p>
+
+          <h2>
+            Viele Angriffe beginnen nicht mit Technik –
+            sondern mit Täuschung
+          </h2>
 
         </div>
 
 
         <div class="feature-grid">
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              REUSE
-            </span>
-
-            <h2>
-              Passwort-Wiederverwendung vermeiden
-            </h2>
+            <h3>
+              Dringlichkeit
+            </h3>
 
             <p>
-              Ein Passwort-Manager
-              erleichtert es,
-              für jeden Dienst
-              ein eigenes Passwort zu verwenden.
+              „Sofort handeln“,
+              „Konto wird gesperrt“
+              oder „letzte Warnung“
+              sollen dich unter Zeitdruck setzen.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              PHISHING
-            </span>
-
-            <h2>
-              Phishing besser erkennen
-            </h2>
+            <h3>
+              Gefälschte Login-Seite
+            </h3>
 
             <p>
-              Nutzer sollten weiterhin prüfen,
-              auf welcher Website
-              sie sich tatsächlich befinden,
-              bevor Zugangsdaten eingegeben werden.
+              Eine Seite kann optisch
+              nahezu identisch mit einem echten Dienst aussehen.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              MASTER
-            </span>
-
-            <h2>
-              Master-Passwort schützen
-            </h2>
+            <h3>
+              Unerwarteter Anhang
+            </h3>
 
             <p>
-              Das zentrale Passwort
-              für den Tresor
-              sollte besonders stark,
-              einzigartig
-              und nicht anderweitig verwendet werden.
+              Rechnungen,
+              Dokumente oder ZIP-Dateien
+              sollten nicht unkritisch geöffnet werden.
             </p>
 
           </article>
 
+
+          <article class="feature-card">
+
+            <h3>
+              Ungewöhnlicher Absender
+            </h3>
+
+            <p>
+              Anzeigename und tatsächliche Absenderadresse
+              sind nicht immer dasselbe.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Zahlungsaufforderung
+            </h3>
+
+            <p>
+              Änderungen von Bankdaten
+              oder dringende Zahlungsanweisungen
+              sollten separat bestätigt werden.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Sicherheitscode anfordern
+            </h3>
+
+            <p>
+              Ein echter Support benötigt normalerweise
+              nicht deinen aktuellen MFA-Code,
+              um dir zu helfen.
+            </p>
+
+          </article>
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         BUYING GUIDE
-         ===================================================== -->
-
-    <section
-      class="section section-dark"
-      id="kaufberatung"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="eyebrow">
-            KAUFBERATUNG
-          </span>
-
-          <h2>
-            Passwort-Manager vergleichen:
-            <span>Darauf kommt es an.</span>
-          </h2>
-
-          <p>
-            Nicht jeder Passwort-Manager
-            verfolgt denselben Ansatz.
-            Entscheidend sind Sicherheitsmodell,
-            Bedienung,
-            Geräteunterstützung
-            und Funktionsumfang.
-          </p>
-
-        </div>
-
-
-
-        <div class="category-grid">
-
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              ENC
-            </div>
-
-            <span class="category-number">
-              01
-            </span>
-
-            <h3>
-              Verschlüsselung
-            </h3>
-
-            <p>
-              Wichtig ist,
-              wie Zugangsdaten geschützt werden
-              und welches Sicherheitsmodell
-              der Anbieter verwendet.
-            </p>
-
-          </article>
-
-
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              DEV
-            </div>
-
-            <span class="category-number">
-              02
-            </span>
-
-            <h3>
-              Geräte & Plattformen
-            </h3>
-
-            <p>
-              Prüfe,
-              ob die Lösung
-              deine Computer,
-              Smartphones,
-              Tablets
-              und Browser unterstützt.
-            </p>
-
-          </article>
-
-
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              UX
-            </div>
-
-            <span class="category-number">
-              03
-            </span>
-
-            <h3>
-              Bedienbarkeit
-            </h3>
-
-            <p>
-              Ein Sicherheitswerkzeug
-              bringt wenig,
-              wenn es im Alltag
-              zu kompliziert ist
-              und deshalb nicht genutzt wird.
-            </p>
-
-          </article>
-
-
-
-          <article class="category-card">
-
-            <div class="category-icon">
-              REC
-            </div>
-
-            <span class="category-number">
-              04
-            </span>
-
-            <h3>
-              Wiederherstellung
-            </h3>
-
-            <p>
-              Vor dem Einsatz sollte klar sein,
-              welche Möglichkeiten bestehen,
-              wenn Zugangsdaten,
-              Geräte
-              oder Wiederherstellungsinformationen
-              verloren gehen.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         2FA
+         PHISHING CHECK
          ===================================================== -->
 
     <section class="section">
+      <div class="container">
 
-      <div class="container guide-box">
+        <div class="feature-card">
 
-        <div>
-
-          <span class="eyebrow">
-            ZWEI-FAKTOR-AUTHENTIFIZIERUNG
-          </span>
+          <p class="eyebrow">
+            FRONIXIS-PHISHING-CHECK
+          </p>
 
           <h2>
-            Ein Passwort allein
-            <span>muss nicht reichen.</span>
+            Bevor du klickst
           </h2>
 
+          <ol>
+
+            <li>
+              Habe ich diese Nachricht erwartet?
+            </li>
+
+            <li>
+              Stimmt die tatsächliche Absenderadresse?
+            </li>
+
+            <li>
+              Passt die Domain wirklich zum Anbieter?
+            </li>
+
+            <li>
+              Versucht die Nachricht,
+              mich unter Druck zu setzen?
+            </li>
+
+            <li>
+              Soll ich Passwort,
+              Zahlungsdaten oder Sicherheitscode eingeben?
+            </li>
+
+            <li>
+              Kann ich den Anbieter direkt
+              über die offizielle App oder Webseite öffnen,
+              statt den Link zu verwenden?
+            </li>
+
+          </ol>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         UPDATES
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            UPDATES
+          </p>
+
+          <h2>
+            Veraltete Software vergrößert die Angriffsfläche
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
           <p>
-            Zwei-Faktor-Authentifizierung,
-            häufig als 2FA bezeichnet,
-            ergänzt das Passwort
-            um einen weiteren Nachweis.
+            Updates enthalten nicht nur neue Funktionen.
           </p>
 
           <p>
-            Je nach Dienst können beispielsweise
-            Authenticator-Apps,
-            Sicherheitsschlüssel,
-            Passkeys
-            oder andere Verfahren
-            zur zusätzlichen Absicherung verwendet werden.
+            Sie schließen häufig auch bekannte Sicherheitslücken.
+          </p>
+
+          <p>
+            Deshalb sollten insbesondere aktuell gehalten werden:
+          </p>
+
+          <ul>
+            <li>Betriebssystem</li>
+            <li>Browser</li>
+            <li>E-Mail-Programme</li>
+            <li>Router</li>
+            <li>Passwortmanager</li>
+            <li>Cloud-Apps</li>
+            <li>Smart-Home-Geräte</li>
+            <li>Plugins und CMS-Systeme</li>
+          </ul>
+
+          <p>
+            Automatische Sicherheitsupdates
+            sind für viele Nutzer sinnvoll.
           </p>
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         MALWARE
+         DEVICE SECURITY
          ===================================================== -->
 
-    <section class="section section-dark">
-
+    <section class="section">
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            MALWARE & BEDROHUNGEN
-          </span>
+          <p class="eyebrow">
+            GERÄTESICHERHEIT
+          </p>
 
           <h2>
-            Sicherheit besteht
-            <span>aus mehreren Ebenen.</span>
+            Ein verlorenes Gerät darf nicht automatisch
+            ein verlorenes Konto bedeuten
           </h2>
-
-          <p>
-            Ein Passwort-Manager allein
-            ersetzt keine vollständige Sicherheitsstrategie.
-          </p>
 
         </div>
 
 
         <div class="feature-grid">
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              MALWARE
-            </span>
-
-            <h2>
-              Schadsoftware
-            </h2>
+            <h3>
+              Bildschirmsperre
+            </h3>
 
             <p>
-              Sicherheitssoftware
-              kann dabei helfen,
-              bestimmte bekannte
-              oder verdächtige Aktivitäten
-              zu erkennen und zu blockieren.
+              Smartphone,
+              Tablet und Computer
+              sollten automatisch gesperrt werden.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              PHISHING
-            </span>
-
-            <h2>
-              Gefälschte Nachrichten
-            </h2>
+            <h3>
+              Geräteverschlüsselung
+            </h3>
 
             <p>
-              Betrüger versuchen häufig,
-              Nutzer über E-Mails,
-              Nachrichten
-              oder gefälschte Websites
-              zur Preisgabe sensibler Daten zu bewegen.
+              Moderne Betriebssysteme
+              unterstützen häufig eine Verschlüsselung
+              gespeicherter Daten.
             </p>
 
           </article>
 
 
-
           <article class="feature-card">
 
-            <span class="feature-label">
-              RANSOMWARE
-            </span>
-
-            <h2>
-              Datenverschlüsselung
-            </h2>
+            <h3>
+              Geräteortung
+            </h3>
 
             <p>
-              Ransomware kann Dateien
-              unbrauchbar machen
-              oder Systeme blockieren.
-              Aktuelle Systeme
-              und getrennte Backups
-              sind deshalb besonders wichtig.
+              Unterstützte Geräte können
+              bei Verlust häufig gesucht,
+              gesperrt oder gelöscht werden.
             </p>
 
           </article>
 
+
+          <article class="feature-card">
+
+            <h3>
+              Admin-Rechte
+            </h3>
+
+            <p>
+              Anwendungen sollten nicht unnötig
+              weitreichende Rechte erhalten.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Unbekannte Software
+            </h3>
+
+            <p>
+              Programme sollten möglichst
+              aus vertrauenswürdigen Quellen stammen.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Alte Geräte
+            </h3>
+
+            <p>
+              Geräte ohne Sicherheitsupdates
+              sollten besonders kritisch bewertet werden.
+            </p>
+
+          </article>
 
         </div>
 
       </div>
-
     </section>
-
 
 
     <!-- =====================================================
@@ -896,504 +1001,1118 @@
          ===================================================== -->
 
     <section class="section">
-
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            BACKUP
-          </span>
+          <p class="eyebrow">
+            BACKUPS
+          </p>
+
+          <h2>
+            Synchronisation ist nicht automatisch ein Backup
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Wenn eine Datei in einer synchronisierten Cloud gelöscht
+            oder überschrieben wird,
+            kann diese Änderung auf andere Geräte übertragen werden.
+          </p>
+
+          <p>
+            Deshalb sollte für wichtige Daten
+            mindestens eine zusätzliche Sicherung existieren.
+          </p>
+
+          <p>
+            Eine verbreitete Orientierung ist die
+            <strong>3-2-1-Regel</strong>:
+          </p>
+
+          <ul>
+            <li>3 Kopien wichtiger Daten</li>
+            <li>2 unterschiedliche Speichermedien oder Speicherarten</li>
+            <li>1 Kopie räumlich oder logisch getrennt</li>
+          </ul>
+
+          <p>
+            Entscheidend ist außerdem,
+            dass sich das Backup tatsächlich wiederherstellen lässt.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CLOUD
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            CLOUD
+          </p>
+
+          <h2>
+            Cloud-Sicherheit ist auch eine Frage der Freigaben
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Selbst ein gut geschütztes Konto kann problematisch sein,
+            wenn Dateien versehentlich öffentlich freigegeben werden.
+          </p>
+
+          <p>
+            Prüfe regelmäßig:
+          </p>
+
+          <ul>
+            <li>öffentliche Freigabelinks</li>
+            <li>alte Teammitglieder</li>
+            <li>verbundene Drittanbieter-Apps</li>
+            <li>gemeinsame Ordner</li>
+            <li>Freigaben mit Bearbeitungsrechten</li>
+            <li>aktive Sitzungen</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CONNECTED APPS
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            VERBUNDENE APPS
+          </p>
+
+          <h2>
+            Alte App-Verbindungen nicht vergessen
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Wenn du einen Dienst mit Google,
+            Microsoft,
+            Apple
+            oder einem anderen Konto verbindest,
+            kann die Anwendung bestimmte Berechtigungen erhalten.
+          </p>
+
+          <p>
+            Manche Verbindungen bleiben jahrelang aktiv,
+            obwohl die Anwendung längst nicht mehr genutzt wird.
+          </p>
+
+          <p>
+            Deshalb lohnt es sich,
+            regelmäßig verknüpfte Apps und Zugriffsrechte
+            zu kontrollieren und unnötige Verbindungen zu entfernen.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         WI-FI
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            WLAN & ROUTER
+          </p>
+
+          <h2>
+            Der Router ist ein zentraler Zugangspunkt
+          </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+
+            <h3>
+              Admin-Passwort ändern
+            </h3>
+
+            <p>
+              Standardzugänge sollten
+              nicht dauerhaft verwendet werden.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Firmware aktuell halten
+            </h3>
+
+            <p>
+              Auch Router benötigen
+              Sicherheitsupdates.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              WLAN verschlüsseln
+            </h3>
+
+            <p>
+              Moderne Sicherheitsstandards
+              sollten bevorzugt werden.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Gastnetzwerk nutzen
+            </h3>
+
+            <p>
+              Gäste oder bestimmte IoT-Geräte
+              können von wichtigen Geräten
+              getrennt werden.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         IOT
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            SMART HOME & IOT
+          </p>
+
+          <h2>
+            Jedes vernetzte Gerät erweitert die Angriffsfläche
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Kameras,
+            Türklingeln,
+            Steckdosen,
+            Lautsprecher,
+            Haushaltsgeräte
+            und Gartentechnik können mit Konten und Cloud-Diensten verbunden sein.
+          </p>
+
+          <p>
+            Prüfe deshalb:
+          </p>
+
+          <ul>
+            <li>erhält das Gerät noch Updates?</li>
+            <li>kann MFA für das Konto aktiviert werden?</li>
+            <li>welche Daten werden in der Cloud gespeichert?</li>
+            <li>wer hat Zugriff auf das Gerät?</li>
+            <li>gibt es unnötige Freigaben?</li>
+            <li>kann das Gerät in ein separates Netzwerk?</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         AI SECURITY
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            KI & SICHERHEIT
+          </p>
+
+          <h2>
+            KI-Dienste können sensible Informationen erhalten
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Wer KI beruflich oder privat nutzt,
+            sollte nicht automatisch jede Information
+            in einen Chat oder Agenten kopieren.
+          </p>
+
+          <p>
+            Besonders vorsichtig solltest du sein bei:
+          </p>
+
+          <ul>
+            <li>Passwörtern</li>
+            <li>API-Schlüsseln</li>
+            <li>Bankinformationen</li>
+            <li>vertraulichen Geschäftsdaten</li>
+            <li>personenbezogenen Kundendaten</li>
+            <li>internen Dokumenten</li>
+            <li>Gesundheitsinformationen</li>
+          </ul>
+
+          <p>
+            Zusätzlich sollte geprüft werden,
+            ob Inhalte gespeichert,
+            für Produktverbesserung verwendet
+            oder an weitere Systeme übertragen werden.
+          </p>
+
+          <a
+            class="button button-secondary"
+            href="/ki-automation"
+          >
+            KI & Automation öffnen
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         AUTOMATION SECURITY
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            AUTOMATION & SICHERHEIT
+          </p>
+
+          <h2>
+            Automationsplattformen können besonders mächtige Zugriffe haben
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Ein Automationsdienst kann je nach Einrichtung
+            unter anderem:
+          </p>
+
+          <ul>
+            <li>E-Mails lesen</li>
+            <li>E-Mails versenden</li>
+            <li>Dateien abrufen</li>
+            <li>Kalender verändern</li>
+            <li>CRM-Daten bearbeiten</li>
+            <li>Webhooks ausführen</li>
+            <li>API-Schlüssel verwenden</li>
+          </ul>
+
+          <p>
+            Deshalb gilt:
+          </p>
+
+          <p>
+            <strong>
+              So wenig Berechtigungen wie möglich,
+              so viele wie für den Workflow notwendig.
+            </strong>
+          </p>
+
+          <a
+            class="button button-secondary"
+            href="/automatisierung-fuer-anfaenger"
+          >
+            Automatisierung verstehen
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         BUSINESS
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            KLEINE UNTERNEHMEN
+          </p>
+
+          <h2>
+            Cybersecurity muss nicht kompliziert beginnen
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <p>
+            Auch kleine Unternehmen profitieren bereits
+            von einfachen Sicherheitsgrundlagen.
+          </p>
+
+          <ol>
+
+            <li>
+              Individuelle Benutzerkonten verwenden.
+            </li>
+
+            <li>
+              MFA für wichtige Dienste aktivieren.
+            </li>
+
+            <li>
+              Passwortmanager einsetzen.
+            </li>
+
+            <li>
+              Geräte aktuell halten.
+            </li>
+
+            <li>
+              Regelmäßige Backups durchführen.
+            </li>
+
+            <li>
+              Zugriffsrechte begrenzen.
+            </li>
+
+            <li>
+              Alte Konten und Apps entfernen.
+            </li>
+
+            <li>
+              Wiederherstellungswege dokumentieren.
+            </li>
+
+          </ol>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         RECOVERY
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            WIEDERHERSTELLUNG
+          </p>
 
           <h2>
             Sicherheit bedeutet auch:
-            <span>Daten wiederherstellen können.</span>
+            Was passiert, wenn etwas schiefgeht?
           </h2>
-
-          <p>
-            Ein gutes Backup
-            kann bei technischen Defekten,
-            Fehlbedienung,
-            Verlust
-            oder Schadsoftware
-            entscheidend sein.
-          </p>
 
         </div>
 
 
-        <div class="feature-grid">
+        <div class="feature-card">
 
+          <p>
+            Viele Menschen denken bei Sicherheit nur an Verhinderung.
+          </p>
 
-          <article class="feature-card">
+          <p>
+            Mindestens genauso wichtig ist die Wiederherstellung.
+          </p>
 
-            <span class="feature-label">
-              LOCAL
-            </span>
+          <p>
+            Für wichtige Konten solltest du wissen:
+          </p>
 
-            <h2>
-              Lokale Sicherung
-            </h2>
-
-            <p>
-              Externe Datenträger
-              können als Teil
-              einer Backup-Strategie dienen,
-              sollten aber nicht dauerhaft
-              ungeschützt verbunden bleiben.
-            </p>
-
-          </article>
-
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              CLOUD
-            </span>
-
-            <h2>
-              Cloud-Backup
-            </h2>
-
-            <p>
-              Online-Sicherungen
-              können zusätzlichen Schutz bieten,
-              sollten aber hinsichtlich
-              Datenschutz,
-              Verschlüsselung
-              und Wiederherstellung
-              geprüft werden.
-            </p>
-
-          </article>
-
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              REDUNDANCY
-            </span>
-
-            <h2>
-              Mehrere Kopien
-            </h2>
-
-            <p>
-              Besonders wichtige Daten
-              sollten nicht ausschließlich
-              an einem einzigen Ort existieren.
-            </p>
-
-          </article>
-
+          <ul>
+            <li>Welche Wiederherstellungs-E-Mail ist hinterlegt?</li>
+            <li>Ist die Telefonnummer noch aktuell?</li>
+            <li>Wo liegen Backup-Codes?</li>
+            <li>Welche vertrauenswürdigen Geräte sind registriert?</li>
+            <li>Wie kann ein verlorenes Gerät entfernt werden?</li>
+            <li>Wie kann ein Passwort zurückgesetzt werden?</li>
+          </ul>
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         SECURITY FOR BUSINESS
+         SECURITY CHECK
          ===================================================== -->
 
-    <section class="section section-dark">
-
+    <section
+      class="section"
+      id="sicherheitscheck"
+    >
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="eyebrow">
-            BUSINESS SECURITY
-          </span>
+          <p class="eyebrow">
+            FRONIXIS-SICHERHEITSCHECK
+          </p>
 
           <h2>
-            Sicherheit
-            <span>für Teams & Unternehmen.</span>
+            Wie gut bist du aktuell aufgestellt?
           </h2>
-
-          <p>
-            Sobald mehrere Personen,
-            Konten
-            und Systeme beteiligt sind,
-            wird strukturierte Zugriffskontrolle
-            besonders wichtig.
-          </p>
 
         </div>
 
 
         <div class="feature-grid">
 
+          <article class="feature-card">
+
+            <h3>
+              Passwort-Check
+            </h3>
+
+            <p>
+              Nutzt du für wichtige Konten
+              unterschiedliche Passwörter?
+            </p>
+
+          </article>
+
 
           <article class="feature-card">
 
-            <span class="feature-label">
-              ACCESS
-            </span>
+            <h3>
+              MFA-Check
+            </h3>
 
-            <h2>
+            <p>
+              Ist bei deiner wichtigsten E-Mail-Adresse
+              ein zweiter Faktor aktiviert?
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Update-Check
+            </h3>
+
+            <p>
+              Sind Computer,
+              Smartphone,
+              Browser und Router aktuell?
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Backup-Check
+            </h3>
+
+            <p>
+              Existiert eine zusätzliche Sicherung
+              deiner wichtigsten Dateien?
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              App-Check
+            </h3>
+
+            <p>
+              Hast du alte verbundene Apps
+              und Sitzungen entfernt?
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Recovery-Check
+            </h3>
+
+            <p>
+              Könntest du dein wichtigstes Konto
+              wiederherstellen,
+              wenn dein Smartphone heute verloren geht?
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         PRIORITIES
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            PRIORITÄTEN
+          </p>
+
+          <h2>
+            Wenn du heute nur fünf Dinge erledigst
+          </h2>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <ol>
+
+            <li>
+              Wichtigstes E-Mail-Konto mit MFA absichern.
+            </li>
+
+            <li>
+              Wiederverwendete Passwörter ersetzen.
+            </li>
+
+            <li>
+              Betriebssystem und Browser aktualisieren.
+            </li>
+
+            <li>
+              Backup wichtiger Dateien einrichten.
+            </li>
+
+            <li>
+              Wiederherstellungsdaten wichtiger Konten kontrollieren.
+            </li>
+
+          </ol>
+
+          <p>
+            Damit werden bereits mehrere häufige
+            Schwachstellen deutlich reduziert.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         MYTHS
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            MYTHEN
+          </p>
+
+          <h2>
+            Was Cybersecurity nicht bedeutet
+          </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+
+            <h3>
+              „Ich bin kein interessantes Ziel.“
+            </h3>
+
+            <p>
+              Viele Angriffe laufen automatisiert
+              und suchen nicht nach einer bestimmten Person.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              „Ich habe Antivirus.“
+            </h3>
+
+            <p>
+              Antivirus ersetzt weder MFA,
+              Backups noch vorsichtigen Umgang
+              mit Zugangsdaten.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              „Cloud bedeutet automatisch sicher.“
+            </h3>
+
+            <p>
+              Cloud-Anbieter können Infrastruktur schützen,
+              aber falsche Freigaben oder gestohlene Konten
+              bleiben ein Risiko.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              „Ein langes Passwort reicht.“
+            </h3>
+
+            <p>
+              Ein starkes Passwort hilft,
+              aber MFA und sichere Wiederherstellung
+              sind zusätzliche Schutzschichten.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              „Updates kann ich später machen.“
+            </h3>
+
+            <p>
+              Bekannte Sicherheitslücken
+              können gezielt ausgenutzt werden.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              „Backups brauche ich nur bei Defekten.“
+            </h3>
+
+            <p>
+              Backups helfen auch bei
+              Fehlbedienung,
+              Diebstahl,
+              Schadsoftware und Datenkorruption.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FRONIXIS APPROACH
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="feature-card">
+
+          <p class="eyebrow">
+            FRONIXIS-ANSATZ
+          </p>
+
+          <h2>
+            Sicherheit soll verständlich und umsetzbar sein
+          </h2>
+
+          <p>
+            Cybersecurity wird häufig entweder
+            zu stark vereinfacht
+            oder unnötig technisch dargestellt.
+          </p>
+
+          <p>
+            Fronixis verfolgt einen anderen Ansatz:
+          </p>
+
+          <p>
+            <strong>
+              Risiko verstehen →
+              wichtigste Schwachstelle erkennen →
+              konkrete Schutzmaßnahme umsetzen →
+              danach weiter verbessern.
+            </strong>
+          </p>
+
+          <p>
+            Niemand muss an einem Tag
+            ein vollständiges Sicherheitskonzept aufbauen.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FUTURE GUIDES
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            CYBERSECURITY-RATGEBER
+          </p>
+
+          <h2>
+            Diese Themen bauen wir als Nächstes aus
+          </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              KONTOSCHUTZ
+            </p>
+
+            <h3>
+              Passwortmanager für Anfänger
+            </h3>
+
+            <p>
+              Wie Passwortmanager funktionieren,
+              worauf du achten solltest
+              und wie du sicher umsteigst.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              PHISHING
+            </p>
+
+            <h3>
+              Phishing erkennen
+            </h3>
+
+            <p>
+              Gefälschte E-Mails,
+              Webseiten und Nachrichten
+              systematisch prüfen.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <p class="eyebrow">
+              BACKUP
+            </p>
+
+            <h3>
+              Backup für Anfänger
+            </h3>
+
+            <p>
+              Lokale Sicherung,
+              Cloud,
+              externe Festplatte
+              und 3-2-1-Regel verständlich erklärt.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         RELATED
+         ===================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            VERWANDTE THEMEN
+          </p>
+
+          <h2>
+            Sicherheit gehört zu jedem digitalen System
+          </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-card">
+
+            <h3>
+              KI & Automation
+            </h3>
+
+            <p>
+              KI-Dienste,
+              Workflows,
+              Agents und Automationsplattformen
+              besser verstehen.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="/ki-automation"
+            >
+              KI & Automation öffnen
+            </a>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <h3>
+              Automatisierung für Anfänger
+            </h3>
+
+            <p>
+              Trigger,
+              Aktionen,
               Zugriffsrechte
-            </h2>
-
-            <p>
-              Mitarbeiter sollten
-              nur auf die Systeme
-              und Daten zugreifen können,
-              die sie tatsächlich benötigen.
+              und Workflows verstehen.
             </p>
 
-          </article>
+            <a
+              class="button button-secondary"
+              href="/automatisierung-fuer-anfaenger"
+            >
+              Ratgeber lesen
+            </a>
 
+          </article>
 
 
           <article class="feature-card">
 
-            <span class="feature-label">
-              TEAM
-            </span>
-
-            <h2>
-              Gemeinsame Zugangsdaten
-            </h2>
+            <h3>
+              Smart Garden
+            </h3>
 
             <p>
-              Geschäftliche Passwörter
-              sollten nicht unkontrolliert
-              über Chat,
-              E-Mail
-              oder ungeschützte Dokumente
-              weitergegeben werden.
+              Vernetzte Gartengeräte
+              und moderne Smart-Garden-Technik.
             </p>
 
-          </article>
-
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              OFFBOARDING
-            </span>
-
-            <h2>
-              Zugänge verwalten
-            </h2>
-
-            <p>
-              Bei Rollenwechseln
-              oder wenn Personen
-              ein Unternehmen verlassen,
-              müssen Berechtigungen
-              kontrolliert angepasst werden können.
-            </p>
+            <a
+              class="button button-secondary"
+              href="/smart-garden"
+            >
+              Smart Garden öffnen
+            </a>
 
           </article>
-
 
         </div>
 
       </div>
-
     </section>
 
 
-
     <!-- =====================================================
-         FUTURE COMPARISONS
+         CONCLUSION
          ===================================================== -->
 
     <section class="section">
-
       <div class="container">
 
-        <div class="section-heading">
+        <div class="feature-card">
 
-          <span class="eyebrow">
-            FRONIXIS VERGLEICHE
-          </span>
+          <p class="eyebrow">
+            FRONIXIS-FAZIT
+          </p>
 
           <h2>
-            Sicherheitssoftware
-            <span>sinnvoll vergleichen.</span>
+            Cybersecurity beginnt mit den wichtigsten Konten
           </h2>
 
           <p>
-            Fronixis wird einzelne Lösungen
-            nicht nur anhand von Werbeaussagen bewerten,
-            sondern nach ihrem tatsächlichen Einsatzgebiet.
-          </p>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              PASSWORD
-            </span>
-
-            <h2>
-              Passwort-Manager im Vergleich
-            </h2>
-
-            <p>
-              Sicherheit,
-              Plattformunterstützung,
-              Benutzerfreundlichkeit,
-              Synchronisierung
-              und Preisstruktur.
-            </p>
-
-            <a href="#">
-              Vergleich folgt →
-            </a>
-
-          </article>
-
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              SECURITY SUITE
-            </span>
-
-            <h2>
-              Sicherheitssoftware
-            </h2>
-
-            <p>
-              Schutzfunktionen,
-              Systembelastung,
-              Bedienbarkeit
-              und Zusatzfunktionen
-              sollen getrennt betrachtet werden.
-            </p>
-
-            <a href="#">
-              Vergleich folgt →
-            </a>
-
-          </article>
-
-
-
-          <article class="feature-card">
-
-            <span class="feature-label">
-              BUSINESS
-            </span>
-
-            <h2>
-              Security für Unternehmen
-            </h2>
-
-            <p>
-              Lösungen für Teams,
-              Zugriffsverwaltung,
-              Endgeräte
-              und geschäftliche Daten.
-            </p>
-
-            <a href="#">
-              Bereich folgt →
-            </a>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         BASIC CHECKLIST
-         ===================================================== -->
-
-    <section class="section section-dark">
-
-      <div class="container guide-box">
-
-        <div>
-
-          <span class="eyebrow">
-            SECURITY CHECK
-          </span>
-
-          <h2>
-            Die wichtigsten Grundlagen
-            <span>auf einen Blick.</span>
-          </h2>
-
-          <p>
-            Nutze möglichst einzigartige Passwörter,
-            aktiviere zusätzliche Authentifizierung,
-            halte deine Systeme aktuell,
-            prüfe Links und Nachrichten kritisch
-            und sichere wichtige Daten regelmäßig.
+            Du musst nicht jedes technische Detail verstehen,
+            um deine digitale Sicherheit deutlich zu verbessern.
           </p>
 
           <p>
-            Keine einzelne Software
-            kann jedes Sicherheitsrisiko beseitigen.
-            Entscheidend ist die Kombination
-            aus Technik,
-            guten Einstellungen
-            und aufmerksamem Verhalten.
+            Beginne mit:
+          </p>
+
+          <p>
+            <strong>
+              einzigartigen Passwörtern,
+              MFA,
+              Updates,
+              Backups
+              und sicheren Wiederherstellungswegen.
+            </strong>
+          </p>
+
+          <p>
+            Danach kannst du Schritt für Schritt
+            Cloud-Freigaben,
+            Geräte,
+            Netzwerke,
+            Automationen
+            und weitere Dienste absichern.
           </p>
 
         </div>
 
       </div>
-
     </section>
-
-
-
-    <!-- =====================================================
-         EDITORIAL PRINCIPLE
-         ===================================================== -->
-
-    <section class="section">
-
-      <div class="container guide-box">
-
-        <div>
-
-          <span class="eyebrow">
-            FRONIXIS PRINZIP
-          </span>
-
-          <h2>
-            Sicherheit nicht
-            <span>mit Angst verkaufen.</span>
-          </h2>
-
-          <p>
-            Fronixis möchte Sicherheitsprodukte
-            nicht durch übertriebene Bedrohungsszenarien
-            vermarkten.
-            Entscheidend ist,
-            welche Funktionen ein Produkt bietet,
-            welche Risiken es adressiert
-            und für wen es sinnvoll ist.
-          </p>
-
-          <p>
-            Manche Links können später
-            Affiliate-Links sein.
-            Eine mögliche Provision
-            soll die redaktionelle Bewertung
-            nicht bestimmen.
-          </p>
-
-        </div>
-
-
-        <a
-          href="/affiliate-hinweis"
-          class="button button-secondary"
-        >
-          Affiliate-Hinweis
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         NEWSLETTER
-         ===================================================== -->
-
-    <section class="newsletter">
-
-      <div class="container newsletter-inner">
-
-        <div>
-
-          <span class="eyebrow">
-            SECURITY UPDATES
-          </span>
-
-          <h2>
-            Digitale Sicherheit verständlich erklärt.
-          </h2>
-
-          <p>
-            Passwort-Manager,
-            Cybersecurity,
-            Tools,
-            Vergleiche
-            und neue Fronixis-Guides.
-          </p>
-
-        </div>
-
-
-        <form class="newsletter-form">
-
-          <input
-            type="email"
-            placeholder="Deine E-Mail-Adresse"
-            aria-label="E-Mail-Adresse"
-            autocomplete="email"
-          >
-
-          <button type="submit">
-            Eintragen
-          </button>
-
-        </form>
-
-      </div>
-
-    </section>
-
 
   </main>
-
 
 
   <!-- =====================================================
        FOOTER
        ===================================================== -->
 
-  <footer class="footer">
-
-    <div class="container footer-grid">
+  <footer class="site-footer">
+    <div class="container footer-inner">
 
       <div>
 
-        <a
-          href="/"
-          class="logo"
-        >
-          FRONIXIS
-        </a>
+        <strong>
+          Fronixis
+        </strong>
 
         <p>
-          AI. Smart Tech. Automation. Future.
+          Technologie verstehen.
+          Produkte sinnvoll auswählen.
         </p>
 
       </div>
 
 
-      <div class="footer-links">
+      <nav
+        class="footer-nav"
+        aria-label="Footer Navigation"
+      >
 
         <a href="/ueber-fronixis">
           Über Fronixis
@@ -1415,208 +2134,155 @@
           Datenschutz
         </a>
 
-      </div>
+        <button
+          class="cookie-settings-link js-cookie-settings"
+          type="button"
+          data-open-cookie-settings
+        >
+          Cookie-Einstellungen
+        </button>
+
+      </nav>
 
     </div>
-
-
-    <div class="container copyright">
-      © 2026 Fronixis. Alle Rechte vorbehalten.
-    </div>
-
   </footer>
 
 
-
   <!-- =====================================================
-       COOKIE SETTINGS BUTTON
+       COOKIE PLANET
        ===================================================== -->
 
   <button
+    class="cookie-planet js-cookie-settings"
     id="cookie-planet"
-    class="cookie-planet"
     type="button"
+    data-open-cookie-settings
     aria-label="Cookie-Einstellungen öffnen"
+    title="Cookie-Einstellungen"
   >
-
     <span class="cookie-tooltip">
       Cookie-Einstellungen
     </span>
-
   </button>
 
 
-
   <!-- =====================================================
-       COOKIE CONSENT
+       COOKIE MODAL
        ===================================================== -->
 
   <div
-    id="cookie-banner"
     class="cookie-modal"
+    id="cookie-modal"
     role="dialog"
     aria-modal="true"
     aria-labelledby="cookie-title"
     hidden
   >
 
-    <div class="cookie-modal-card">
+    <div class="cookie-modal-backdrop"></div>
 
+
+    <div class="cookie-modal-panel">
 
       <button
+        class="cookie-modal-close"
         type="button"
-        id="cookie-close"
-        class="cookie-close"
+        data-cookie-close
         aria-label="Cookie-Fenster schließen"
       >
         ×
       </button>
 
 
-      <div class="cookie-modal-header">
+      <p class="eyebrow">
+        DATENSCHUTZ
+      </p>
 
-        <div class="cookie-shield">
-          ◈
-        </div>
+      <h2 id="cookie-title">
+        Deine Privatsphäre
+      </h2>
 
-
-        <div>
-
-          <span class="eyebrow">
-            DATENSCHUTZ
-          </span>
-
-          <h2 id="cookie-title">
-            Deine Privatsphäre
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <p class="cookie-intro">
-        Wir verwenden technisch notwendige Technologien
-        für den Betrieb von Fronixis.
+      <p>
+        Wir verwenden technisch notwendige Technologien,
+        damit Fronixis funktioniert.
         Analyse-, Marketing- und Affiliate-Technologien
         verwenden wir nur mit deiner Einwilligung.
       </p>
 
 
+      <div class="cookie-option">
 
-      <div class="cookie-options">
+        <div>
 
+          <strong>
+            Technisch notwendig
+          </strong>
 
-        <div class="cookie-option">
-
-          <div class="cookie-option-icon">
-            ✓
-          </div>
-
-
-          <div class="cookie-option-text">
-
-            <strong>
-              Technisch notwendig
-            </strong>
-
-            <span>
-              Immer aktiv
-            </span>
-
-          </div>
-
-
-          <div class="cookie-required">
-            ✓
-          </div>
+          <p>
+            Erforderlich für grundlegende Funktionen.
+          </p>
 
         </div>
 
-
-
-        <label class="cookie-option">
-
-          <div class="cookie-option-icon">
-            ↗
-          </div>
-
-
-          <div class="cookie-option-text">
-
-            <strong>
-              Analyse
-            </strong>
-
-            <span>
-              Hilft uns, Fronixis zu verbessern
-            </span>
-
-          </div>
-
-
-          <input
-            type="checkbox"
-            id="cookie-analytics"
-            class="cookie-toggle-input"
-          >
-
-
-          <span class="cookie-toggle"></span>
-
-        </label>
-
-
-
-        <label class="cookie-option">
-
-          <div class="cookie-option-icon">
-            ◎
-          </div>
-
-
-          <div class="cookie-option-text">
-
-            <strong>
-              Marketing & Affiliate
-            </strong>
-
-            <span>
-              Für relevante Empfehlungen und Angebote
-            </span>
-
-          </div>
-
-
-          <input
-            type="checkbox"
-            id="cookie-marketing"
-            class="cookie-toggle-input"
-          >
-
-
-          <span class="cookie-toggle"></span>
-
-        </label>
-
+        <span>
+          Immer aktiv
+        </span>
 
       </div>
 
 
+      <label class="cookie-option">
+
+        <div>
+
+          <strong>
+            Analyse
+          </strong>
+
+          <p>
+            Hilft uns,
+            Fronixis zu verbessern.
+          </p>
+
+        </div>
+
+        <input
+          type="checkbox"
+          name="analytics"
+          data-consent-analytics
+        />
+
+      </label>
+
+
+      <label class="cookie-option">
+
+        <div>
+
+          <strong>
+            Marketing & Affiliate
+          </strong>
+
+          <p>
+            Für relevante Empfehlungen und Angebote.
+          </p>
+
+        </div>
+
+        <input
+          type="checkbox"
+          name="marketing"
+          data-consent-marketing
+        />
+
+      </label>
+
 
       <div class="cookie-links">
-
-        <span>
-          Mehr erfahren:
-        </span>
 
         <a href="/datenschutz">
           Datenschutz
         </a>
-
-        <span>
-          •
-        </span>
 
         <a href="/affiliate-hinweis">
           Affiliate-Hinweis
@@ -1625,48 +2291,39 @@
       </div>
 
 
-
       <div class="cookie-actions">
 
         <button
+          class="button button-secondary"
           type="button"
-          id="cookie-reject"
-          class="cookie-button cookie-secondary"
+          data-consent-necessary
         >
           Nur notwendige
         </button>
 
-
         <button
+          class="button button-secondary"
           type="button"
-          id="cookie-save"
-          class="cookie-button cookie-secondary"
+          data-consent-save
         >
           Auswahl speichern
         </button>
 
-
         <button
+          class="button button-primary"
           type="button"
-          id="cookie-accept"
-          class="cookie-button cookie-primary"
+          data-consent-all
         >
           Alle akzeptieren
         </button>
 
       </div>
 
-
     </div>
-
   </div>
 
 
-
-  <!-- JAVASCRIPT -->
   <script src="/script.js"></script>
 
-
 </body>
-
 </html>
