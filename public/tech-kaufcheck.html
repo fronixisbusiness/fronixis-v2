@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Tech-Kaufcheck: 12 Fragen vor jedem Smart-Tech-Kauf | Fronixis</title>
+
+  <meta
+    name="description"
+    content="Der Fronixis Tech-Kaufcheck: 12 wichtige Fragen zu Kosten, Datenschutz, Updates, Abos, Kompatibilität und Zukunftssicherheit vor deinem nächsten Smart-Tech-Kauf."
+  >
+
+  <!--
+    Diese Seite dient aktuell als exklusives Briefing
+    nach der Newsletter-Bestätigung.
+  -->
+  <meta
+    name="robots"
+    content="noindex, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://fronixis.com/tech-kaufcheck"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/style.css?v=5"
+  >
+
+  <style>
+
+    /* =========================================================
+       FRONIXIS BRIEFING #01
+       TECH-KAUFCHECK
+       ========================================================= */
+
+    .briefing-page {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 15% 8%,
+          rgba(139, 92, 246, 0.16),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 88% 22%,
+          rgba(34, 211, 238, 0.10),
+          transparent 30%
+        ),
+        #070912;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .briefing-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      background:
+        rgba(7, 9, 18, 0.82);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .briefing-topbar-inner {
+      width:
+        min(
+          1180px,
+          calc(100% - 40px)
+        );
+
+      min-height: 72px;
+
+      margin-inline: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .briefing-brand {
+      font-size: 1.15rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .briefing-back {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 14px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 999px;
+
+      color: #a6acc7;
+
+      font-size: 0.86rem;
+      font-weight: 700;
+
+      transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .briefing-back:hover {
+      color: #ffffff;
+
+      border-color:
+        rgba(139, 92, 246, 0.38);
+
+      background:
+        rgba(139, 92, 246, 0.08);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .briefing-hero {
+      padding:
+        110px 0
+        85px;
+    }
+
+    .briefing-container {
+      width:
+        min(
+          1080px,
+          calc(100% - 40px)
+        );
+
+      margin-inline: auto;
+    }
+
+    .briefing-hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(280px, 0.75fr);
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .briefing-kicker {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 24px;
+
+      padding: 8px 13px;
+
+      border:
+        1px solid
+        rgba(34, 211, 238, 0.22);
+
+      border-radius: 999px;
+
+      background:
+        rgba(34, 211, 238, 0.045);
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .briefing-kicker-dot {
+      width: 7px;
+      height: 7px;
+
+      flex: 0 0 7px;
+
+      border-radius: 50%;
+
+      background: #4ade80;
+
+      box-shadow:
+        0 0 14px
+        rgba(74, 222, 128, 0.75);
+    }
+
+    .briefing-hero h1 {
+      max-width: 780px;
+
+      margin-bottom: 26px;
+
+      font-size:
+        clamp(
+          2.8rem,
+          7vw,
+          5.7rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .briefing-hero h1 span {
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef 48%,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .briefing-intro {
+      max-width: 720px;
+
+      color: #a6acc7;
+
+      font-size:
+        clamp(
+          1.05rem,
+          2vw,
+          1.22rem
+        );
+
+      line-height: 1.72;
+    }
+
+    .briefing-meta {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+    .briefing-meta span {
+      padding: 8px 11px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 9px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      color: #737a99;
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================================================
+       HERO PANEL
+       ========================================================= */
+
+    .briefing-core {
+      position: relative;
+
+      min-height: 390px;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(139, 92, 246, 0.25);
+
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(19, 23, 46, 0.94),
+          rgba(8, 11, 24, 0.98)
+        );
+
+      box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.35);
+    }
+
+    .briefing-core::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.35;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        28px 28px;
+    }
+
+    .briefing-core-content {
+      position: relative;
+      z-index: 1;
+
+      min-height: 390px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 28px;
+    }
+
+    .briefing-core-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 16px;
+    }
+
+    .briefing-core-head strong {
+      color: #737a99;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.14em;
+    }
+
+    .briefing-live {
+      color: #4ade80 !important;
+    }
+
+    .briefing-orbit {
+      position: relative;
+
+      width: 220px;
+      height: 220px;
+
+      margin: 16px auto;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .briefing-orbit::before,
+    .briefing-orbit::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+    }
+
+    .briefing-orbit::before {
+      inset: 10px;
+
+      border:
+        1px solid
+        rgba(139, 92, 246, 0.34);
+    }
+
+    .briefing-orbit::after {
+      inset: 40px;
+
+      border:
+        1px solid
+        rgba(34, 211, 238, 0.26);
+    }
+
+    .briefing-orbit-center {
+      position: relative;
+      z-index: 2;
+
+      width: 92px;
+      height: 92px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: white;
+
+      font-size: 2rem;
+      font-weight: 900;
+
+      box-shadow:
+        0 0 42px
+        rgba(139, 92, 246, 0.36);
+    }
+
+    .briefing-core-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 14px;
+
+      color: #737a99;
+
+      font-size: 0.63rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+    }
+
+
+    /* =========================================================
+       INTRO STRIP
+       ========================================================= */
+
+    .decision-strip {
+      margin-bottom: 85px;
+
+      padding: 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        repeat(4, minmax(0, 0.5fr));
+
+      gap: 26px;
+
+      align-items: center;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 22px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .decision-strip-title span {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #22d3ee;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.15em;
+    }
+
+    .decision-strip-title strong {
+      font-size: 1.6rem;
+
+      line-height: 1.15;
+    }
+
+    .decision-step {
+      min-width: 0;
+    }
+
+    .decision-step span {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #22d3ee;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+    }
+
+    .decision-step strong {
+      font-size: 0.85rem;
+    }
+
+
+    /* =========================================================
+       ARTICLE SECTION
+       ========================================================= */
+
+    .check-section {
+      padding-bottom: 100px;
+    }
+
+    .check-heading {
+      max-width: 760px;
+
+      margin-bottom: 46px;
+    }
+
+    .check-heading span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+    }
+
+    .check-heading h2 {
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          3.7rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.045em;
+    }
+
+    .check-heading p {
+      color: #a6acc7;
+
+      font-size: 1.03rem;
+    }
+
+
+    /* =========================================================
+       12 CHECK CARDS
+       ========================================================= */
+
+    .check-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .check-card {
+      position: relative;
+
+      min-width: 0;
+
+      padding: 30px;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 24, 47, 0.78),
+          rgba(9, 12, 25, 0.88)
+        );
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .check-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139, 92, 246, 0.10),
+          transparent 36%
+        );
+    }
+
+    .check-card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        rgba(139, 92, 246, 0.34);
+
+      box-shadow:
+        0 20px 55px
+        rgba(0, 0, 0, 0.23);
+    }
+
+    .check-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .check-number {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 25px;
+
+      border:
+        1px solid
+        rgba(34, 211, 238, 0.22);
+
+      border-radius: 13px;
+
+      background:
+        rgba(34, 211, 238, 0.06);
+
+      color: #22d3ee;
+
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .check-card h3 {
+      margin-bottom: 12px;
+
+      font-size: 1.28rem;
+
+      line-height: 1.25;
+    }
+
+    .check-card p {
+      color: #a6acc7;
+
+      font-size: 0.95rem;
+
+      line-height: 1.68;
+    }
+
+    .check-card ul {
+      margin-top: 15px;
+
+      padding-left: 1.15rem;
+
+      color: #a6acc7;
+
+      font-size: 0.9rem;
+    }
+
+    .check-card li + li {
+      margin-top: 6px;
+    }
+
+
+    /* =========================================================
+       60 SECOND CHECK
+       ========================================================= */
+
+    .quick-check {
+      margin-top: 90px;
+
+      padding: 46px;
+
+      border:
+        1px solid
+        rgba(139, 92, 246, 0.24);
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139, 92, 246, 0.17),
+          transparent 40%
+        ),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .quick-check-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 40px;
+
+      margin-bottom: 34px;
+    }
+
+    .quick-check-head span {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: #22d3ee;
+
+      font-size: 0.7rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .quick-check h2 {
+      max-width: 680px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.5rem
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -0.04em;
+    }
+
+    .quick-check-text {
+      max-width: 370px;
+
+      color: #a6acc7;
+    }
+
+    .quick-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 12px;
+    }
+
+    .quick-item {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      padding: 17px 18px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      border-radius: 15px;
+
+      background:
+        rgba(7, 9, 18, 0.55);
+
+      cursor: pointer;
+
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .quick-item:hover {
+      border-color:
+        rgba(34, 211, 238, 0.24);
+
+      background:
+        rgba(34, 211, 238, 0.035);
+    }
+
+    .quick-item input {
+      width: 20px;
+      height: 20px;
+
+      flex: 0 0 20px;
+
+      accent-color: #8b5cf6;
+    }
+
+    .quick-item strong {
+      font-size: 0.95rem;
+    }
+
+    .quick-result {
+      margin-top: 24px;
+
+      color: #a6acc7;
+
+      font-size: 0.92rem;
+    }
+
+
+    /* =========================================================
+       PRINT / SAVE
+       ========================================================= */
+
+    .briefing-tools {
+      margin-top: 28px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .briefing-button {
+      min-height: 50px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 20px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+      border-radius: 13px;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      color: #f7f8ff;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .briefing-button:hover {
+      transform: translateY(-2px);
+
+      border-color:
+        rgba(139, 92, 246, 0.4);
+
+      background:
+        rgba(139, 92, 246, 0.10);
+    }
+
+    .briefing-button-primary {
+      border-color: transparent;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: white;
+    }
+
+
+    /* =========================================================
+       NEXT BRIEFING
+       ========================================================= */
+
+    .next-briefing {
+      padding:
+        0 0
+        110px;
+    }
+
+    .next-card {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(240px, 0.8fr);
+
+      gap: 50px;
+
+      align-items: center;
+
+      padding: 50px;
+
+      overflow: hidden;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+      border-radius: 28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.12),
+          rgba(217, 70, 239, 0.055),
+          rgba(34, 211, 238, 0.045)
+        );
+    }
+
+    .next-card::after {
+      content: "02";
+
+      position: absolute;
+
+      right: 40px;
+      top: 10px;
+
+      color:
+        rgba(255, 255, 255, 0.035);
+
+      font-size: 10rem;
+      font-weight: 900;
+
+      line-height: 1;
+
+      pointer-events: none;
+    }
+
+    .next-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .next-card span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .next-card h2 {
+      margin-bottom: 16px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.4rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.04em;
+    }
+
+    .next-card p {
+      max-width: 650px;
+
+      color: #a6acc7;
+    }
+
+    .next-status {
+      position: relative;
+      z-index: 1;
+
+      padding: 26px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+      border-radius: 20px;
+
+      background:
+        rgba(7, 9, 18, 0.58);
+    }
+
+    .next-status strong {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: #f7f8ff;
+
+      font-size: 1rem;
+    }
+
+    .next-status p {
+      color: #737a99;
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .briefing-footer {
+      padding:
+        48px 0
+        34px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+    }
+
+    .briefing-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+    }
+
+    .briefing-footer p {
+      color: #737a99;
+
+      font-size: 0.85rem;
+    }
+
+    .briefing-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px 20px;
+    }
+
+    .briefing-footer-links a {
+      color: #a6acc7;
+
+      font-size: 0.85rem;
+
+      transition: color 0.2s ease;
+    }
+
+    .briefing-footer-links a:hover {
+      color: white;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .briefing-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-core {
+        max-width: 540px;
+      }
+
+      .decision-strip {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .decision-strip-title {
+        grid-column:
+          1 / -1;
+      }
+
+      .quick-check-head {
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+      .next-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 680px) {
+
+      .briefing-topbar-inner,
+      .briefing-container {
+        width:
+          min(
+            calc(100% - 26px),
+            1080px
+          );
+      }
+
+      .briefing-topbar-inner {
+        min-height: 64px;
+      }
+
+      .briefing-brand {
+        font-size: 0.95rem;
+      }
+
+      .briefing-back {
+        padding:
+          8px 10px;
+
+        font-size: 0.76rem;
+      }
+
+      .briefing-hero {
+        padding:
+          75px 0
+          58px;
+      }
+
+      .briefing-hero h1 {
+        font-size:
+          clamp(
+            2.45rem,
+            13vw,
+            4rem
+          );
+      }
+
+      .briefing-core,
+      .briefing-core-content {
+        min-height: 330px;
+      }
+
+      .briefing-orbit {
+        width: 180px;
+        height: 180px;
+      }
+
+      .decision-strip {
+        margin-bottom: 65px;
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+      }
+
+      .decision-strip-title {
+        grid-column: auto;
+      }
+
+      .check-section {
+        padding-bottom: 75px;
+      }
+
+      .check-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .check-card {
+        padding: 25px;
+      }
+
+      .quick-check {
+        margin-top: 65px;
+
+        padding: 28px 20px;
+      }
+
+      .quick-list {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-tools {
+        flex-direction: column;
+      }
+
+      .briefing-button {
+        width: 100%;
+      }
+
+      .next-card {
+        padding: 32px 24px;
+      }
+
+      .next-card::after {
+        right: 15px;
+
+        font-size: 7rem;
+      }
+
+      .briefing-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+
+    /* =========================================================
+       PRINT VIEW
+       ========================================================= */
+
+    @media print {
+
+      .briefing-topbar,
+      .briefing-core,
+      .briefing-tools,
+      .next-briefing,
+      .briefing-footer {
+        display: none !important;
+      }
+
+      .briefing-page {
+        background: #ffffff !important;
+
+        color: #111111 !important;
+      }
+
+      .briefing-hero {
+        padding:
+          30px 0
+          25px;
+      }
+
+      .briefing-hero-grid {
+        display: block;
+      }
+
+      .briefing-hero h1,
+      .check-heading h2,
+      .quick-check h2 {
+        color: #111111 !important;
+      }
+
+      .briefing-hero h1 span,
+      .briefing-kicker,
+      .check-heading span,
+      .quick-check-head span {
+        color: #111111 !important;
+
+        background: none !important;
+      }
+
+      .briefing-intro,
+      .check-heading p,
+      .check-card p,
+      .check-card ul,
+      .quick-check-text,
+      .quick-result {
+        color: #333333 !important;
+      }
+
+      .decision-strip,
+      .check-card,
+      .quick-check,
+      .quick-item {
+        break-inside: avoid;
+
+        border:
+          1px solid
+          #dddddd !important;
+
+        background:
+          #ffffff !important;
+
+        box-shadow:
+          none !important;
+      }
+
+      .check-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+      }
+
+      .check-card {
+        padding: 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<div class="briefing-page">
+
+
+  <!-- =======================================================
+       TOP BAR
+       ======================================================= -->
+
+  <header class="briefing-topbar">
+
+    <div class="briefing-topbar-inner">
+
+      <a
+        href="/"
+        class="briefing-brand"
+        aria-label="Zur Fronixis Startseite"
+      >
+        FRONIXIS
+      </a>
+
+      <a
+        href="/"
+        class="briefing-back"
+      >
+        ← Zur Website
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="briefing-hero">
+
+      <div class="briefing-container">
+
+        <div class="briefing-hero-grid">
+
+
+          <div>
+
+            <div class="briefing-kicker">
+
+              <span class="briefing-kicker-dot"></span>
+
+              FRONIXIS BRIEFING #01
+
+            </div>
+
+
+            <h1>
+              12 Fragen vor deinem
+              <span>nächsten Smart-Tech-Kauf.</span>
+            </h1>
+
+
+            <p class="briefing-intro">
+
+              Neue Technik kann vieles einfacher machen.
+              Gleichzeitig verstecken sich hinter attraktiven
+              Funktionen oft Abos, Cloud-Abhängigkeiten,
+              Datenschutzfragen oder Folgekosten.
+
+              Dieser Kaufcheck hilft dir dabei, zuerst zu verstehen
+              und danach zu entscheiden.
+
+            </p>
+
+
+            <div class="briefing-meta">
+
+              <span>KAUFCHECK</span>
+
+              <span>12 FRAGEN</span>
+
+              <span>CA. 5 MINUTEN</span>
+
+              <span>AUGUST 2026</span>
+
+            </div>
+
+          </div>
+
+
+
+          <aside
+            class="briefing-core"
+            aria-label="Fronixis Kaufcheck System"
+          >
+
+            <div class="briefing-core-content">
+
+              <div class="briefing-core-head">
+
+                <strong>
+                  FRONIXIS CHECK CORE
+                </strong>
+
+                <strong class="briefing-live">
+                  ● READY
+                </strong>
+
+              </div>
+
+
+              <div class="briefing-orbit">
+
+                <div class="briefing-orbit-center">
+                  12
+                </div>
+
+              </div>
+
+
+              <div class="briefing-core-bottom">
+
+                <span>VERSTEHEN</span>
+
+                <span>PRÜFEN</span>
+
+                <span>ENTSCHEIDEN</span>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DECISION STRIP
+         ===================================================== -->
+
+    <section>
+
+      <div class="briefing-container">
+
+        <div class="decision-strip">
+
+          <div class="decision-strip-title">
+
+            <span>
+              DER FRONIXIS-ANSATZ
+            </span>
+
+            <strong>
+              Erst verstehen.<br>
+              Dann entscheiden.
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>01</span>
+
+            <strong>
+              Bedarf klären
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>02</span>
+
+            <strong>
+              Kosten prüfen
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>03</span>
+
+            <strong>
+              Risiken erkennen
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>04</span>
+
+            <strong>
+              Bewusst entscheiden
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         12 QUESTIONS
+         ===================================================== -->
+
+    <section class="check-section">
+
+      <div class="briefing-container">
+
+
+        <div class="check-heading">
+
+          <span>
+            TECH-KAUFCHECK
+          </span>
+
+          <h2>
+            Beantworte diese 12 Fragen vor dem Kauf.
+          </h2>
+
+          <p>
+            Du musst nicht bei jedem Punkt stundenlang recherchieren.
+            Aber wenn du mehrere Fragen nicht beantworten kannst,
+            lohnt sich ein zweiter Blick auf das Produkt.
+          </p>
+
+        </div>
+
+
+
+        <div class="check-grid">
+
+
+          <!-- 01 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              01
+            </div>
+
+            <h3>
+              Welches konkrete Problem soll das Produkt lösen?
+            </h3>
+
+            <p>
+              Nicht zuerst fragen, was das Gerät alles kann.
+              Frage dich, welche Funktion du tatsächlich brauchst.
+              Ein Produkt mit zwanzig Funktionen ist kein Vorteil,
+              wenn du davon nur zwei verwendest.
+            </p>
+
+          </article>
+
+
+
+          <!-- 02 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              02
+            </div>
+
+            <h3>
+              Funktioniert das Produkt auch ohne kostenpflichtiges Abo?
+            </h3>
+
+            <p>
+              Prüfe vor dem Kauf, welche Funktionen im Kaufpreis
+              enthalten sind und welche später ein monatliches oder
+              jährliches Abonnement benötigen.
+            </p>
+
+            <ul>
+              <li>Welche Funktionen sind kostenlos?</li>
+              <li>Welche benötigen ein Abo?</li>
+              <li>Was passiert nach einer Kündigung?</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 03 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              03
+            </div>
+
+            <h3>
+              Was kostet das Produkt über mehrere Jahre wirklich?
+            </h3>
+
+            <p>
+              Der Kaufpreis ist häufig nur der Anfang.
+              Berechne möglichst die Gesamtkosten über zwei bis
+              drei Jahre.
+            </p>
+
+            <ul>
+              <li>Abonnements</li>
+              <li>Cloudspeicher</li>
+              <li>Zubehör</li>
+              <li>Ersatzteile</li>
+              <li>Verbrauchsmaterial</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 04 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              04
+            </div>
+
+            <h3>
+              Bin ich dauerhaft an einen Hersteller gebunden?
+            </h3>
+
+            <p>
+              Ein geschlossenes Ökosystem kann bequem sein,
+              erschwert aber möglicherweise einen späteren Wechsel.
+              Prüfe Kompatibilität, offene Standards und
+              Exportmöglichkeiten.
+            </p>
+
+          </article>
+
+
+
+          <!-- 05 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              05
+            </div>
+
+            <h3>
+              Was passiert, wenn der Hersteller seinen Dienst einstellt?
+            </h3>
+
+            <p>
+              Gerade Cloud-Geräte sind häufig auf Server des
+              Herstellers angewiesen. Ein technisch funktionierendes
+              Gerät kann dadurch später Funktionen verlieren oder
+              unbrauchbar werden.
+            </p>
+
+          </article>
+
+
+
+          <!-- 06 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              06
+            </div>
+
+            <h3>
+              Welche Daten sammelt das Produkt?
+            </h3>
+
+            <p>
+              Besonders bei Kameras, Sprachassistenten,
+              Robotern, Apps und KI-Systemen solltest du wissen,
+              welche Informationen verarbeitet werden.
+            </p>
+
+            <ul>
+              <li>Welche Daten werden gespeichert?</li>
+              <li>Wo werden sie gespeichert?</li>
+              <li>Kannst du sie löschen?</li>
+              <li>Lässt sich die Datensammlung reduzieren?</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 07 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              07
+            </div>
+
+            <h3>
+              Muss das Gerät permanent mit dem Internet verbunden sein?
+            </h3>
+
+            <p>
+              Lokale Verarbeitung kann Vorteile bei Datenschutz,
+              Geschwindigkeit und Ausfallsicherheit bieten.
+              Prüfe deshalb, welche Funktionen auch offline
+              verfügbar bleiben.
+            </p>
+
+          </article>
+
+
+
+          <!-- 08 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              08
+            </div>
+
+            <h3>
+              Wie lange gibt es Sicherheits- und Softwareupdates?
+            </h3>
+
+            <p>
+              Smart-Geräte sind kleine Computer.
+              Fehlende Updates können später zu Sicherheitsproblemen
+              oder Inkompatibilitäten führen.
+            </p>
+
+          </article>
+
+
+
+          <!-- 09 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              09
+            </div>
+
+            <h3>
+              Kann ich das Produkt reparieren oder Teile ersetzen?
+            </h3>
+
+            <p>
+              Gute Technik sollte möglichst nicht wegen eines kleinen
+              Defekts vollständig ersetzt werden müssen.
+            </p>
+
+            <ul>
+              <li>Ist der Akku austauschbar?</li>
+              <li>Gibt es Ersatzteile?</li>
+              <li>Existiert ein Reparaturservice?</li>
+              <li>Wie lange sind Teile erhältlich?</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 10 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              10
+            </div>
+
+            <h3>
+              Passt die Technologie wirklich zu meinem Einsatzgebiet?
+            </h3>
+
+            <p>
+              Mehr Technik bedeutet nicht automatisch ein besseres
+              Ergebnis. RTK, LiDAR, Mesh, Matter oder KI können
+              hervorragende Lösungen sein – aber nur, wenn sie zu
+              deinem tatsächlichen Problem passen.
+            </p>
+
+          </article>
+
+
+
+          <!-- 11 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              11
+            </div>
+
+            <h3>
+              Welche Nachteile werden im Marketing kaum erwähnt?
+            </h3>
+
+            <p>
+              Suche bewusst nicht nur nach Vorteilen.
+              Gerade die Einschränkungen entscheiden oft darüber,
+              ob du mit einem Produkt langfristig zufrieden bist.
+            </p>
+
+            <ul>
+              <li>Folgekosten</li>
+              <li>Kompatibilitätsprobleme</li>
+              <li>Lautstärke</li>
+              <li>Akkulaufzeit</li>
+              <li>schwierige Einrichtung</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 12 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              12
+            </div>
+
+            <h3>
+              Würde ich das Produkt auch kaufen, wenn es 20 % teurer wäre?
+            </h3>
+
+            <p>
+              Diese einfache Kontrollfrage hilft dabei,
+              Rabattdruck von echtem Bedarf zu unterscheiden.
+              Wenn die Antwort sofort Nein lautet, kaufst du
+              möglicherweise hauptsächlich wegen des Angebots.
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- ===================================================
+             60 SECOND CHECK
+             =================================================== -->
+
+        <section class="quick-check">
+
+          <div class="quick-check-head">
+
+            <div>
+
+              <span>
+                60-SEKUNDEN-CHECK
+              </span>
+
+              <h2>
+                Sechs Punkte vor dem Klick auf „Kaufen“.
+              </h2>
+
+            </div>
+
+
+            <p class="quick-check-text">
+
+              Kannst du mehrere dieser Punkte nicht sicher
+              beantworten, recherchiere noch einmal,
+              bevor du dich entscheidest.
+
+            </p>
+
+          </div>
+
+
+
+          <div class="quick-list">
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Problem und Bedarf sind klar
+              </strong>
+
+            </label>
+
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Gesamtkosten sind bekannt
+              </strong>
+
+            </label>
+
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Abo-Kosten sind geprüft
+              </strong>
+
+            </label>
+
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Datenschutz wurde geprüft
+              </strong>
+
+            </label>
+
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Updates und Support sind geklärt
+              </strong>
+
+            </label>
+
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Technologie passt zum Einsatz
+              </strong>
+
+            </label>
+
+
+          </div>
+
+
+
+          <p class="quick-result">
+
+            <strong>Fronixis-Regel:</strong>
+            Bei mehreren offenen Punkten erst recherchieren –
+            dann kaufen.
+
+          </p>
+
+
+
+          <div class="briefing-tools">
+
+            <button
+              type="button"
+              class="briefing-button briefing-button-primary"
+              onclick="window.print()"
+            >
+              Kaufcheck drucken / als PDF speichern
+            </button>
+
+
+            <a
+              href="/"
+              class="briefing-button"
+            >
+              Fronixis entdecken
+            </a>
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NEXT BRIEFING
+         ===================================================== -->
+
+    <section class="next-briefing">
+
+      <div class="briefing-container">
+
+        <div class="next-card">
+
+
+          <div class="next-card-content">
+
+            <span>
+              ALS NÄCHSTES
+            </span>
+
+            <h2>
+              Briefing #02:
+              Smart-Home-Kaufcheck
+            </h2>
+
+            <p>
+
+              Matter, Thread, Zigbee, WLAN, Cloud und Hersteller-
+              Ökosysteme: Im nächsten Fronixis-Briefing schauen wir
+              uns an, welche Entscheidungen du treffen solltest,
+              bevor das erste Smart-Home-Gerät bei dir einzieht.
+
+            </p>
+
+          </div>
+
+
+
+          <aside class="next-status">
+
+            <strong>
+              Bereits angemeldet.
+            </strong>
+
+            <p>
+              Wenn du das Fronixis-Briefing abonniert hast,
+              erhältst du zukünftige Ausgaben über dein Postfach.
+            </p>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="briefing-footer">
+
+    <div class="briefing-container">
+
+      <div class="briefing-footer-inner">
+
+
+        <div>
+
+          <a
+            href="/"
+            class="briefing-brand"
+          >
+            FRONIXIS
+          </a>
+
+          <p>
+            Technologie verstehen, bevor du dich entscheidest.
+          </p>
+
+        </div>
+
+
+        <nav
+          class="briefing-footer-links"
+          aria-label="Rechtliche Navigation"
+        >
+
+          <a href="/impressum.html">
+            Impressum
+          </a>
+
+          <a href="/datenschutz.html">
+            Datenschutz
+          </a>
+
+          <a href="/kontakt.html">
+            Kontakt
+          </a>
+
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</div>
+
+
+<script>
+
+  /*
+   * Der 60-Sekunden-Check speichert
+   * keine personenbezogenen Daten.
+   * Er läuft ausschließlich lokal
+   * im Browser des Besuchers.
+   */
+
+  const quickChecks =
+    document.querySelectorAll(
+      ".quick-item input[type='checkbox']"
+    );
+
+  quickChecks.forEach((checkbox) => {
+
+    checkbox.addEventListener(
+      "change",
+      () => {
+
+        const checked =
+          document.querySelectorAll(
+            ".quick-item input[type='checkbox']:checked"
+          ).length;
+
+        const result =
+          document.querySelector(
+            ".quick-result"
+          );
+
+        if (!result) {
+          return;
+        }
+
+
+        if (checked === 6) {
+
+          result.innerHTML =
+            "<strong>6 von 6 geprüft.</strong> " +
+            "Du hast die wichtigsten Grundlagen vor deiner Entscheidung kontrolliert.";
+
+        }
+
+        else if (checked >= 4) {
+
+          result.innerHTML =
+            "<strong>" +
+            checked +
+            " von 6 geprüft.</strong> " +
+            "Fast geschafft. Prüfe die noch offenen Punkte vor dem Kauf.";
+
+        }
+
+        else {
+
+          result.innerHTML =
+            "<strong>" +
+            checked +
+            " von 6 geprüft.</strong> " +
+            "Bei mehreren offenen Punkten erst recherchieren – dann kaufen.";
+
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+
+</body>
+</html>
