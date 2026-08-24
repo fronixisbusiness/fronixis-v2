@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>KI-Abo-Check: Lohnt sich ein kostenpflichtiges KI-Tool für dich? | Fronixis</title>
+
+  <meta
+    name="description"
+    content="Der Fronixis KI-Abo-Check: 12 Fragen zu Nutzen, Kosten, Datenschutz, Limits, Export, kommerzieller Nutzung und echten Alternativen vor dem Abschluss eines KI-Abos."
+  >
+
+  <meta
+    name="robots"
+    content="noindex, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://fronixis.com/ki-abo-check"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/style.css?v=5"
+  >
+
+  <style>
+
+    /* =========================================================
+       FRONIXIS BRIEFING #03
+       KI-ABO-CHECK
+       ========================================================= */
+
+    .briefing-page {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 14% 8%,
+          rgba(139, 92, 246, 0.18),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(34, 211, 238, 0.11),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 55% 88%,
+          rgba(217, 70, 239, 0.08),
+          transparent 36%
+        ),
+        #070912;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .briefing-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+      background:
+        rgba(7,9,18,0.82);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .briefing-topbar-inner {
+      width:
+        min(
+          1180px,
+          calc(100% - 40px)
+        );
+
+      min-height: 72px;
+
+      margin-inline: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .briefing-brand {
+      font-size: 1.15rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .briefing-back {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 14px;
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
+      border-radius: 999px;
+
+      color: #a6acc7;
+
+      font-size: 0.86rem;
+      font-weight: 700;
+
+      transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .briefing-back:hover {
+      color: #ffffff;
+
+      border-color:
+        rgba(139,92,246,0.38);
+
+      background:
+        rgba(139,92,246,0.08);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================================================
+       CONTAINER
+       ========================================================= */
+
+    .briefing-container {
+      width:
+        min(
+          1080px,
+          calc(100% - 40px)
+        );
+
+      margin-inline: auto;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .briefing-hero {
+      padding:
+        110px 0
+        85px;
+    }
+
+    .briefing-hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.25fr)
+        minmax(280px,0.75fr);
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .briefing-kicker {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 24px;
+
+      padding: 8px 13px;
+
+      border:
+        1px solid rgba(34,211,238,0.22);
+
+      border-radius: 999px;
+
+      background:
+        rgba(34,211,238,0.045);
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .briefing-kicker-dot {
+      width: 7px;
+      height: 7px;
+
+      flex: 0 0 7px;
+
+      border-radius: 50%;
+
+      background: #4ade80;
+
+      box-shadow:
+        0 0 14px rgba(74,222,128,0.75);
+    }
+
+    .briefing-hero h1 {
+      max-width: 780px;
+
+      margin-bottom: 26px;
+
+      font-size:
+        clamp(
+          2.8rem,
+          7vw,
+          5.5rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .briefing-hero h1 span {
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef 48%,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .briefing-intro {
+      max-width: 720px;
+
+      color: #a6acc7;
+
+      font-size:
+        clamp(
+          1.05rem,
+          2vw,
+          1.22rem
+        );
+
+      line-height: 1.72;
+    }
+
+    .briefing-meta {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+    .briefing-meta span {
+      padding: 8px 11px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 9px;
+
+      background:
+        rgba(255,255,255,0.025);
+
+      color: #737a99;
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================================================
+       AI CORE VISUAL
+       ========================================================= */
+
+    .ai-core {
+      position: relative;
+
+      min-height: 390px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(139,92,246,0.25);
+
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(19,23,46,0.94),
+          rgba(8,11,24,0.98)
+        );
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.35);
+    }
+
+    .ai-core::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.35;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        );
+
+      background-size: 28px 28px;
+    }
+
+    .ai-core-content {
+      position: relative;
+      z-index: 1;
+
+      min-height: 390px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 28px;
+    }
+
+    .ai-core-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 16px;
+    }
+
+    .ai-core-head strong {
+      color: #737a99;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.14em;
+    }
+
+    .ai-live {
+      color: #4ade80 !important;
+    }
+
+    .ai-visual {
+      position: relative;
+
+      width: 235px;
+      height: 235px;
+
+      margin: 10px auto;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .ai-ring {
+      position: absolute;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(139,92,246,0.28);
+    }
+
+    .ai-ring-1 {
+      inset: 8px;
+    }
+
+    .ai-ring-2 {
+      inset: 38px;
+
+      border-color:
+        rgba(34,211,238,0.24);
+    }
+
+    .ai-ring-3 {
+      inset: 68px;
+
+      border-color:
+        rgba(217,70,239,0.30);
+    }
+
+    .ai-core-center {
+      position: relative;
+      z-index: 3;
+
+      width: 88px;
+      height: 88px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: #ffffff;
+
+      font-size: 1.3rem;
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+
+      box-shadow:
+        0 0 42px rgba(139,92,246,0.35);
+    }
+
+    .ai-dot {
+      position: absolute;
+
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: #22d3ee;
+
+      box-shadow:
+        0 0 14px rgba(34,211,238,0.8);
+    }
+
+    .dot-1 {
+      top: 18px;
+      left: 108px;
+    }
+
+    .dot-2 {
+      top: 72px;
+      right: 14px;
+    }
+
+    .dot-3 {
+      bottom: 28px;
+      right: 58px;
+    }
+
+    .dot-4 {
+      bottom: 22px;
+      left: 58px;
+    }
+
+    .dot-5 {
+      top: 70px;
+      left: 14px;
+    }
+
+    .ai-core-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 14px;
+
+      color: #737a99;
+
+      font-size: 0.63rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+    }
+
+
+    /* =========================================================
+       DECISION STRIP
+       ========================================================= */
+
+    .decision-strip {
+      margin-bottom: 85px;
+
+      padding: 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.2fr)
+        repeat(4,minmax(0,0.5fr));
+
+      gap: 26px;
+
+      align-items: center;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 22px;
+
+      background:
+        rgba(255,255,255,0.025);
+    }
+
+    .decision-strip-title span {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #22d3ee;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.15em;
+    }
+
+    .decision-strip-title strong {
+      font-size: 1.6rem;
+
+      line-height: 1.15;
+    }
+
+    .decision-step span {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #22d3ee;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+    }
+
+    .decision-step strong {
+      font-size: 0.85rem;
+    }
+
+
+    /* =========================================================
+       CONTENT
+       ========================================================= */
+
+    .check-section {
+      padding-bottom: 100px;
+    }
+
+    .check-heading {
+      max-width: 760px;
+
+      margin-bottom: 46px;
+    }
+
+    .check-heading span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+    }
+
+    .check-heading h2 {
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          3.7rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.045em;
+    }
+
+    .check-heading p {
+      color: #a6acc7;
+
+      font-size: 1.03rem;
+    }
+
+
+    /* =========================================================
+       CHECK CARDS
+       ========================================================= */
+
+    .check-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 18px;
+    }
+
+    .check-card {
+      position: relative;
+
+      min-width: 0;
+
+      padding: 30px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20,24,47,0.78),
+          rgba(9,12,25,0.88)
+        );
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .check-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139,92,246,0.10),
+          transparent 36%
+        );
+    }
+
+    .check-card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        rgba(139,92,246,0.34);
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,0.23);
+    }
+
+    .check-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .check-number {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 25px;
+
+      border:
+        1px solid rgba(34,211,238,0.22);
+
+      border-radius: 13px;
+
+      background:
+        rgba(34,211,238,0.06);
+
+      color: #22d3ee;
+
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+
+    .check-card h3 {
+      margin-bottom: 12px;
+
+      font-size: 1.28rem;
+
+      line-height: 1.25;
+    }
+
+    .check-card p {
+      color: #a6acc7;
+
+      font-size: 0.95rem;
+
+      line-height: 1.68;
+    }
+
+    .check-card ul {
+      margin-top: 15px;
+
+      padding-left: 1.15rem;
+
+      color: #a6acc7;
+
+      font-size: 0.9rem;
+    }
+
+    .check-card li + li {
+      margin-top: 6px;
+    }
+
+
+    /* =========================================================
+       AI SUBSCRIPTION MATRIX
+       ========================================================= */
+
+    .ai-matrix {
+      margin-top: 80px;
+
+      padding: 42px;
+
+      border:
+        1px solid rgba(139,92,246,0.24);
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139,92,246,0.16),
+          transparent 42%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .ai-matrix > span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.7rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .ai-matrix h2 {
+      max-width: 760px;
+
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.4rem
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -0.04em;
+    }
+
+    .ai-matrix > p {
+      max-width: 760px;
+
+      color: #a6acc7;
+
+      margin-bottom: 30px;
+    }
+
+    .matrix-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+      gap: 12px;
+    }
+
+    .matrix-card {
+      padding: 22px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 16px;
+
+      background:
+        rgba(7,9,18,0.55);
+    }
+
+    .matrix-card span {
+      display: inline-block;
+
+      margin-bottom: 10px;
+
+      color: #22d3ee;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+    }
+
+    .matrix-card strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #f7f8ff;
+
+      font-size: 1rem;
+    }
+
+    .matrix-card p {
+      color: #737a99;
+
+      font-size: 0.85rem;
+
+      line-height: 1.55;
+    }
+
+
+    /* =========================================================
+       QUICK CHECK
+       ========================================================= */
+
+    .quick-check {
+      margin-top: 85px;
+
+      padding: 46px;
+
+      border:
+        1px solid rgba(139,92,246,0.24);
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139,92,246,0.17),
+          transparent 40%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .quick-check-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 40px;
+
+      margin-bottom: 34px;
+    }
+
+    .quick-check-head span {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: #22d3ee;
+
+      font-size: 0.7rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .quick-check h2 {
+      max-width: 680px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.5rem
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -0.04em;
+    }
+
+    .quick-check-text {
+      max-width: 370px;
+
+      color: #a6acc7;
+    }
+
+    .quick-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+      gap: 12px;
+    }
+
+    .quick-item {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      padding: 17px 18px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 15px;
+
+      background:
+        rgba(7,9,18,0.55);
+
+      cursor: pointer;
+
+      transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .quick-item:hover {
+      border-color:
+        rgba(34,211,238,0.24);
+
+      background:
+        rgba(34,211,238,0.035);
+    }
+
+    .quick-item input {
+      width: 20px;
+      height: 20px;
+
+      flex: 0 0 20px;
+
+      accent-color: #8b5cf6;
+    }
+
+    .quick-item strong {
+      font-size: 0.95rem;
+    }
+
+    .quick-result {
+      margin-top: 24px;
+
+      color: #a6acc7;
+
+      font-size: 0.92rem;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
+
+    .briefing-tools {
+      margin-top: 28px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .briefing-button {
+      min-height: 50px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 20px;
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
+      border-radius: 13px;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      color: #f7f8ff;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .briefing-button:hover {
+      transform: translateY(-2px);
+
+      border-color:
+        rgba(139,92,246,0.4);
+
+      background:
+        rgba(139,92,246,0.10);
+    }
+
+    .briefing-button-primary {
+      border-color: transparent;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       NEXT BRIEFING
+       ========================================================= */
+
+    .next-briefing {
+      padding:
+        0 0
+        110px;
+    }
+
+    .next-card {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.2fr)
+        minmax(240px,0.8fr);
+
+      gap: 50px;
+
+      align-items: center;
+
+      padding: 50px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(255,255,255,0.09);
+
+      border-radius: 28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139,92,246,0.12),
+          rgba(217,70,239,0.055),
+          rgba(34,211,238,0.045)
+        );
+    }
+
+    .next-card::after {
+      content: "04";
+
+      position: absolute;
+
+      right: 40px;
+      top: 10px;
+
+      color:
+        rgba(255,255,255,0.035);
+
+      font-size: 10rem;
+      font-weight: 900;
+
+      line-height: 1;
+
+      pointer-events: none;
+    }
+
+    .next-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .next-card span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .next-card h2 {
+      margin-bottom: 16px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.4rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.04em;
+    }
+
+    .next-card p {
+      max-width: 650px;
+
+      color: #a6acc7;
+    }
+
+    .next-status {
+      position: relative;
+      z-index: 1;
+
+      padding: 26px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 20px;
+
+      background:
+        rgba(7,9,18,0.58);
+    }
+
+    .next-status strong {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: #f7f8ff;
+
+      font-size: 1rem;
+    }
+
+    .next-status p {
+      color: #737a99;
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .briefing-footer {
+      padding:
+        48px 0
+        34px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.08);
+    }
+
+    .briefing-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+    }
+
+    .briefing-footer p {
+      color: #737a99;
+
+      font-size: 0.85rem;
+    }
+
+    .briefing-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px 20px;
+    }
+
+    .briefing-footer-links a {
+      color: #a6acc7;
+
+      font-size: 0.85rem;
+    }
+
+    .briefing-footer-links a:hover {
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .briefing-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-core {
+        max-width: 540px;
+      }
+
+      .decision-strip {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+      }
+
+      .decision-strip-title {
+        grid-column: 1 / -1;
+      }
+
+      .matrix-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-check-head {
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+      .next-card {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 680px) {
+
+      .briefing-topbar-inner,
+      .briefing-container {
+        width:
+          min(
+            calc(100% - 26px),
+            1080px
+          );
+      }
+
+      .briefing-topbar-inner {
+        min-height: 64px;
+      }
+
+      .briefing-brand {
+        font-size: 0.95rem;
+      }
+
+      .briefing-back {
+        padding: 8px 10px;
+
+        font-size: 0.76rem;
+      }
+
+      .briefing-hero {
+        padding:
+          75px 0
+          58px;
+      }
+
+      .briefing-hero h1 {
+        font-size:
+          clamp(
+            2.45rem,
+            13vw,
+            4rem
+          );
+      }
+
+      .ai-core,
+      .ai-core-content {
+        min-height: 330px;
+      }
+
+      .decision-strip {
+        margin-bottom: 65px;
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+      }
+
+      .decision-strip-title {
+        grid-column: auto;
+      }
+
+      .check-section {
+        padding-bottom: 75px;
+      }
+
+      .check-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .check-card {
+        padding: 25px;
+      }
+
+      .ai-matrix {
+        margin-top: 65px;
+
+        padding: 28px 20px;
+      }
+
+      .quick-check {
+        margin-top: 65px;
+
+        padding: 28px 20px;
+      }
+
+      .quick-list {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-tools {
+        flex-direction: column;
+      }
+
+      .briefing-button {
+        width: 100%;
+      }
+
+      .next-card {
+        padding: 32px 24px;
+      }
+
+      .next-card::after {
+        right: 15px;
+
+        font-size: 7rem;
+      }
+
+      .briefing-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+
+    /* =========================================================
+       PRINT
+       ========================================================= */
+
+    @media print {
+
+      .briefing-topbar,
+      .ai-core,
+      .briefing-tools,
+      .next-briefing,
+      .briefing-footer {
+        display: none !important;
+      }
+
+      .briefing-page {
+        background: #ffffff !important;
+
+        color: #111111 !important;
+      }
+
+      .briefing-hero {
+        padding:
+          30px 0
+          25px;
+      }
+
+      .briefing-hero-grid {
+        display: block;
+      }
+
+      .briefing-hero h1,
+      .check-heading h2,
+      .ai-matrix h2,
+      .quick-check h2 {
+        color: #111111 !important;
+      }
+
+      .briefing-hero h1 span,
+      .briefing-kicker,
+      .check-heading span,
+      .ai-matrix > span,
+      .quick-check-head span {
+        color: #111111 !important;
+
+        background: none !important;
+      }
+
+      .briefing-intro,
+      .check-heading p,
+      .check-card p,
+      .check-card ul,
+      .ai-matrix > p,
+      .matrix-card p,
+      .quick-check-text,
+      .quick-result {
+        color: #333333 !important;
+      }
+
+      .decision-strip,
+      .check-card,
+      .ai-matrix,
+      .matrix-card,
+      .quick-check,
+      .quick-item {
+        break-inside: avoid;
+
+        border:
+          1px solid #dddddd !important;
+
+        background:
+          #ffffff !important;
+
+        box-shadow:
+          none !important;
+      }
+
+      .check-grid {
+        grid-template-columns:
+          1fr 1fr;
+
+        gap: 12px;
+      }
+
+      .check-card {
+        padding: 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<div class="briefing-page">
+
+
+  <!-- =======================================================
+       TOP BAR
+       ======================================================= -->
+
+  <header class="briefing-topbar">
+
+    <div class="briefing-topbar-inner">
+
+      <a
+        href="/"
+        class="briefing-brand"
+        aria-label="Zur Fronixis Startseite"
+      >
+        FRONIXIS
+      </a>
+
+      <a
+        href="/"
+        class="briefing-back"
+      >
+        ← Zur Website
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="briefing-hero">
+
+      <div class="briefing-container">
+
+        <div class="briefing-hero-grid">
+
+
+          <div>
+
+            <div class="briefing-kicker">
+
+              <span class="briefing-kicker-dot"></span>
+
+              FRONIXIS BRIEFING #03
+
+            </div>
+
+
+            <h1>
+              Brauchst du dieses
+              <span>KI-Abo wirklich?</span>
+            </h1>
+
+
+            <p class="briefing-intro">
+
+              KI-Tools versprechen mehr Produktivität, bessere Texte,
+              schnellere Analysen und neue Automatisierungen.
+
+              Doch ein kostenpflichtiges Abo lohnt sich nur dann,
+              wenn du die Funktionen tatsächlich brauchst und
+              regelmäßig nutzt.
+
+              Dieser Check hilft dir dabei, Nutzen, Kosten,
+              Datenschutz und echte Alternativen vor dem Abschluss
+              eines KI-Abos zu prüfen.
+
+            </p>
+
+
+            <div class="briefing-meta">
+
+              <span>KI & AUTOMATION</span>
+
+              <span>12 FRAGEN</span>
+
+              <span>CA. 6 MINUTEN</span>
+
+              <span>BRIEFING #03</span>
+
+            </div>
+
+          </div>
+
+
+
+          <aside
+            class="ai-core"
+            aria-label="Fronixis AI Decision Core"
+          >
+
+            <div class="ai-core-content">
+
+              <div class="ai-core-head">
+
+                <strong>
+                  AI DECISION CORE
+                </strong>
+
+                <strong class="ai-live">
+                  ● ACTIVE
+                </strong>
+
+              </div>
+
+
+              <div class="ai-visual">
+
+                <div class="ai-ring ai-ring-1"></div>
+
+                <div class="ai-ring ai-ring-2"></div>
+
+                <div class="ai-ring ai-ring-3"></div>
+
+                <div class="ai-core-center">
+                  AI
+                </div>
+
+                <span class="ai-dot dot-1"></span>
+                <span class="ai-dot dot-2"></span>
+                <span class="ai-dot dot-3"></span>
+                <span class="ai-dot dot-4"></span>
+                <span class="ai-dot dot-5"></span>
+
+              </div>
+
+
+              <div class="ai-core-bottom">
+
+                <span>NEED</span>
+
+                <span>VALUE</span>
+
+                <span>DECIDE</span>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DECISION STRIP
+         ===================================================== -->
+
+    <section>
+
+      <div class="briefing-container">
+
+        <div class="decision-strip">
+
+          <div class="decision-strip-title">
+
+            <span>
+              KI-ABO-STRATEGIE
+            </span>
+
+            <strong>
+              Erst Bedarf.<br>
+              Dann Bezahlung.
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>01</span>
+
+            <strong>
+              Problem definieren
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>02</span>
+
+            <strong>
+              Nutzung prüfen
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>03</span>
+
+            <strong>
+              Kosten vergleichen
+            </strong>
+
+          </div>
+
+
+          <div class="decision-step">
+
+            <span>04</span>
+
+            <strong>
+              Bewusst abonnieren
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         12 QUESTIONS
+         ===================================================== -->
+
+    <section class="check-section">
+
+      <div class="briefing-container">
+
+
+        <div class="check-heading">
+
+          <span>
+            KI-ABO-CHECK
+          </span>
+
+          <h2>
+            Prüfe diese 12 Fragen vor dem Bezahlen.
+          </h2>
+
+          <p>
+            Ein gutes KI-Tool kann sehr wertvoll sein.
+            Trotzdem ist das teuerste Abo nicht automatisch
+            die beste Lösung für deinen Alltag.
+          </p>
+
+        </div>
+
+
+
+        <div class="check-grid">
+
+
+          <!-- 01 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              01
+            </div>
+
+            <h3>
+              Welches konkrete Problem soll das KI-Tool lösen?
+            </h3>
+
+            <p>
+              Schreibe in einem Satz auf, wofür du das Tool
+              tatsächlich brauchst. Wenn du das nicht klar
+              formulieren kannst, ist ein kostenpflichtiges Abo
+              möglicherweise noch zu früh.
+            </p>
+
+          </article>
+
+
+
+          <!-- 02 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              02
+            </div>
+
+            <h3>
+              Wie oft wirst du die kostenpflichtigen Funktionen nutzen?
+            </h3>
+
+            <p>
+              Ein Abo lohnt sich eher bei regelmäßiger Nutzung.
+              Für ein oder zwei Aufgaben im Monat reicht oft
+              eine kostenlose Version oder ein flexibler Tarif.
+            </p>
+
+          </article>
+
+
+
+          <!-- 03 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              03
+            </div>
+
+            <h3>
+              Welche Funktion fehlt dir in der kostenlosen Version?
+            </h3>
+
+            <p>
+              Bezahle nicht nur für das Gefühl, die bessere Version
+              zu besitzen. Identifiziere mindestens eine Funktion,
+              die du wirklich regelmäßig brauchst.
+            </p>
+
+            <ul>
+              <li>höhere Limits</li>
+              <li>bessere Modelle</li>
+              <li>Datei-Analyse</li>
+              <li>Automatisierungen</li>
+              <li>Team-Funktionen</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 04 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              04
+            </div>
+
+            <h3>
+              Gibt es eine kostenlose oder günstigere Alternative?
+            </h3>
+
+            <p>
+              Vergleiche nicht nur Marken, sondern auch deine
+              tatsächliche Nutzung. Manche Aufgaben lassen sich
+              mit kostenlosen Tools oder Kombinationen aus mehreren
+              Diensten genauso gut erledigen.
+            </p>
+
+          </article>
+
+
+
+          <!-- 05 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              05
+            </div>
+
+            <h3>
+              Was kostet das Abo pro Jahr?
+            </h3>
+
+            <p>
+              Monatspreise wirken klein. Rechne sie immer auf zwölf
+              Monate hoch und vergleiche anschließend mit deinem
+              tatsächlichen Nutzen.
+            </p>
+
+            <ul>
+              <li>Monatspreis × 12</li>
+              <li>jährlicher Tarif</li>
+              <li>Mehrwertsteuer</li>
+              <li>zusätzliche Credits</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 06 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              06
+            </div>
+
+            <h3>
+              Gibt es Nutzungs-, Nachrichten- oder Credit-Limits?
+            </h3>
+
+            <p>
+              „Unbegrenzt“ ist nicht immer wirklich unbegrenzt.
+              Prüfe Nachrichtenlimits, Bild-Credits, API-Kosten,
+              Dateigrößen und mögliche Fair-Use-Regeln.
+            </p>
+
+          </article>
+
+
+
+          <!-- 07 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              07
+            </div>
+
+            <h3>
+              Was passiert mit deinen eingegebenen Daten?
+            </h3>
+
+            <p>
+              Besonders bei geschäftlichen Dokumenten,
+              personenbezogenen Daten und vertraulichen Informationen
+              solltest du die Datenschutz- und Trainingsbedingungen
+              des Anbieters kennen.
+            </p>
+
+            <ul>
+              <li>Werden Eingaben gespeichert?</li>
+              <li>Werden sie zum Training verwendet?</li>
+              <li>Kannst du Daten löschen?</li>
+              <li>Gibt es Business-/Privacy-Einstellungen?</li>
+            </ul>
+
+          </article>
+
+
+
+          <!-- 08 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              08
+            </div>
+
+            <h3>
+              Darfst du die Ergebnisse kommerziell verwenden?
+            </h3>
+
+            <p>
+              Wenn du mit dem Tool Inhalte für Kunden,
+              Produkte, Werbung oder dein Unternehmen erstellst,
+              prüfe die jeweiligen Nutzungsbedingungen.
+            </p>
+
+          </article>
+
+
+
+          <!-- 09 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              09
+            </div>
+
+            <h3>
+              Kannst du deine Daten und Ergebnisse exportieren?
+            </h3>
+
+            <p>
+              Ein Tool sollte dich nicht unnötig einsperren.
+              Prüfe, ob Chats, Dateien, Projekte oder Ergebnisse
+              exportiert und außerhalb der Plattform weiterverwendet
+              werden können.
+            </p>
+
+          </article>
+
+
+
+          <!-- 10 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              10
+            </div>
+
+            <h3>
+              Lässt sich das Tool mit deinem Workflow verbinden?
+            </h3>
+
+            <p>
+              Ein KI-Tool ist besonders wertvoll, wenn es in deinen
+              bestehenden Arbeitsablauf passt – zum Beispiel über
+              Integrationen, APIs oder Automatisierungsplattformen.
+            </p>
+
+          </article>
+
+
+
+          <!-- 11 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              11
+            </div>
+
+            <h3>
+              Wie leicht kannst du das Abo wieder kündigen?
+            </h3>
+
+            <p>
+              Prüfe Kündigungsfrist, Abrechnungszeitraum
+              und automatische Verlängerungen, bevor du einen
+              Jahresvertrag abschließt.
+            </p>
+
+          </article>
+
+
+
+          <!-- 12 -->
+
+          <article class="check-card">
+
+            <div class="check-number">
+              12
+            </div>
+
+            <h3>
+              Spart dir das Tool tatsächlich Zeit oder Geld?
+            </h3>
+
+            <p>
+              Am Ende zählt der reale Nutzen.
+              Wenn ein KI-Abo 25 € im Monat kostet,
+              sollte es entweder messbar Zeit sparen,
+              bessere Ergebnisse ermöglichen oder einen anderen
+              klaren wirtschaftlichen Mehrwert liefern.
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+
+        <!-- ===================================================
+             DECISION MATRIX
+             =================================================== -->
+
+        <section class="ai-matrix">
+
+          <span>
+            SCHNELLE EINORDNUNG
+          </span>
+
+          <h2>
+            Wann lohnt sich ein KI-Abo eher – und wann eher nicht?
+          </h2>
+
+          <p>
+            Diese Einordnung ersetzt keinen individuellen Vergleich,
+            hilft aber dabei, deine Situation schnell einzuordnen.
+          </p>
+
+
+          <div class="matrix-grid">
+
+
+            <div class="matrix-card">
+
+              <span>
+                EHER JA
+              </span>
+
+              <strong>
+                Du nutzt KI fast täglich.
+              </strong>
+
+              <p>
+                Höhere Limits, bessere Modelle oder zusätzliche
+                Funktionen können dann einen echten Produktivitäts-
+                vorteil bringen.
+              </p>
+
+            </div>
+
+
+            <div class="matrix-card">
+
+              <span>
+                KOMMT DARAUF AN
+              </span>
+
+              <strong>
+                Du nutzt KI gelegentlich.
+              </strong>
+
+              <p>
+                Prüfe, ob du wirklich eine Premium-Funktion brauchst
+                oder ob die kostenlose Version deine Aufgaben bereits
+                zuverlässig abdeckt.
+              </p>
+
+            </div>
+
+
+            <div class="matrix-card">
+
+              <span>
+                EHER NEIN
+              </span>
+
+              <strong>
+                Du möchtest das Abo nur ausprobieren.
+              </strong>
+
+              <p>
+                Starte zunächst kostenlos oder monatlich.
+                Ein Jahresabo lohnt sich selten, bevor du deinen
+                tatsächlichen Bedarf kennst.
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </section>
+
+
+
+        <!-- ===================================================
+             QUICK CHECK
+             =================================================== -->
+
+        <section class="quick-check">
+
+          <div class="quick-check-head">
+
+
+            <div>
+
+              <span>
+                60-SEKUNDEN-KI-ABO-CHECK
+              </span>
+
+              <h2>
+                Sechs Punkte vor dem Klick auf „Abonnieren“.
+              </h2>
+
+            </div>
+
+
+            <p class="quick-check-text">
+
+              Je mehr dieser Punkte du klar beantworten kannst,
+              desto fundierter ist deine Entscheidung.
+
+            </p>
+
+
+          </div>
+
+
+
+          <div class="quick-list">
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Mein konkreter Anwendungsfall ist klar
+              </strong>
+
+            </label>
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Ich brauche tatsächlich eine Premium-Funktion
+              </strong>
+
+            </label>
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Jahreskosten und Limits sind bekannt
+              </strong>
+
+            </label>
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Datenschutz und Nutzungsrechte sind geprüft
+              </strong>
+
+            </label>
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Kostenlose Alternativen wurden verglichen
+              </strong>
+
+            </label>
+
+
+            <label class="quick-item">
+
+              <input type="checkbox">
+
+              <strong>
+                Das Tool spart mir messbar Zeit oder Geld
+              </strong>
+
+            </label>
+
+
+          </div>
+
+
+
+          <p class="quick-result">
+
+            <strong>Fronixis-Regel:</strong>
+            Bezahle für echten Nutzen – nicht nur für mehr Funktionen.
+
+          </p>
+
+
+
+          <div class="briefing-tools">
+
+
+            <button
+              type="button"
+              class="briefing-button briefing-button-primary"
+              onclick="window.print()"
+            >
+              KI-Abo-Check drucken / als PDF speichern
+            </button>
+
+
+            <a
+              href="/ki-automation.html"
+              class="briefing-button"
+            >
+              KI & Automation bei Fronixis entdecken
+            </a>
+
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NEXT BRIEFING
+         ===================================================== -->
+
+    <section class="next-briefing">
+
+      <div class="briefing-container">
+
+        <div class="next-card">
+
+
+          <div class="next-card-content">
+
+            <span>
+              ALS NÄCHSTES
+            </span>
+
+            <h2>
+              Briefing #04:
+              Smart-Garden-Check
+            </h2>
+
+            <p>
+              RTK, LiDAR, Kamera, Begrenzungskabel und automatische
+              Gartenpflege: Im nächsten Briefing prüfen wir,
+              welche Technik wirklich zu deinem Garten passt.
+            </p>
+
+          </div>
+
+
+
+          <aside class="next-status">
+
+            <strong>
+              Nächste Stufe der Festung.
+            </strong>
+
+            <p>
+              Mit jeder Ausgabe wächst deine Fronixis-
+              Entscheidungsbibliothek um ein weiteres Tech-Thema.
+            </p>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="briefing-footer">
+
+    <div class="briefing-container">
+
+      <div class="briefing-footer-inner">
+
+
+        <div>
+
+          <a
+            href="/"
+            class="briefing-brand"
+          >
+            FRONIXIS
+          </a>
+
+          <p>
+            Technologie verstehen, bevor du dich entscheidest.
+          </p>
+
+        </div>
+
+
+        <nav
+          class="briefing-footer-links"
+          aria-label="Rechtliche Navigation"
+        >
+
+          <a href="/impressum.html">
+            Impressum
+          </a>
+
+          <a href="/datenschutz.html">
+            Datenschutz
+          </a>
+
+          <a href="/kontakt.html">
+            Kontakt
+          </a>
+
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</div>
+
+
+<script>
+
+  const quickChecks =
+    document.querySelectorAll(
+      ".quick-item input[type='checkbox']"
+    );
+
+  quickChecks.forEach((checkbox) => {
+
+    checkbox.addEventListener(
+      "change",
+      () => {
+
+        const checked =
+          document.querySelectorAll(
+            ".quick-item input[type='checkbox']:checked"
+          ).length;
+
+        const result =
+          document.querySelector(
+            ".quick-result"
+          );
+
+        if (!result) {
+          return;
+        }
+
+        if (checked === 6) {
+
+          result.innerHTML =
+            "<strong>6 von 6 geprüft.</strong> " +
+            "Du hast die wichtigsten Punkte vor deinem KI-Abo kontrolliert.";
+
+        }
+
+        else if (checked >= 4) {
+
+          result.innerHTML =
+            "<strong>" +
+            checked +
+            " von 6 geprüft.</strong> " +
+            "Fast geschafft. Kläre die offenen Punkte vor dem Abschluss.";
+
+        }
+
+        else {
+
+          result.innerHTML =
+            "<strong>" +
+            checked +
+            " von 6 geprüft.</strong> " +
+            "Prüfe Bedarf, Kosten und Alternativen noch einmal, bevor du abonnierst.";
+
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+
+</body>
+</html>
