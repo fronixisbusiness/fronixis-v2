@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Fronixis Briefing Bibliothek | Tech-Kaufchecks & Entscheidungshelfer</title>
+
+  <meta
+    name="description"
+    content="Die Fronixis Briefing Bibliothek bündelt Tech-Kaufchecks, Smart-Home-, KI-, Smart-Garden-, Cybersecurity- und Kosten-Guides an einem Ort."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://fronixis.com/briefing-bibliothek"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/style.css?v=5"
+  >
+
+  <style>
+
+    /* =========================================================
+       FRONIXIS BRIEFING LIBRARY
+       ========================================================= */
+
+    .library-page {
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at 10% 8%,
+          rgba(139, 92, 246, 0.17),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 16%,
+          rgba(34, 211, 238, 0.10),
+          transparent 30%
+        ),
+        #070912;
+
+      color: #f7f8ff;
+    }
+
+    .library-container {
+      width:
+        min(
+          1180px,
+          calc(100% - 40px)
+        );
+
+      margin-inline: auto;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .library-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+      background:
+        rgba(7,9,18,0.82);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .library-topbar-inner {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .library-brand {
+      font-size: 1.15rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .library-back {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 9px 14px;
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
+      border-radius: 999px;
+
+      color: #a6acc7;
+
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .library-back:hover {
+      color: #ffffff;
+
+      border-color:
+        rgba(139,92,246,0.38);
+
+      background:
+        rgba(139,92,246,0.08);
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .library-hero {
+      padding:
+        110px 0
+        90px;
+    }
+
+    .library-hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.35fr)
+        minmax(300px,0.65fr);
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .library-kicker {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 24px;
+
+      padding: 8px 13px;
+
+      border:
+        1px solid rgba(34,211,238,0.22);
+
+      border-radius: 999px;
+
+      background:
+        rgba(34,211,238,0.045);
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .library-kicker::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #4ade80;
+
+      box-shadow:
+        0 0 14px rgba(74,222,128,0.75);
+    }
+
+    .library-hero h1 {
+      max-width: 860px;
+
+      margin-bottom: 26px;
+
+      font-size:
+        clamp(
+          3rem,
+          7vw,
+          6rem
+        );
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .library-hero h1 span {
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef 48%,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .library-intro {
+      max-width: 760px;
+
+      color: #a6acc7;
+
+      font-size:
+        clamp(
+          1.05rem,
+          2vw,
+          1.2rem
+        );
+
+      line-height: 1.72;
+    }
+
+    .library-meta {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+    .library-meta span {
+      padding: 8px 11px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 9px;
+
+      background:
+        rgba(255,255,255,0.025);
+
+      color: #737a99;
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =========================================================
+       LIBRARY CORE
+       ========================================================= */
+
+    .library-core {
+      position: relative;
+
+      min-height: 390px;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(139,92,246,0.25);
+
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(19,23,46,0.94),
+          rgba(8,11,24,0.98)
+        );
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,0.35);
+    }
+
+    .library-core::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      opacity: 0.35;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        );
+
+      background-size: 28px 28px;
+    }
+
+    .library-core-content {
+      position: relative;
+      z-index: 1;
+
+      min-height: 390px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 28px;
+    }
+
+    .library-core-head {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 16px;
+    }
+
+    .library-core-head strong {
+      color: #737a99;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.14em;
+    }
+
+    .library-live {
+      color: #4ade80 !important;
+    }
+
+    .library-stack {
+      position: relative;
+
+      width: 230px;
+      height: 220px;
+
+      margin: 10px auto;
+    }
+
+    .stack-card {
+      position: absolute;
+
+      width: 160px;
+      height: 115px;
+
+      left: 35px;
+
+      border:
+        1px solid rgba(255,255,255,0.10);
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(139,92,246,0.24),
+          rgba(34,211,238,0.08)
+        );
+
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.22);
+    }
+
+    .stack-card-1 {
+      top: 24px;
+
+      transform:
+        rotate(-9deg)
+        translateX(-14px);
+
+      opacity: 0.55;
+    }
+
+    .stack-card-2 {
+      top: 44px;
+
+      transform:
+        rotate(7deg)
+        translateX(12px);
+
+      opacity: 0.72;
+    }
+
+    .stack-card-3 {
+      top: 67px;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: #ffffff;
+
+      font-size: 2rem;
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+    }
+
+    .library-core-bottom {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 14px;
+
+      color: #737a99;
+
+      font-size: 0.63rem;
+      font-weight: 900;
+
+      letter-spacing: 0.12em;
+    }
+
+
+    /* =========================================================
+       SECTION HEAD
+       ========================================================= */
+
+    .library-section {
+      padding-bottom: 110px;
+    }
+
+    .library-section-head {
+      max-width: 760px;
+
+      margin-bottom: 44px;
+    }
+
+    .library-section-head span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.17em;
+    }
+
+    .library-section-head h2 {
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          3.7rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.045em;
+    }
+
+    .library-section-head p {
+      color: #a6acc7;
+
+      font-size: 1.03rem;
+    }
+
+
+    /* =========================================================
+       SERIES GRID
+       ========================================================= */
+
+    .briefing-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+      gap: 18px;
+    }
+
+    .briefing-card {
+      position: relative;
+
+      min-width: 0;
+
+      min-height: 410px;
+
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      padding: 28px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20,24,47,0.80),
+          rgba(9,12,25,0.92)
+        );
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .briefing-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139,92,246,0.13),
+          transparent 40%
+        );
+    }
+
+    .briefing-card:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(139,92,246,0.35);
+
+      box-shadow:
+        0 24px 65px rgba(0,0,0,0.25);
+    }
+
+    .briefing-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .briefing-number {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 26px;
+
+      border:
+        1px solid rgba(34,211,238,0.22);
+
+      border-radius: 14px;
+
+      background:
+        rgba(34,211,238,0.06);
+
+      color: #22d3ee;
+
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .briefing-category {
+      display: inline-block;
+
+      margin-bottom: 10px;
+
+      color: #d946ef;
+
+      font-size: 0.68rem;
+      font-weight: 900;
+
+      letter-spacing: 0.13em;
+    }
+
+    .briefing-card h3 {
+      margin-bottom: 14px;
+
+      font-size: 1.45rem;
+
+      line-height: 1.18;
+
+      letter-spacing: -0.02em;
+    }
+
+    .briefing-card p {
+      margin-bottom: 26px;
+
+      color: #a6acc7;
+
+      font-size: 0.92rem;
+
+      line-height: 1.65;
+    }
+
+    .briefing-topics {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: auto;
+      margin-bottom: 24px;
+    }
+
+    .briefing-topics span {
+      padding: 6px 8px;
+
+      border:
+        1px solid rgba(255,255,255,0.07);
+
+      border-radius: 8px;
+
+      background:
+        rgba(255,255,255,0.025);
+
+      color: #737a99;
+
+      font-size: 0.64rem;
+      font-weight: 800;
+    }
+
+    .briefing-open {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 12px;
+
+      padding-top: 18px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.07);
+
+      color: #22d3ee;
+
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .briefing-open strong {
+      transition:
+        transform 0.25s ease;
+    }
+
+    .briefing-card:hover .briefing-open strong {
+      transform: translateX(4px);
+    }
+
+
+    /* =========================================================
+       SERIES SYSTEM
+       ========================================================= */
+
+    .series-system {
+      margin-top: 90px;
+
+      padding: 46px;
+
+      border:
+        1px solid rgba(139,92,246,0.24);
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(139,92,246,0.16),
+          transparent 42%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .series-system-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1.2fr)
+        minmax(280px,0.8fr);
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .series-system span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.7rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .series-system h2 {
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.4rem
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -0.04em;
+    }
+
+    .series-system p {
+      color: #a6acc7;
+
+      line-height: 1.7;
+    }
+
+    .series-flow {
+      display: grid;
+
+      gap: 10px;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: center;
+
+      gap: 14px;
+
+      padding: 15px 17px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 14px;
+
+      background:
+        rgba(7,9,18,0.55);
+    }
+
+    .flow-step strong {
+      width: 34px;
+      height: 34px;
+
+      flex: 0 0 34px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 10px;
+
+      background:
+        rgba(139,92,246,0.12);
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+    }
+
+    .flow-step span {
+      margin: 0;
+
+      color: #cdd2e6;
+
+      font-size: 0.85rem;
+      font-weight: 800;
+
+      letter-spacing: 0;
+    }
+
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .library-cta {
+      padding:
+        0 0
+        110px;
+    }
+
+    .library-cta-card {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 50px;
+
+      border:
+        1px solid rgba(255,255,255,0.09);
+
+      border-radius: 28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139,92,246,0.14),
+          rgba(217,70,239,0.06),
+          rgba(34,211,238,0.05)
+        );
+    }
+
+    .library-cta-card::after {
+      content: "FRX";
+
+      position: absolute;
+
+      right: 30px;
+      top: 0;
+
+      color:
+        rgba(255,255,255,0.025);
+
+      font-size: 9rem;
+      font-weight: 900;
+
+      line-height: 1;
+
+      pointer-events: none;
+    }
+
+    .library-cta-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .library-cta-card span {
+      display: inline-block;
+
+      margin-bottom: 12px;
+
+      color: #22d3ee;
+
+      font-size: 0.72rem;
+      font-weight: 900;
+
+      letter-spacing: 0.16em;
+    }
+
+    .library-cta-card h2 {
+      max-width: 760px;
+
+      margin-bottom: 16px;
+
+      font-size:
+        clamp(
+          2rem,
+          5vw,
+          3.4rem
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -0.04em;
+    }
+
+    .library-cta-card p {
+      max-width: 700px;
+
+      color: #a6acc7;
+
+      margin-bottom: 26px;
+    }
+
+    .library-button {
+      min-height: 50px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 20px;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #8b5cf6,
+          #d946ef,
+          #22d3ee
+        );
+
+      color: #ffffff;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .library-footer {
+      padding:
+        48px 0
+        34px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.08);
+    }
+
+    .library-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 30px;
+    }
+
+    .library-footer p {
+      color: #737a99;
+
+      font-size: 0.85rem;
+    }
+
+    .library-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px 20px;
+    }
+
+    .library-footer-links a {
+      color: #a6acc7;
+
+      font-size: 0.85rem;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .library-hero-grid,
+      .series-system-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-grid {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+      }
+
+      .library-core {
+        max-width: 540px;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 680px) {
+
+      .library-container {
+        width:
+          min(
+            calc(100% - 26px),
+            1180px
+          );
+      }
+
+      .library-topbar-inner {
+        min-height: 64px;
+      }
+
+      .library-brand {
+        font-size: 0.95rem;
+      }
+
+      .library-back {
+        padding: 8px 10px;
+
+        font-size: 0.76rem;
+      }
+
+      .library-hero {
+        padding:
+          75px 0
+          60px;
+      }
+
+      .library-hero h1 {
+        font-size:
+          clamp(
+            2.5rem,
+            13vw,
+            4rem
+          );
+      }
+
+      .briefing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-card {
+        min-height: auto;
+
+        padding: 24px;
+      }
+
+      .series-system {
+        margin-top: 65px;
+
+        padding: 28px 20px;
+      }
+
+      .library-cta-card {
+        padding: 32px 24px;
+      }
+
+      .library-footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<div class="library-page">
+
+
+  <!-- =======================================================
+       TOP BAR
+       ======================================================= -->
+
+  <header class="library-topbar">
+
+    <div class="library-container">
+
+      <div class="library-topbar-inner">
+
+        <a
+          href="/"
+          class="library-brand"
+          aria-label="Zur Fronixis Startseite"
+        >
+          FRONIXIS
+        </a>
+
+        <a
+          href="/"
+          class="library-back"
+        >
+          ← Zur Website
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="library-hero">
+
+      <div class="library-container">
+
+        <div class="library-hero-grid">
+
+
+          <div>
+
+            <div class="library-kicker">
+              FRONIXIS BRIEFING LIBRARY
+            </div>
+
+
+            <h1>
+              Deine Bibliothek für
+              <span>bessere Tech-Entscheidungen.</span>
+            </h1>
+
+
+            <p class="library-intro">
+
+              Fronixis Briefings sind kompakte Entscheidungshelfer
+              für moderne Technologie.
+
+              Statt endloser Produktlisten konzentriert sich jede
+              Ausgabe auf die Fragen, die du vor einer Entscheidung
+              wirklich beantworten solltest.
+
+            </p>
+
+
+            <div class="library-meta">
+
+              <span>SERIE 01</span>
+
+              <span>6 BRIEFINGS</span>
+
+              <span>72+ PRÜFPUNKTE</span>
+
+              <span>TOOLS & CHECKLISTEN</span>
+
+            </div>
+
+          </div>
+
+
+
+          <aside
+            class="library-core"
+            aria-label="Fronixis Briefing Library Core"
+          >
+
+            <div class="library-core-content">
+
+              <div class="library-core-head">
+
+                <strong>
+                  KNOWLEDGE CORE
+                </strong>
+
+                <strong class="library-live">
+                  ● ONLINE
+                </strong>
+
+              </div>
+
+
+              <div class="library-stack">
+
+                <div class="stack-card stack-card-1"></div>
+
+                <div class="stack-card stack-card-2"></div>
+
+                <div class="stack-card stack-card-3">
+                  06
+                </div>
+
+              </div>
+
+
+              <div class="library-core-bottom">
+
+                <span>CHECK</span>
+
+                <span>LEARN</span>
+
+                <span>DECIDE</span>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BRIEFINGS
+         ===================================================== -->
+
+    <section class="library-section">
+
+      <div class="library-container">
+
+
+        <div class="library-section-head">
+
+          <span>
+            SERIE 01
+          </span>
+
+          <h2>
+            Die ersten sechs Fronixis Briefings.
+          </h2>
+
+          <p>
+            Von allgemeinen Kaufentscheidungen bis zu
+            Cybersecurity und Gesamtkosten:
+            Jede Ausgabe behandelt einen anderen Teil moderner Technik.
+          </p>
+
+        </div>
+
+
+
+        <div class="briefing-grid">
+
+
+          <!-- #01 -->
+
+          <a
+            href="/tech-kaufcheck"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              01
+            </div>
+
+            <span class="briefing-category">
+              SMART TECH
+            </span>
+
+            <h3>
+              Tech-Kaufcheck
+            </h3>
+
+            <p>
+              12 Fragen, die du vor jedem Smart-Tech-Kauf
+              beantworten solltest.
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>ABOS</span>
+              <span>DATENSCHUTZ</span>
+              <span>UPDATES</span>
+              <span>KOSTEN</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- #02 -->
+
+          <a
+            href="/smart-home-kaufcheck"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              02
+            </div>
+
+            <span class="briefing-category">
+              SMART HOME
+            </span>
+
+            <h3>
+              Smart-Home-Kaufcheck
+            </h3>
+
+            <p>
+              Matter, Thread, Zigbee, WLAN, Cloud und
+              Herstellerbindung richtig einordnen.
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>MATTER</span>
+              <span>THREAD</span>
+              <span>ZIGBEE</span>
+              <span>CLOUD</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- #03 -->
+
+          <a
+            href="/ki-abo-check"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              03
+            </div>
+
+            <span class="briefing-category">
+              KI & AUTOMATION
+            </span>
+
+            <h3>
+              KI-Abo-Check
+            </h3>
+
+            <p>
+              Wann lohnt sich ein kostenpflichtiges KI-Tool
+              wirklich – und wann reicht kostenlos?
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>KI</span>
+              <span>ABOS</span>
+              <span>LIMITS</span>
+              <span>DATEN</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- #04 -->
+
+          <a
+            href="/smart-garden-kaufcheck"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              04
+            </div>
+
+            <span class="briefing-category">
+              SMART GARDEN
+            </span>
+
+            <h3>
+              Smart-Garden-Check
+            </h3>
+
+            <p>
+              RTK, LiDAR, Kamera oder Begrenzungskabel:
+              Welche Navigation passt zu deinem Garten?
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>RTK</span>
+              <span>LIDAR</span>
+              <span>KAMERA</span>
+              <span>MÄHROBOTER</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- #05 -->
+
+          <a
+            href="/cybersecurity-check"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              05
+            </div>
+
+            <span class="briefing-category">
+              CYBERSECURITY
+            </span>
+
+            <h3>
+              Cybersecurity-Check
+            </h3>
+
+            <p>
+              Passwörter, 2FA, Backups, Router und Phishing
+              als zusammenhängendes Schutzsystem.
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>2FA</span>
+              <span>BACKUP</span>
+              <span>PHISHING</span>
+              <span>VPN</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- #06 -->
+
+          <a
+            href="/technik-kostencheck"
+            class="briefing-card"
+          >
+
+            <div class="briefing-number">
+              06
+            </div>
+
+            <span class="briefing-category">
+              TOTAL COST
+            </span>
+
+            <h3>
+              Technik-Kostencheck
+            </h3>
+
+            <p>
+              Berechne Kaufpreis, Abos, Energie,
+              Wartung und Restwert über drei Jahre.
+            </p>
+
+            <div class="briefing-topics">
+
+              <span>3 JAHRE</span>
+              <span>ABOS</span>
+              <span>ENERGIE</span>
+              <span>RECHNER</span>
+
+            </div>
+
+            <div class="briefing-open">
+
+              Briefing öffnen
+
+              <strong>→</strong>
+
+            </div>
+
+          </a>
+
+
+        </div>
+
+
+
+        <!-- ===================================================
+             SYSTEM
+             =================================================== -->
+
+        <section class="series-system">
+
+          <div class="series-system-grid">
+
+
+            <div>
+
+              <span>
+                DAS SYSTEM
+              </span>
+
+              <h2>
+                Aus einzelnen Guides wird ein Wissensnetz.
+              </h2>
+
+              <p>
+                Die Briefings funktionieren nicht isoliert.
+                Sie führen von einer allgemeinen Tech-Entscheidung
+                immer tiefer in einzelne Themenbereiche.
+
+                So entsteht mit der Zeit eine Bibliothek,
+                die Leser immer wieder zu Fronixis zurückführt.
+              </p>
+
+            </div>
+
+
+
+            <div class="series-flow">
+
+
+              <div class="flow-step">
+
+                <strong>01</strong>
+
+                <span>
+                  Problem verstehen
+                </span>
+
+              </div>
+
+
+              <div class="flow-step">
+
+                <strong>02</strong>
+
+                <span>
+                  passende Kategorie wählen
+                </span>
+
+              </div>
+
+
+              <div class="flow-step">
+
+                <strong>03</strong>
+
+                <span>
+                  Kaufcheck durchführen
+                </span>
+
+              </div>
+
+
+              <div class="flow-step">
+
+                <strong>04</strong>
+
+                <span>
+                  vertiefenden Fronixis-Guide lesen
+                </span>
+
+              </div>
+
+
+              <div class="flow-step">
+
+                <strong>05</strong>
+
+                <span>
+                  fundierte Entscheidung treffen
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section class="library-cta">
+
+      <div class="library-container">
+
+        <div class="library-cta-card">
+
+          <span>
+            FRONIXIS BRIEFING
+          </span>
+
+          <h2>
+            Neue Briefings sollen regelmäßig dazukommen.
+          </h2>
+
+          <p>
+            Smart Tech verändert sich ständig.
+            Die Fronixis Bibliothek wird deshalb Schritt für Schritt
+            um neue Kaufchecks, Rechner, Vergleiche und
+            Entscheidungshelfer erweitert.
+          </p>
+
+          <a
+            href="/#briefing"
+            class="library-button"
+          >
+            Fronixis Briefing abonnieren
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="library-footer">
+
+    <div class="library-container">
+
+      <div class="library-footer-inner">
+
+
+        <div>
+
+          <a
+            href="/"
+            class="library-brand"
+          >
+            FRONIXIS
+          </a>
+
+          <p>
+            Technologie verstehen, bevor du dich entscheidest.
+          </p>
+
+        </div>
+
+
+        <nav
+          class="library-footer-links"
+          aria-label="Rechtliche Navigation"
+        >
+
+          <a href="/impressum.html">
+            Impressum
+          </a>
+
+          <a href="/datenschutz.html">
+            Datenschutz
+          </a>
+
+          <a href="/kontakt.html">
+            Kontakt
+          </a>
+
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</div>
+
+</body>
+</html>
